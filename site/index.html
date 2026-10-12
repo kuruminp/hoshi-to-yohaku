@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#17233c">
+  <meta name="description" content="星と余白は，今日の12星座占い，タロット，恋愛・性格診断を無料で楽しめる，小さな物語のような占いサイトです．">
+  <meta name="robots" content="index,follow">
+  <title>星と余白 | 12星座占い・タロット・心の診断</title>
+  <link rel="icon" href="./assets/favicon.svg" type="image/svg+xml">
+  <link rel="alternate" type="application/rss+xml" title="星と余白の更新情報" href="./feed.xml">
+  <link rel="canonical" href="{{HOME_URL}}">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="星と余白">
+  <meta property="og:title" content="星と余白 | 今日という一日に，小さな光を．">
+  <meta property="og:description" content="毎日の星座占いとタロット，物語のような3つの無料診断．">
+  <meta property="og:url" content="{{HOME_URL}}">
+  <meta property="og:image" content="{{OG_IMAGE_URL}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="stylesheet" href="./styles.css">
+  <script type="application/ld+json">{{JSON_LD}}</script>
+</head>
+<body>
+  <a class="skip-link" href="#main">本文へ移動</a>
+  <div class="announcement"><span class="announcement-star">✦</span> EVERY DAY IS A LITTLE STORY <span class="announcement-star">✦</span></div>
+  <header class="site-header">
+    <div class="nav-shell container">
+      <a class="brand" href="./" aria-label="星と余白 ホームへ"><span class="brand-mark" aria-hidden="true">✳</span><span>星と余白</span><small>HOSHI TO YOHAKU</small></a>
+      <nav class="main-nav" aria-label="メインメニュー">
+        <a href="#horoscope">今日の運勢</a>
+        <a href="#diagnosis">こころ診断</a>
+        <a href="#tarot">タロット</a>
+        <a class="nav-last" href="#archives">過去の便り <span aria-hidden="true">↗</span></a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-sky" aria-hidden="true"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div>
+      <div class="container hero-layout">
+        <div class="hero-copy">
+          <div class="hero-eyebrow"><span class="glow-dot"></span> YOUR DAILY CELESTIAL LETTER <span class="hairline"></span></div>
+          <p class="hero-date" id="hero-date">{{TODAY_LONG}} <span>JST</span></p>
+          <h1 id="hero-title">今日という一日に，<br><em>小さな光を．</em></h1>
+          <p class="hero-lead">思いどおりの日も，そうではない日も．<br>星と物語を道しるべに，今のあなたを少しだけ好きになる時間を．</p>
+          <div class="hero-actions"><a class="btn btn-peach" href="#horoscope">今日の運勢を読む <span aria-hidden="true">↗</span></a><a class="text-link light-link" href="#diagnosis">心の診断をする <span aria-hidden="true">→</span></a></div>
+          <p class="hero-footnote"><span aria-hidden="true">✧</span> 無料で楽しめます · 登録不要</p>
+        </div>
+        <div class="astral-wrap" aria-hidden="true">
+          <div class="astral-orbit orbit-one"></div><div class="astral-orbit orbit-two"></div><div class="astral-orbit orbit-three"></div>
+          <div class="orbit-dot dot-one"></div><div class="orbit-dot dot-two"></div><div class="orbit-dot dot-three"></div>
+          <div class="astral-center"><div class="moon-shape"></div><span class="moon-spark spark-a">✦</span><span class="moon-spark spark-b">✧</span></div>
+          <span class="orbit-mark o-a">✦</span><span class="orbit-mark o-b">✧</span><span class="orbit-mark o-c">✳</span>
+          <div class="astral-caption"><span>THE MOON</span><strong>and all the little lights</strong><span>2026 — ∞</span></div>
+        </div>
+      </div>
+      <div class="hero-bottom container"><div><span class="mini-star">✦</span> 今日の星のことば</div><p id="hero-quote">{{TODAY_QUOTE}}</p><span class="hero-bottom-index">01 / 04</span></div>
+    </section>
+
+    <section class="section horoscope-section" id="horoscope" aria-labelledby="horoscope-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="section-kicker">01 <span class="kicker-line"></span> TODAY'S HOROSCOPE</p><h2 id="horoscope-title">今日の<span class="title-accent">12星座</span></h2><p class="section-sub">あなたの星座を選んで，今日だけの小さな便りを受け取ってください．</p></div><span class="section-date" id="section-date">{{TODAY_SHORT}}</span></div>
+        <div class="sign-grid" id="sign-grid" role="group" aria-label="占う星座を選ぶ">{{SIGN_GRID}}</div>
+        <article class="fortune-panel" id="fortune-panel" aria-live="polite" aria-atomic="true">{{FORTUNE_DETAIL}}</article>
+        <p class="section-note">※運勢は日付ごとに更新されるエンターテインメントです．未来を保証するものではありません．</p>
+      </div>
+    </section>
+
+    <section class="quote-band" aria-label="星の言葉"><div class="container quote-band-content"><span class="quote-ornament" aria-hidden="true">❝</span><p>あなたらしさは，<br class="mobile-break">誰かと同じでなくていい．</p><span class="quote-tiny">A LITTLE REMINDER</span></div></section>
+
+    <section class="section diagnosis-section" id="diagnosis" aria-labelledby="diagnosis-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="section-kicker">02 <span class="kicker-line"></span> LITTLE QUIZZES</p><h2 id="diagnosis-title">心のかたちを，<span class="title-accent">のぞいてみる．</span></h2><p class="section-sub">正解はありません．直感で選ぶ4つの質問が，あなたの小さな物語になります．</p></div><span class="section-extra">3 FREE STORIES <span aria-hidden="true">✧</span></span></div>
+        <div class="quiz-cards" id="quiz-cards">{{QUIZ_CARDS}}</div>
+        <p class="section-note">診断結果は娯楽目的の読み物です．心理学的・医学的な検査ではありません．</p>
+      </div>
+    </section>
+
+    <section class="tarot-section" id="tarot" aria-labelledby="tarot-title">
+      <div class="tarot-stars" aria-hidden="true">✦ &nbsp;&nbsp; ✧ &nbsp;&nbsp; ✦</div>
+      <div class="container tarot-layout">
+        <div class="tarot-copy"><p class="section-kicker invert">03 <span class="kicker-line"></span> A CARD FOR TODAY</p><h2 id="tarot-title">一枚のカードに，<br><em>今日を預ける．</em></h2><p>気になるカードを，直感で一枚．<br>いまの気持ちに寄り添う言葉をお届けします．</p><div class="tarot-hint"><span class="hint-line"></span> CHOOSE ONE CARD <span class="hint-line"></span></div><p class="tarot-small">選んだカードは，今日のあいだ記憶されます．</p></div>
+        <div class="tarot-play">
+          <div class="tarot-deck" id="tarot-deck" aria-label="タロットカードを選ぶ">
+            <button type="button" class="tarot-card" data-card-position="0" aria-label="左のタロットカードを選ぶ"><span class="tarot-card-inner"><span class="tarot-frame"><span class="tarot-star-a">✧</span><span class="tarot-center-symbol">☾</span><span class="tarot-star-b">✧</span><small>HOSHI TO YOHAKU</small></span></span></button>
+            <button type="button" class="tarot-card" data-card-position="1" aria-label="真ん中のタロットカードを選ぶ"><span class="tarot-card-inner"><span class="tarot-frame"><span class="tarot-star-a">✧</span><span class="tarot-center-symbol">✦</span><span class="tarot-star-b">✧</span><small>HOSHI TO YOHAKU</small></span></span></button>
+            <button type="button" class="tarot-card" data-card-position="2" aria-label="右のタロットカードを選ぶ"><span class="tarot-card-inner"><span class="tarot-frame"><span class="tarot-star-a">✧</span><span class="tarot-center-symbol">☾</span><span class="tarot-star-b">✧</span><small>HOSHI TO YOHAKU</small></span></span></button>
+          </div>
+          <div class="tarot-result" id="tarot-result" hidden aria-live="polite"><div class="tarot-result-icon" id="tarot-result-icon">✦</div><span class="tarot-result-top" id="tarot-result-number"></span><h3 id="tarot-result-name"></h3><div class="tarot-keyword" id="tarot-result-keyword"></div><p id="tarot-result-message"></p><p class="tarot-action" id="tarot-result-action"></p><button type="button" class="tiny-share" id="tarot-share">カードをシェアする <span aria-hidden="true">↗</span></button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section archives-section" id="archives" aria-labelledby="archives-title"><div class="container archives-layout"><div class="archives-intro"><p class="section-kicker">04 <span class="kicker-line"></span> FROM THE ARCHIVE</p><h2 id="archives-title">星の便りを，<br><span class="title-accent">読み返す．</span></h2><p>昨日のあなたにも，まだ出会っていない明日のあなたにも．毎日の運勢を14日分，さかのぼって読めます．</p><a href="./feed.xml" class="text-link">RSSで更新を受け取る <span aria-hidden="true">↗</span></a></div><div class="archive-list" id="archive-list">{{ARCHIVE_LIST}}</div></div></section>
+    {{AFFILIATE_SECTION}}
+  </main>
+
+  <footer class="site-footer"><div class="container footer-top"><div><a href="./" class="footer-brand"><span aria-hidden="true">✳</span> 星と余白</a><p>こころに，ひとさじの星あかりを．</p></div><nav aria-label="フッターメニュー"><a href="./about.html">このサイトについて</a><a href="./privacy.html">プライバシーポリシー</a><a href="./terms.html">ご利用にあたって</a><a href="./contact.html">お問い合わせ</a></nav></div><div class="container footer-bottom"><span>© 2026 星と余白</span><span>MADE WITH A LITTLE STARLIGHT <span aria-hidden="true">✦</span></span></div></footer>
+  <dialog id="quiz-dialog" class="quiz-dialog" aria-labelledby="quiz-dialog-title"><div class="dialog-inner"><button type="button" class="dialog-close" id="quiz-close" aria-label="診断を閉じる">×</button><p class="dialog-eyebrow" id="quiz-dialog-eyebrow">LITTLE QUIZZES</p><h2 id="quiz-dialog-title"></h2><div id="quiz-dialog-body"></div></div></dialog>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="application/json" id="site-data">{{INLINE_JSON}}</script>
+  <script src="./app.js" defer></script>
+</body>
+</html>
