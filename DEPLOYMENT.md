@@ -2,7 +2,7 @@
 
 ## 1. GitHub Actions
 
-ワークフロー `.github/workflows/publish.yml` は `main` への push、毎日06:17（日本時間）、手動実行で動きます。テストを実行し、`dist/` を生成して、Actions の実行結果に7日間保存します。
+ワークフロー `.github/workflows/publish.yml` は `main` への push、毎日00:00（日本時間、Asia/Tokyo）、手動実行で動きます。テストを実行し、`dist/` を生成して、Actions の実行結果に7日間保存します。
 
 ## 2. 商用ホスティング
 
