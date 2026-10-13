@@ -267,7 +267,8 @@ def build(today: date, base: str) -> None:
     # same config value so the public ID never needs to be duplicated by hand.
     if config.get("adsense_publisher_id"):
         (DIST / "ads.txt").write_text(
-            f"google.com, {h(config['adsense_publisher_id']).removeprefix('ca-pub-')}, DIRECT, f08c47fec0942fa0\\n",
+            
+            f"google.com, pub-{config['adsense_publisher_id'].removeprefix('ca-pub-')}, DIRECT, f08c47fec0942fa0\n",
             encoding="utf-8",
         )
 
