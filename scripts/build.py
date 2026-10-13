@@ -280,17 +280,6 @@ def build(today: date, base: str) -> None:
     else:
         contact = "お問い合わせ先は公開前に設定します．運営開始前に <code>config.json</code> の contact_email を設定してください．"
   
-    analytics_privacy = (
-        "当サイトではCloudflare Web Analyticsを利用し，ページ閲覧数や参照元などを計測しています．"
-        "Cloudflare Web Analyticsは，アクセス解析のためにCookieやローカルストレージを使用せず，"
-        "サイトをまたいだ利用者の追跡も行いません．"
-    )
-    if config.get("adsense_publisher_id"):
-        ads_privacy = analytics_privacy + (
-            " 当サイトではGoogle AdSenseによる広告を配信する場合があります．"
-            "広告配信事業者は，広告の配信や測定のためCookie等を使用する場合があります．"
-        )
-    else:
 
     ads_privacy = (
         "当サイトでは，Cloudflare Web Analyticsを利用して，"
