@@ -44,7 +44,7 @@
           <p class="hero-date" id="hero-date">{{TODAY_LONG}} <span>JST</span></p>
           <h1 id="hero-title">今日という一日に，<br><em>小さな光を．</em></h1>
           <p class="hero-lead">思いどおりの日も，そうではない日も．<br>星と物語を道しるべに，今のあなたを少しだけ好きになる時間を．</p>
-          <div class="hero-actions"><a class="btn btn-peach" href="#horoscope">今日の運勢を読む <span aria-hidden="true">↗</span></a><a class="text-link light-link" href="#diagnosis">心の診断をする <span aria-hidden="true">→</span></a></div>
+          <div class="hero-actions"><a class="btn btn-peach" href="#horoscope">運勢を読む <span aria-hidden="true">↗</span></a><a class="text-link light-link" href="#diagnosis">心の診断をする <span aria-hidden="true">→</span></a></div>
           <p class="hero-footnote"><span aria-hidden="true">✧</span> 無料で楽しめます · 登録不要</p>
         </div>
         <div class="astral-wrap" aria-hidden="true">
@@ -55,12 +55,12 @@
           <div class="astral-caption"><span>THE MOON</span><strong>and all the little lights</strong><span>2026 — ∞</span></div>
         </div>
       </div>
-      <div class="hero-bottom container"><div><span class="mini-star">✦</span> 今日の星のことば</div><p id="hero-quote">{{TODAY_QUOTE}}</p><span class="hero-bottom-index">01 / 04</span></div>
+      <div class="hero-bottom container"><div><span class="mini-star">✦</span> 星のことば</div><p id="hero-quote">{{TODAY_QUOTE}}</p><span class="hero-bottom-index">01 / 04</span></div>
     </section>
 
     <section class="section horoscope-section" id="horoscope" aria-labelledby="horoscope-title">
       <div class="container">
-        <div class="section-heading"><div><p class="section-kicker">01 <span class="kicker-line"></span> TODAY'S HOROSCOPE</p><h2 id="horoscope-title">今日の<span class="title-accent">12星座</span></h2><p class="section-sub">あなたの星座を選んで，今日だけの小さな便りを受け取ってください．</p></div><span class="section-date" id="section-date">{{TODAY_SHORT}}</span></div>
+        <div class="section-heading"><div><p class="section-kicker">01 <span class="kicker-line"></span> TODAY'S HOROSCOPE</p><h2 id="horoscope-title"><span class="title-accent">12星座</span></h2><p class="section-sub">あなたの星座を選んで，今日だけの小さな便りを受け取ってください．</p></div><span class="section-date" id="section-date">{{TODAY_SHORT}}</span></div>
         <div class="sign-grid" id="sign-grid" role="group" aria-label="占う星座を選ぶ">{{SIGN_GRID}}</div>
         <article class="fortune-panel" id="fortune-panel" aria-live="polite" aria-atomic="true">{{FORTUNE_DETAIL}}</article>
         <p class="section-note">※運勢は日付ごとに更新されるエンターテインメントです．未来を保証するものではありません．</p>
@@ -80,7 +80,14 @@
     <section class="tarot-section" id="tarot" aria-labelledby="tarot-title">
       <div class="tarot-stars" aria-hidden="true">✦ &nbsp;&nbsp; ✧ &nbsp;&nbsp; ✦</div>
       <div class="container tarot-layout">
-        <div class="tarot-copy"><p class="section-kicker invert">03 <span class="kicker-line"></span> A CARD FOR TODAY</p><h2 id="tarot-title">一枚のカードに，<br><em>今日を預ける．</em></h2><p>気になるカードを，直感で一枚．<br>いまの気持ちに寄り添う言葉をお届けします．</p><div class="tarot-hint"><span class="hint-line"></span> CHOOSE ONE CARD <span class="hint-line"></span></div><p class="tarot-small">選んだカードは，今日のあいだ記憶されます．</p></div>
+        <div class="tarot-copy"><p class="section-kicker invert">03 <span class="kicker-line"></span> A CARD FOR TODAY</p><h2 id="tarot-title">一枚のカードに，<br><em>今日を預ける．</em></h2><p>気になるカードを，直感で一枚．<br>いまの気持ちに寄り添う言葉をお届けします．</p><div class="tarot-hint"><span class="hint-line"></span> CHOOSE ONE CARD <span class="hint-line"></span></div>
+<p class="tarot-small">選んだカードは，今日のあいだ記憶されます．</p>
+<a href="./tarot-guide.html" class="text-link light-link" style="margin-top:24px;">
+  はじめてのタロット｜カードの意味と楽しみ方
+  <span aria-hidden="true">↗</span>
+</a>
+</div>
+
         <div class="tarot-play">
           <div class="tarot-deck" id="tarot-deck" aria-label="タロットカードを選ぶ">
             <button type="button" class="tarot-card" data-card-position="0" aria-label="左のタロットカードを選ぶ"><span class="tarot-card-inner"><span class="tarot-frame"><span class="tarot-star-a">✧</span><span class="tarot-center-symbol">☾</span><span class="tarot-star-b">✧</span><small>HOSHI TO YOHAKU</small></span></span></button>
