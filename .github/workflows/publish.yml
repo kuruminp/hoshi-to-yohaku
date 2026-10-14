@@ -50,6 +50,17 @@ jobs:
           git commit -m 'chore: record daily site build [skip ci]'
           git push origin "HEAD:${GITHUB_REF_NAME}" || echo 'Build succeeded; the scheduled-build record could not be pushed.'
 
+      - name: Trigger Cloudflare Pages daily rebuild
+        if: github.event_name == 'schedule' || github.event_name == 'workflow_dispatch'
+        env:
+          CLOUDFLARE_DEPLOY_HOOK: ${{ secrets.CLOUDFLARE_DEPLOY_HOOK }}
+        run: |
+          if [ -z "$CLOUDFLARE_DEPLOY_HOOK" ]; then
+            echo "Deploy Hook secret is missing"
+            exit 1
+          fi
+          curl --fail --silent --show-error --request POST "$CLOUDFLARE_DEPLOY_HOOK"
+
   deploy-cloudflare-pages:
     needs: build
     if: ${{ vars.CLOUDFLARE_PAGES_DEPLOY_ENABLED == 'true' }}
