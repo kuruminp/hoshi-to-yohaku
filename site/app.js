@@ -77,7 +77,7 @@
         <p class="fortune-message">${esc(f.overall)}</p>
         <div class="fortune-mini-head">TODAY'S LITTLE STEP</div>
         <p class="fortune-action">${esc(f.action)}</p>
-        <div class="fortune-buttons"><button type="button" class="plain-action" id="fortune-share">この運勢をシェアする ↗</button><a class="plain-action" href="./signs/${encodeURIComponent(f.id)}/">${esc(f.name)}のページを見る →</a></div>
+        <div class="fortune-buttons"><button type="button" class="plain-action" id="fortune-share">この運勢をシェアする ↗</button><a class="plain-action" href="./signs/${encodeURIComponent(f.id)}/#top">${esc(f.name)}のページを見る →</a></div>
       </div>
       <div class="fortune-right">
         <div class="reading-row"><span class="reading-label"><span aria-hidden="true">♡</span> 恋愛運</span><p>${esc(f.love)}</p></div>
