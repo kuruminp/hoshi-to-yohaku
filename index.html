@@ -1,0 +1,1825 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#172138">
+<meta name="description" content="星の彼方で，もう一度。生まれる土地も，出会う人も，やり直せない選択も。星座と日替わりの出生地から始まる，恋愛・仕事・家族の選択で変わるファンタジー人生ゲーム。">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://hoshi-to-yohaku.pages.dev/game/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="星と余白">
+<meta property="og:title" content="星の彼方で，もう一度｜一度きりの人生を紡ぐ物語">
+<meta property="og:description" content="星座を選んで旅立とう。仕事・結婚・子育てなどの選択から，あなただけの一生を描く物語ゲーム。">
+<meta property="og:url" content="https://hoshi-to-yohaku.pages.dev/game/">
+<title>星の彼方で，もう一度｜選択が未来につながる物語ゲーム | 星と余白</title>
+<style>
+:root{color-scheme:light;--night:#131d31;--night2:#1c2c42;--night3:#26374c;--paper:#f7f2e8;--paper-light:#fffdfa;--ink:#303445;--muted:#777783;--gold:#d9b783;--gold-dark:#a78150;--rose:#956f84;--border:#e4d9c8;--green:#6a8373;--red:#9e6770;--serif:"Hiragino Mincho ProN","Yu Mincho","Noto Serif CJK JP","MS PMincho",serif;--sans:"Hiragino Kaku Gothic ProN","Yu Gothic","Noto Sans CJK JP",sans-serif}
+*{box-sizing:border-box}
+html{scroll-behavior:auto}
+body{margin:0;background:radial-gradient(ellipse at 82% 0%,#32425e 0%,transparent 43%),radial-gradient(ellipse at 15% 90%,#203248 0%,transparent 55%),var(--night);font-family:var(--sans);color:var(--ink);min-height:100vh;line-height:1.9;-webkit-font-smoothing:antialiased}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.28;background-image:radial-gradient(circle at 13% 15%,#f9dca9 0 1px,transparent 1.3px),radial-gradient(circle at 66% 30%,#fff3db 0 1px,transparent 1.4px),radial-gradient(circle at 35% 70%,#d6e4ff 0 .85px,transparent 1px);background-size:233px 277px,367px 281px,283px 347px}
+a{color:inherit}
+button{font:inherit}
+button:focus-visible,a:focus-visible,textarea:focus-visible{outline:3px solid #f1c981;outline-offset:4px}
+button{cursor:pointer}
+button:disabled{cursor:default;opacity:.65}
+.shell{position:relative;max-width:1180px;margin:0 auto;padding:0 29px 72px}
+.masthead{display:flex;align-items:center;justify-content:space-between;gap:20px;min-height:92px;color:#f5eee3;border-bottom:1px solid #d9b78338}
+.brand{font-family:var(--serif);font-size:23px;letter-spacing:.12em;text-decoration:none;white-space:nowrap;display:flex;gap:9px;align-items:center}.brand b{font-weight:400;color:#dfbf8f;font-size:25px}
+.brand small{display:block;font:9px var(--sans);letter-spacing:.17em;color:#b5b9c4;margin-top:2px}
+.mast-right{display:flex;align-items:center;gap:18px}.mast-label{color:#aeb4c3;font-size:10px;letter-spacing:.18em;white-space:nowrap}.mast-link{border:1px solid #b7a68d6c;color:#ebe3d6;background:transparent;text-decoration:none;border-radius:3px;padding:8px 15px;font-size:11px;white-space:nowrap}
+main{padding-top:32px}.screen-enter{animation:appear .34s ease-out both}@keyframes appear{from{opacity:.65;transform:translateY(8px)}to{opacity:1;transform:translateY(0)}}
+.eyebrow{display:flex;align-items:center;gap:13px;color:var(--gold-dark);font-size:10px;letter-spacing:.23em;text-transform:uppercase;font-weight:600}.eyebrow:before{content:"";display:block;width:25px;height:1px;background:currentColor}
+.eyebrow.light{color:#dfbe8f}
+.display{font-family:var(--serif);font-size:clamp(38px,5.1vw,66px);font-weight:500;letter-spacing:.1em;line-height:1.6;margin:24px 0 18px}.display em{font-style:normal;color:#e6c498}
+.intro-card{min-height:650px;display:grid;grid-template-columns:minmax(0,1.25fr) minmax(0,1fr);overflow:hidden;border:1px solid #e1c69d52;background:linear-gradient(111deg,#1b2a40 0%,#18253b 60%,#1d2b41 100%);box-shadow:0 28px 90px #050b1590;border-radius:6px;position:relative}
+.intro-copy{padding:clamp(36px,5vw,76px) 0 clamp(36px,4vw,68px) clamp(30px,6vw,76px);position:relative;z-index:1;color:#f2ece3}
+.intro-copy .display{max-width:600px}
+.lead{font-size:14px;line-height:2.55;color:#c9ced9;letter-spacing:.035em;max-width:490px;margin:0 0 33px}
+.intro-motto{border-left:2px solid var(--gold);padding:3px 0 3px 18px;color:#e5d9c8;font:15px/2.4 var(--serif);margin:29px 0 35px}
+.actions{display:flex;flex-wrap:wrap;align-items:center;gap:12px}
+.button{display:inline-flex;align-items:center;justify-content:center;gap:13px;min-height:50px;padding:11px 22px;border-radius:3px;text-decoration:none;font-size:13px;font-weight:600;line-height:1.5;transition:background .2s,transform .2s,border-color .2s;border:1px solid transparent;max-width:100%;text-align:center}
+.button:active{transform:translateY(1px)}.button.gold{background:#debd8a;color:#253145;border-color:#debd8a}.button.gold:hover{background:#edcc98}.button.outline{background:transparent;color:#e5d7c2;border-color:#b5a07d8c}.button.outline:hover{background:#ffffff12}.button.ink{background:var(--night2);color:#fff7e9;border-color:var(--night2)}.button.ink:hover{background:#2c3b51}.button.plain{background:#fffaf2;color:#69566a;border-color:#b8a592}.button.plain:hover{background:#f1e9dd}
+.tiny-help{font-size:11px;color:#b4b8c7;line-height:1.9;margin-top:26px;letter-spacing:.02em}
+.ornament-wrap{display:flex;align-items:center;justify-content:center;position:relative;min-width:0;overflow:hidden}
+.ornament-wrap:before{content:"";position:absolute;width:440px;height:440px;max-width:100%;border-radius:50%;background:radial-gradient(circle,#c4a26f15 0%,transparent 67%)}
+.sigil{position:relative;width:min(390px,90%);aspect-ratio:1;display:flex;align-items:center;justify-content:center;color:#e2bf8b}
+.sigil .ring{position:absolute;border:1px solid #ceb48458;border-radius:50%;inset:6%}.sigil .ring.b{inset:20%;border-color:#e3c69d85}.sigil .ring.c{inset:0%;border-style:dashed;opacity:.38;transform:rotate(27deg)}
+.sigil .arc{width:60%;height:60%;border-radius:50%;border:1px solid #c6bdc143;transform:rotate(35deg) scaleX(.53);position:absolute}
+.sigil .moon{font-size:clamp(130px,20vw,210px);line-height:1;text-shadow:0 0 55px #e6c28f4d;font-family:var(--serif);transform:translateY(-10px)}
+.sigil .dot{position:absolute;font-family:var(--serif);color:#e7c492;font-size:22px}.sigil .dot.a{top:11%;left:31%}.sigil .dot.b{top:55%;right:1%;font-size:15px}.sigil .dot.c{bottom:3%;left:39%;font-size:28px}.sigil .dot.d{bottom:38%;left:2%;font-size:12px}
+.sigil-caption{position:absolute;bottom:13%;color:#c7bbc0;letter-spacing:.27em;font-size:9px}
+.intro-bottom{border-top:1px solid #e1c69d52;padding:28px clamp(20px,4vw,50px);background:#f7f1e9;color:#716a71;display:flex;justify-content:space-between;gap:26px;align-items:center;font-size:12px;letter-spacing:.04em}.intro-bottom span{display:flex;align-items:center;gap:10px}.intro-bottom strong{color:var(--rose);font-weight:500;font-family:var(--serif);font-size:17px}
+.folio-wrap{display:grid;grid-template-columns:minmax(0,1.65fr) minmax(270px,.85fr);gap:22px;align-items:start}
+.folio-paper{background:linear-gradient(135deg,#fffdfa 0%,#f8f3e9 100%);border-radius:5px;position:relative;overflow:hidden;min-height:565px;box-shadow:0 21px 70px #080c1599;border:1px solid #e7d8c6}
+.folio-paper:before{content:"";position:absolute;inset:12px;border:1px solid #bda48031;pointer-events:none;border-radius:2px}
+.folio-inside{position:relative;padding:clamp(27px,4.7vw,63px);z-index:1}
+.chapter-top{display:flex;justify-content:space-between;align-items:center;gap:15px;border-bottom:1px solid #ddcfbd;padding-bottom:21px;margin-bottom:28px}.chapter-top .side-date{font:13px var(--serif);color:#967c69;white-space:nowrap}
+.eyebrow.dark{color:#906f79}
+.story-title{font:500 clamp(28px,3.5vw,40px)/1.65 var(--serif);letter-spacing:.055em;color:#2b3446;margin:16px 0 25px}
+.story-text{color:#4b4f5b;font:clamp(13px,1.4vw,15px)/2.5 var(--serif);letter-spacing:.038em}.story-text p{margin:0 0 18px}
+.scene-divider{display:flex;align-items:center;gap:13px;margin:25px 0 27px;color:#b19a81}.scene-divider:before,.scene-divider:after{content:"";height:1px;background:#dbcbb8;flex:1}.scene-divider span{font-size:16px}
+.choice-label{font-size:11px;color:#886e73;letter-spacing:.18em;margin-bottom:14px;text-align:center}
+.options{display:grid;gap:11px;margin:0;padding:0;list-style:none}.option{width:100%;padding:16px 17px;min-height:78px;border:1px solid #dfd4c6;text-align:left;color:var(--ink);background:#fffdf8;border-radius:4px;display:flex;gap:14px;align-items:center;transition:background .18s,border-color .18s,transform .18s}
+.option:hover{border-color:#b99b7e;background:#f7f0e6;transform:translateX(2px)}.option .index{flex:0 0 29px;height:29px;display:flex;align-items:center;justify-content:center;border:1px solid #ddcdb8;font:15px var(--serif);color:#947a71;border-radius:50%}.option .copy{flex:1;min-width:0}.option strong{display:block;font-family:var(--serif);font-size:15px;font-weight:500;line-height:1.7}.option small{display:block;color:#827f87;font-size:11px;line-height:1.85;margin-top:2px}.option .arrow{font-size:15px;color:#ad927a;flex:0 0 auto}
+.caption{font-size:11px;color:#89838a;letter-spacing:.02em;line-height:2.1;margin:20px 0 0}
+.sidebar{display:grid;gap:16px}
+.status-box{background:#203049;color:#f2e9dc;border:1px solid #c0a27b40;padding:27px 25px;border-radius:5px;box-shadow:0 18px 55px #080c1563}.status-box h2,.tale-box h2{font:normal 18px var(--serif);letter-spacing:.08em;margin:0 0 12px}
+.status-sub{font-size:11px;color:#b4bbca;line-height:2;margin:0 0 22px}.row{display:flex;justify-content:space-between;gap:12px;align-items:center;margin:0 0 9px;font-size:11px;letter-spacing:.07em}.row span{color:#d8d6d7}.row strong{font:normal 13px var(--serif);color:#eecf9e}
+.meter{height:5px;background:#ffffff1c;border-radius:5px;overflow:hidden;margin-bottom:18px}.meter>span{display:block;height:100%;background:linear-gradient(90deg,#c09383,#e6c496);border-radius:5px;transition:width .35s ease}
+.about-you{border-top:1px solid #ffffff2c;margin-top:20px;padding-top:16px;font-size:11px;line-height:2.3;color:#d9d4cc}.about-you strong{color:#e9c9a0;font-weight:500}
+.tale-box{background:#f7f0e5;border:1px solid #d6c3a6;padding:25px;color:#514e56;border-radius:4px}.tale-box h2{color:#504a50}.tale-box p{font:12px/2.15 var(--serif);margin:9px 0;color:#68636a}
+.timeline{list-style:none;margin:14px 0 0;padding:0}.timeline li{position:relative;border-left:1px solid #c7ae92;padding:0 0 18px 17px;font-size:11px;line-height:2;color:#6d636a}.timeline li:last-child{padding-bottom:0}.timeline li:before{content:"";position:absolute;width:7px;height:7px;border-radius:50%;background:#b09279;left:-4px;top:7px}.timeline b{font-weight:600;color:#584f60}.timeline .seed{font-style:italic;color:#896c75}.tale-box details summary{cursor:pointer;color:#705c6a;font-size:12px;padding:8px 0;list-style-position:outside}
+.stage-foot{margin:29px 0 0;color:#c9c4c5;display:flex;justify-content:space-between;gap:18px;align-items:center;font-size:11px;letter-spacing:.04em}
+.progress{height:3px;background:#ffffff22;border-radius:3px;overflow:hidden;flex:1;max-width:370px}.progress span{display:block;height:100%;background:#e2bd8d;transition:width .3s}
+.birth-board{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px;margin:19px 0 26px}.birth-chip{background:#f2ebe0;border:1px solid #dfd1bc;padding:14px 12px}.birth-chip b{display:block;font-size:10px;letter-spacing:.1em;color:#9d7b77;margin-bottom:6px;font-weight:500}.birth-chip span{display:block;color:#3e4350;font:14px/1.7 var(--serif)}
+.fate-quote{background:#efe4d8;border-left:3px solid #b68a77;padding:18px 21px;margin:23px 0 26px;font:14px/2.2 var(--serif);color:#51414d}
+.delta-row{display:flex;flex-wrap:wrap;gap:7px;margin:14px 0 25px}.delta{font-size:11px;border-radius:3px;background:#e7eee8;color:#4e7561;padding:6px 10px;font-weight:600}.delta.minus{background:#f0e4e3;color:#94656d}.delta.neutral{background:#ede8de;color:#806f5e}
+.memo{border-top:1px solid #e0d4c4;border-bottom:1px solid #e0d4c4;padding:19px 0;margin:25px 0;color:#585461;font:13px/2.3 var(--serif)}.memo .memo-title{font:10px var(--sans);letter-spacing:.18em;color:#997d7d;margin-bottom:8px;display:block}.memo p{margin:0}
+.epilogue-heading{text-align:center;padding:10px 0 22px}.ending-sigil{display:flex;justify-content:center;align-items:center;margin:0 auto 20px;width:76px;height:76px;color:#947054;font:45px var(--serif);border-radius:50%;border:1px solid #bda480;background:#f0e6d9}
+.ending-title{font:500 clamp(30px,4.8vw,49px)/1.65 var(--serif);margin:14px 0;letter-spacing:.06em}
+.epilogue-age{font-size:11px;letter-spacing:.19em;color:#9a7e75}.share-input{width:100%;resize:vertical;background:#fbf8f2;border:1px solid #d8c6b2;border-radius:4px;padding:10px;font-size:12px;line-height:1.8;min-height:100px;color:#3f4452}
+.share-box{display:none;margin:15px 0 0}.share-box.visible{display:block}.share-note{color:#83747a;font-size:11px}
+.site-footer{margin-top:29px;color:#a7afbf;display:flex;flex-wrap:wrap;justify-content:space-between;gap:15px;align-items:center;font-size:11px;line-height:2}.site-footer a{color:#d8c4a6}.site-footer .attribution{color:#92a0b6}
+.sr-only{position:absolute!important;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+#notice{min-height:1.5em;color:#e8c699;font-size:12px;letter-spacing:.02em;padding-top:9px}
+@media(max-width:900px){.intro-card{grid-template-columns:1fr}.intro-copy{padding:48px clamp(27px,6vw,65px) 0}.ornament-wrap{min-height:250px}.sigil{width:225px}.sigil .moon{font-size:135px}.sigil-caption{bottom:2%}.intro-bottom{flex-wrap:wrap}.folio-wrap{grid-template-columns:minmax(0,1fr)}.sidebar{grid-template-columns:minmax(0,1fr) minmax(0,1fr)}.story-title{font-size:34px}.status-box{padding:26px}.tale-box{padding:26px}}
+@media(max-width:600px){.shell{padding:0 13px 42px}.masthead{min-height:75px}.brand{font-size:19px}.brand b{font-size:20px}.brand small{font-size:7px}.mast-label{display:none}.mast-link{padding:7px 11px;font-size:10px}.intro-card{min-height:0}.intro-copy{padding:42px 23px 0}.display{font-size:clamp(35px,9vw,50px);margin:15px 0 14px}.lead{font-size:12px;line-height:2.45;margin-bottom:22px}.intro-motto{font-size:13px;margin:20px 0 25px}.ornament-wrap{min-height:242px}.sigil{width:210px}.sigil .moon{font-size:130px}.intro-bottom{padding:20px;font-size:11px;gap:9px}.intro-bottom strong{font-size:14px}.button{font-size:12px;padding:10px 16px;min-height:47px}.folio-wrap{gap:13px}.folio-inside{padding:35px 23px}.folio-paper{min-height:0}.folio-paper:before{inset:8px}.story-title{font-size:clamp(28px,7vw,35px);margin:17px 0 18px}.story-text{font-size:13px;line-height:2.45}.chapter-top{margin-bottom:25px;padding-bottom:14px}.chapter-top .side-date{font-size:10px}.eyebrow{font-size:9px;letter-spacing:.16em}.birth-board{grid-template-columns:1fr;gap:8px}.birth-chip{display:flex;align-items:center;gap:12px;padding:9px 13px}.birth-chip b{min-width:65px;margin:0}.birth-chip span{font-size:13px}.option{min-height:76px;padding:12px}.option strong{font-size:13px}.option small{font-size:10px}.sidebar{grid-template-columns:1fr}.status-box{padding:25px}.tale-box{padding:23px}.scene-divider{margin:17px 0}.status-sub{margin-bottom:14px}.meter{margin-bottom:12px}.stage-foot{flex-wrap:wrap}.stage-foot .progress{max-width:none;width:100%;order:-1}.site-footer{font-size:10px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* v2: Make dilemmas and known trade-offs easier to read on phones. */
+.decision-question{background:#f1e6d8;border-left:4px solid #ae846e;padding:15px 18px;margin:22px 0 19px;line-height:1.8}
+.decision-question span{display:block;font:11px var(--sans);letter-spacing:.12em;color:#896b69;margin-bottom:3px}
+.decision-question strong{font:500 17px/1.8 var(--serif);color:#3a3c49}
+.tradeoff-label{font-weight:700;color:#765e67}
+.option{align-items:flex-start;min-height:90px}
+.option .index{margin-top:5px}
+.option strong{font-size:16px;line-height:1.65}
+.option small{font-size:12px;line-height:1.85;color:#575760;margin-top:6px}
+.guide-note{background:#f3e9df;border:1px solid #dfcfc2;border-radius:4px;padding:17px 19px;font:12px/2.1 var(--sans);color:#5b5561;margin:20px 0}
+.guide-note strong{color:#8e6c74}
+@media(max-width:600px){.option{min-height:98px;padding:14px 12px}.option strong{font-size:15px}.option small{font-size:12px}.decision-question strong{font-size:15px}}
+
+.all-life{margin:26px 0;padding:16px 19px;background:rgba(255,255,255,.35);border:1px solid var(--border)}
+.all-life summary{cursor:pointer;font-weight:700;color:var(--night);padding:4px 0;min-height:32px}
+.all-life[open] summary{margin-bottom:12px}
+.all-life .timeline li{line-height:2.1;margin-bottom:18px;font-size:12px}
+@media(max-width:600px){.all-life{padding:14px 13px}.all-life .timeline li{font-size:12px}}
+@media(max-width:600px){.option strong{font-size:15px}.option small{font-size:12px;line-height:1.85}.story-text{font-size:14px;line-height:2.25}.button{min-height:48px;font-size:13px}.option{min-height:83px}}
+
+.zodiac-section{max-width:510px;margin:0 0 26px}.zodiac-label{font:600 13px var(--sans);color:#f1e1c7;letter-spacing:.07em;margin:0 0 12px}
+.zodiac-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:7px}
+.zodiac-option{background:#ffffff0c;border:1px solid #e1c69d54;border-radius:4px;color:#e6e3e2;padding:10px 3px;min-height:65px;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1px;font-size:12px;transition:background .16s,border-color .16s}
+.zodiac-symbol{font-size:21px;line-height:1.3;color:#e9c895}.zodiac-option:hover{background:#ffffff20}.zodiac-option.selected,.zodiac-option[aria-pressed=true]{background:#e8c79e1c;border-color:#e2c08e;box-shadow:inset 0 0 0 1px #e2c08e70;color:white}
+.zodiac-note{font-size:11px;line-height:1.9;margin:11px 0 0;color:#b6c9d2}
+@media(max-width:600px){.zodiac-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:7px}.zodiac-option{min-height:63px;font-size:11px}.zodiac-section{margin-bottom:23px}}
+
+/* 第11版：数値でわかる選択の結果と，職業ごとに変わる生涯の挿絵 */
+.numeric-feedback{margin:26px 0 30px;padding:19px 19px 14px;background:#f2ecdf;border:1px solid #d9c9b5;border-radius:5px}
+.numeric-feedback-label{font:600 12px var(--sans);letter-spacing:.12em;color:#725765;margin:0 0 12px}
+.numeric-feedback .delta-row{margin:0 0 8px;gap:9px}
+.numeric-feedback .delta{display:inline-flex;align-items:center;gap:9px;font-size:12px;padding:8px 13px;border:1px solid #c2d5c8;background:#e9f2e9}
+.numeric-feedback .delta b{font-size:15px;letter-spacing:.04em;color:#346548}
+.numeric-feedback .delta.minus{border-color:#dfbdc1;background:#f6e7e8}
+.numeric-feedback .delta.minus b{color:#a34c5e}
+.numeric-feedback .delta.neutral{border-color:#dfd1b9;background:#eee6d9}
+.numeric-feedback-note{color:#7f7680;font:11px/1.9 var(--sans);margin:10px 0 0}
+.ending-art{padding:0;margin:10px 0 28px;border:1px solid #c7a782;border-radius:6px;background:#17243a;box-shadow:0 13px 35px #1b223128;overflow:hidden}
+.ending-art svg{display:block;width:100%;height:auto;aspect-ratio:900/390}
+.ending-art-caption{display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px 20px;background:#21324a;color:#efdbb6;font:11px/1.8 var(--serif);letter-spacing:.035em;padding:11px 17px}
+.ending-art-caption span:last-child{color:#d3c5b5}
+.ending-scoreboard{background:#f3eadc;border:1px solid #dfcfbb;border-radius:4px;padding:16px 18px;margin:20px 0 25px}
+.ending-scoreboard>p{font:12px/1.8 var(--serif);color:#74636e;margin:0 0 12px;text-align:center;letter-spacing:.05em}
+.ending-score-grid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:9px}
+.ending-score-grid>div{background:#fffbf4;border:1px solid #e8dac6;border-radius:3px;padding:10px 6px;text-align:center;min-width:0}
+.ending-score-grid span{display:block;color:#837280;font:11px/1.55 var(--sans)}
+.ending-score-grid strong{display:block;color:#45536b;font:500 22px/1.45 var(--serif);margin-top:3px;font-variant-numeric:tabular-nums}
+@media(max-width:530px){.ending-score-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ending-art-caption{font-size:10px;padding:11px 12px}.ending-art{margin:12px 0 22px}.ending-art svg{height:184px;aspect-ratio:auto}.numeric-feedback{padding:17px 13px}.numeric-feedback .delta{font-size:11px}.ending-score-grid strong{font-size:20px}}
+
+/* 第14版：選択後に結果を示し，年齢で変わる挿絵を使用 */
+.intro-card{background:#17253b;isolation:isolate}
+.intro-copy{padding-right:clamp(16px,3.3vw,30px)}
+.intro-visual{position:relative;min-width:0;min-height:620px;overflow:hidden;background:#152338}
+.intro-visual img{width:100%;height:100%;position:absolute;inset:0;display:block;object-fit:cover;object-position:48% center}
+.intro-visual:after{content:'';position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#17253c73,transparent 28%),linear-gradient(0deg,#111d32ae,transparent 45%)}
+.intro-visual-caption{position:absolute;left:24px;right:20px;bottom:21px;margin:0;z-index:1;font:12px/1.9 var(--serif);color:#f8e6c5;letter-spacing:.09em;text-shadow:0 1px 6px #091423}
+.intro-card .display{position:relative;z-index:1}
+.chapter-art{margin:16px 0 26px;overflow:hidden;border:1px solid #d8c4a7;border-radius:5px;background:#18283f}
+.chapter-art img{display:block;width:100%;height:clamp(135px,22vw,240px);object-fit:cover;object-position:center 50%}
+.chapter-art figcaption{background:#f5ecdc;border-top:1px solid #e5d3b9;padding:7px 12px;color:#786a77;font:11px/1.8 var(--serif)}
+.option .career-thumb{width:98px;height:68px;object-fit:cover;border:1px solid #dbcaab;border-radius:4px;flex:0 0 98px;align-self:center}
+.option.option-career{align-items:center}
+.ending-art-v12{border:1px solid #cfac75;position:relative;margin:15px 0 26px}
+.ending-art-v12 img{width:100%;height:auto;aspect-ratio:16/10;object-fit:cover;object-position:center 47%;display:block}
+.ending-art-v12 .ending-art-caption{background:#1b2b43}
+.ending-art-v12:before{content:'';position:absolute;inset:10px 10px 46px;border:1px solid #f3d2a866;pointer-events:none;z-index:1;border-radius:4px}
+.ending-scene-label{font:11px/1.8 var(--serif);letter-spacing:.08em;color:#9a765d;margin:2px 0 14px;text-align:center}
+@media(max-width:900px){.intro-visual{min-height:365px}.intro-copy{padding-bottom:24px}.intro-visual img{object-position:50% 52%}}
+@media(max-width:600px){
+  .intro-visual{min-height:270px}
+  .intro-visual-caption{left:15px;bottom:14px;font-size:10px}
+  .intro-visual img{object-position:42% 50%}
+  .chapter-art img{height:180px}
+  .option .career-thumb{width:62px;height:62px;flex-basis:62px}
+  .option.option-career{gap:9px;padding:11px 9px}
+  .option.option-career .index{display:none}
+  .option.option-career .copy strong{font-size:13px}
+  .option.option-career .copy small{font-size:10px}
+  .ending-art-v12 img{aspect-ratio:5/4;object-position:center 48%;height:auto}
+  .ending-art-v12:before{inset:7px 7px 65px}
+}
+
+/* スマートフォンではタイトルの直下にも実際の挿絵を見せる */
+.intro-visual-peek{display:none}
+@media(max-width:600px){
+ .intro-visual-peek{display:block;position:relative;margin:10px 0 25px;border:1px solid #d2ab74;border-radius:4px;overflow:hidden;aspect-ratio:16/7;box-shadow:0 8px 24px #07102066}
+ .intro-visual-peek img{display:block;width:100%;height:100%;object-fit:cover;object-position:center 50%}
+ .intro-visual-peek figcaption{position:absolute;bottom:0;left:0;right:0;color:#fbe6c1;background:linear-gradient(0deg,#0c1936d9,transparent);text-align:right;padding:22px 10px 7px;font:10px var(--serif)}
+ .ending-title{font-size:clamp(24px,6.5vw,30px);letter-spacing:0;line-height:1.6}
+}
+
+/* 第13版：年齢で変わる職業イラストと代償の表示 */
+.age-art{margin:18px 0 27px;background:#18263c;border:1px solid #cbad7c;border-radius:7px;overflow:hidden;box-shadow:0 9px 25px #17233c18}
+.age-art-picture{position:relative;overflow:hidden;background:#142239}
+.age-art-picture:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(0deg,#0a192f6b,transparent 40%)}
+.age-art-picture>img{display:block;width:100%;height:clamp(230px,31vw,380px);object-fit:cover;object-position:center 46%}
+.age-art figcaption{display:flex;gap:10px;flex-wrap:wrap;align-items:center;justify-content:space-between;padding:9px 13px;color:#ffebce;background:#18263c;font:12px/1.7 var(--serif)}
+.age-art.ending-art-v13{margin-top:20px}
+.age-art.ending-art-v13 img{height:clamp(270px,36vw,440px)}
+.age-corner{position:absolute;top:14px;left:14px;z-index:2;color:#f9edcf;background:#142238d9;border:1px solid #e2bb78bd;padding:5px 11px;border-radius:999px;font:12px/1.4 var(--serif);letter-spacing:.06em}
+
+
+
+.numeric-feedback .delta.minus{background:#fff0eb;color:#ab4d52;border-color:#eec8c6}
+@media(max-width:600px){.age-art-picture>img{height:220px}.age-art.ending-art-v13 img{height:255px}.age-art figcaption{font-size:10px;padding:9px}.age-corner{top:9px;left:9px;font-size:10px}}
+
+/* 第14版：結果は後から表示．危険の注意だけは選択前に明示． */
+.life-risk{display:block;margin-top:7px;font-size:11px;line-height:1.7;color:#944a48;font-weight:600}
+.result-reason{font-size:12px!important;line-height:1.9!important;color:#736b6d;border-left:2px solid #cbab83;padding-left:11px;margin:17px 0!important}
+.age-art-picture img{object-position:center center}
+@media(max-width:600px){.ending-score-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.life-risk{font-size:11px}}
+
+/* v15: protagonist / romance preferences and qualified careers */
+.person-setup{margin:20px 0 25px;padding:18px 15px;background:#0d1b304a;border:1px solid #dcb57e50;border-radius:5px}
+.setup-grid{display:grid;gap:8px;margin:8px 0 10px}
+.setup-grid-three{grid-template-columns:repeat(3,minmax(0,1fr))}
+.setup-grid-two{grid-template-columns:repeat(2,minmax(0,1fr))}
+.setup-button{appearance:none;border:1px solid #dec39760;background:#fffefe0d;color:#f2e7da;border-radius:5px;padding:11px 6px;font:600 12px/1.55 var(--sans);min-height:46px;cursor:pointer}
+.setup-button:hover{background:#ffffff21}
+.setup-button.selected{background:#d7b5812b;border-color:#f2d9a4;box-shadow:inset 0 0 0 1px #f2d9a433}
+.setup-button:focus-visible{outline:3px solid #e8c18c;outline-offset:2px}
+.setup-label-space{margin-top:20px!important}
+.option.locked-career,.option.locked-career:disabled{cursor:not-allowed;opacity:.62;background:#e8e4de;border-color:#ded5c7;box-shadow:none}
+.option.locked-career .career-thumb{filter:grayscale(.88)}
+.option.locked-career .arrow{color:#9f9ca0}
+.option .copy .career-requirement{color:#815c62;font-size:11px;line-height:1.7;margin-top:7px;display:block}
+.option .copy .career-open{color:#377654;font-size:11px;line-height:1.7;margin-top:7px;display:block}
+.milestone-art img{object-fit:cover;object-position:center 53%}
+@media(max-width:530px){.person-setup{padding:13px 11px}.setup-button{font-size:11px}.option .copy .career-requirement{font-size:10px}}
+
+
+/* v16: The ending opens with a scene from youth, with later decades available as a memory. */
+.ending-memory{max-width:100%;margin:10px 0 25px}
+.ending-memory-label{font-weight:700;letter-spacing:.12em;color:#927045;text-align:center;margin:10px 0 5px;font-size:12px}
+.late-years{margin:15px 0 0;padding:13px 14px;background:#f3eadf;border:1px solid #dfcebd;border-radius:6px}
+.late-years summary{cursor:pointer;font-size:13px;font-weight:600;color:#34425b}
+.late-years .age-art{margin:14px 0 3px}
+
+.gender-card{display:flex;flex-direction:column;align-items:stretch;gap:7px;padding:6px!important;text-align:center}
+.gender-card img{display:block;width:100%;height:98px;object-fit:cover;border-radius:3px;box-shadow:0 2px 9px #08142655}
+.gender-card span{display:block;line-height:1.4}
+@media(min-width:601px){.gender-card img{height:132px}}
+
+/* v17: the epilogue visibly reacts to abilities, relationships and memories. */
+.legacy-section-title{font:500 clamp(18px,3vw,22px)/1.6 var(--serif);color:#253651;margin:24px 0 13px}
+.legacy-destiny{text-align:center;color:#916638;letter-spacing:.09em;font:600 14px/1.75 var(--serif);margin:8px 0}
+.legacy-lead{font:13px/1.9 var(--sans);color:#625c61;margin:2px 0 13px}
+.legacy-lead strong{color:#385674}
+.ending-scoreboard{padding:22px 20px;background:#f6f0e7;border:1px solid #dbcab3;border-radius:6px;margin:22px 0}
+.legacy-stat{position:relative}
+.legacy-stat.legacy-strong{background:#fffaf2!important;border:1px solid #d6b47e!important}
+.legacy-meter{display:block;width:100%;height:5px;border-radius:4px;background:#e3e3dc;overflow:hidden;margin:7px 0 0}
+.legacy-meter b{display:block;height:100%;background:#789a88;border-radius:4px}
+.legacy-strong .legacy-meter b{background:#bd8e4f}
+.legacy-family-panel{margin:28px 0;padding:20px;background:#f9f5ed;border:1px solid #dfcbb1;border-radius:6px}
+.legacy-lead-title{color:#9b6a40;font:500 17px/1.5 var(--serif);text-align:center;padding:4px 0 8px}
+.legacy-families{display:grid;grid-template-columns:1fr 1fr;gap:11px}
+.legacy-families>div{background:#fffcf8;border:1px solid #e6d8c7;padding:12px 13px;border-radius:4px;min-width:0}
+.legacy-families span{display:block;font-size:11px;color:#846d64}
+.legacy-families strong{display:block;color:#2b4155;font:500 15px/1.7 var(--serif);overflow-wrap:anywhere}
+.legacy-families small{font-size:11px;line-height:1.7;color:#6f6772}
+.legacy-memory-picture{margin:17px 0 0;overflow:hidden;border-radius:4px;border:1px solid #ddc8a7}
+.legacy-memory-picture img{display:block;width:100%;aspect-ratio:16/7;object-fit:cover}
+.legacy-memory-picture figcaption{font-size:11px;padding:8px 11px;background:#1a2b44;color:#f9e9cd}
+.legacy-memory-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:9px;margin:7px 0 20px}
+.legacy-memory-grid article{background:#f5efe5;border:1px solid #ddcfbd;border-radius:4px;padding:12px 11px;min-width:0}
+.legacy-memory-grid small{display:block;color:#927258;font-size:10px;line-height:1.8}
+.legacy-memory-grid strong{display:block;color:#253852;font:500 13px/1.65 var(--serif)}
+.legacy-memory-grid p{font-size:11px;line-height:1.85;color:#6a6464}
+@media(max-width:600px){.legacy-families{grid-template-columns:1fr}.legacy-memory-grid{grid-template-columns:1fr}.legacy-family-panel{padding:16px 12px}.ending-scoreboard{padding:17px 14px}}
+
+
+/* v18: A quiet, tailored final word. */
+.star-message{margin:27px auto 30px;padding:24px 19px;border:1px solid #d9b889;border-radius:5px;background:radial-gradient(circle at 85% 10%,#293b57 0,#1c2c45 42%,#152139 100%);box-shadow:inset 0 0 0 3px #ffffff13;text-align:center;position:relative;overflow:hidden}
+.star-message:before{content:"✧  ·  ✦  ·  ☾  ·  ✧";display:block;margin-bottom:9px;color:#e2bb78;letter-spacing:.34em;font-size:14px}
+.star-message-label{color:#e1c08f;font-size:11px;letter-spacing:.2em;margin:0 0 12px}
+.star-message-text{color:#fff1d6;font:500 clamp(15px,2.3vw,19px)/2 var(--serif);margin:0 auto;max-width:37em;text-wrap:pretty}
+@media(max-width:600px){.star-message{padding:20px 15px}.star-message-text{font-size:15px}}
+</style>
+</head>
+<body>
+<div class="shell">
+  <header class="masthead">
+    <a class="brand" href="../../" aria-label="星と余白 トップページに戻る"><b>✳</b><span>星と余白<small>HOSHI TO YOHAKU</small></span></a>
+    <div class="mast-right"><span class="mast-label">ANOTHER LIFE / VOL. 18</span><a class="mast-link" href="../../">占いのページへ ↗</a></div>
+  </header>
+  <main>
+    <div id="notice" role="status" aria-live="polite"></div>
+    <section id="screen" aria-label="星の彼方で，もう一度">
+      <div class="intro-card">
+        <div class="intro-copy"><div class="eyebrow light">A SECOND LIFE, WRITTEN IN STARS</div>
+          <h1 class="display">星の彼方で，<br><em>もう一度．</em></h1>
+          <p class="lead">生まれた町と，出会う人．仕事や人生の選択で，違う物語を歩きます．</p>
+          <p class="intro-motto">選んだ道の先で，<br>思いがけない物語が待っている．</p>
+          <p class="tiny-help">無料 · 途中から再開できます．</p>
+        </div>
+        <div class="intro-visual"><img src="assets/intro.webp" alt="月明かりの書庫で物語を書く人" width="1280" height="960" decoding="async"><p class="intro-visual-caption">✦ ここから，あなただけの星の物語が始まる．</p></div>
+      </div>
+      <div class="intro-bottom"><span><strong>01</strong> 生まれは運命が決める</span><span><strong>02</strong> 選択は時を越える</span><span><strong>03</strong> 結末は一度きり</span></div>
+    </section>
+    <noscript><p style="background:#fffaf1;padding:20px;margin:20px 0">このゲームにはJavaScriptが必要です．ブラウザーのJavaScriptを有効にしてください．</p></noscript>
+  </main>
+  <footer class="site-footer"><span>✧ 星と余白　—　一人ひとりに，一度きりの人生．</span><span class="attribution">この物語はフィクションです．選択の結果は実際の人生や健康を予測するものではありません．<br><a href="../../privacy.html">プライバシーポリシー</a> · 保存情報はこのブラウザー内のみ．</span></footer>
+</div>
+<script>
+(()=>{
+  // 『星の彼方で，もう一度』第18版：性別と年代別の挿絵・星からの言葉・短命ルート
+  const VERSION = 18;
+  const SAVE_KEY = 'hoshi_another_life_save_v18';
+  
+  // Every illustrated scene uses the same actual artwork in the ZIP and the offline HTML.
+  const GAME_ART = {
+    intro:'assets/intro.webp',
+    male_intro:'assets/male_intro.webp',
+    neutral_intro:'assets/neutral_intro.webp',
+    gender_female:'assets/gender_female.webp',
+    gender_male:'assets/gender_male.webp',
+    gender_unspecified:'assets/gender_unspecified.webp',
+    opening:'assets/opening.webp',
+    healer:'assets/healer.webp',
+    builder:'assets/builder.webp',
+    sailor:'assets/sailor.webp',
+    guardian:'assets/guardian.webp',
+    scholar:'assets/scholar.webp',
+    child:'assets/child.webp',
+    story_harbor:'assets/story_harbor.webp',
+    story_tower:'assets/story_tower.webp',
+    story_garden:'assets/story_garden.webp',
+    story_library:'assets/story_library.webp',
+    story_workshop:'assets/story_workshop.webp',
+    story_apothecary:'assets/story_apothecary.webp',
+    story_clock:'assets/story_clock.webp',
+    story_city:'assets/story_city.webp'
+  };
+  // 年代ごとに異なる1枚絵を表示する．別の顔を合成しない．
+  // 人物画の性別と年代を確認した画像だけを使う．
+  // 年代と一致しない人物画は無理に使わず，性別を特定しない仕事場の風景へ切り替える．
+  const GAME_ART_PHASES = {
+    healer:   {young:'assets/healer_middle.webp', middle:'assets/healer.webp', senior:'assets/healer_senior.webp'},
+    builder:  {young:'assets/builder.webp',middle:'assets/builder_middle.webp',senior:'assets/builder_senior.webp'},
+    sailor:   {young:'assets/story_harbor.webp',middle:'assets/sailor_senior.webp',senior:'assets/story_tower.webp'},
+    guardian: {young:'assets/guardian.webp',middle:'assets/guardian_middle.webp',senior:'assets/guardian_senior.webp'},
+    scholar:  {young:'assets/scholar_senior.webp',middle:'assets/scholar.webp',senior:'assets/scholar_middle.webp'}
+  };
+  const GAME_ART_PHASES_MALE = {
+    healer:   {young:'assets/male_healer_young.webp',middle:'assets/male_healer_middle.webp',senior:'assets/male_healer_senior.webp'},
+    builder:  {young:'assets/male_builder_young.webp',middle:'assets/male_builder_middle.webp',senior:'assets/male_builder_senior.webp'},
+    sailor:   {young:'assets/male_sailor_young.webp',middle:'assets/story_city.webp',senior:'assets/guardian_senior.webp'},
+    guardian: {young:'assets/male_guardian_young.webp',middle:'assets/male_guardian_middle.webp',senior:'assets/male_guardian_senior.webp'},
+    scholar:  {young:'assets/male_scholar_young.webp',middle:'assets/male_scholar_middle.webp',senior:'assets/male_scholar_senior.webp'}
+  };
+  const GAME_ART_ALT = {
+    intro:'星空を眺めながら物語を書く旅人',
+    opening:'月明かりに照らされる町の門と旅人',
+    healer:'星明かりの薬草温室で働く薬師',
+    builder:'時計塔の工房で作業する職人',
+    sailor:'月明かりの港にたたずむ航海士',
+    guardian:'夜の城門と星を見守る人物',
+    scholar:'星空の下で本を書く教師',
+    child:'月明かりの門を見上げる旅人'
+  };
+  const GENDERS=[{id:'female',label:'女性'},{id:'male',label:'男性'},{id:'unspecified',label:'指定しない'}];
+  const PEOPLE=[
+    {id:'allen',name:'アレン',gender:'male',job:'時計職人'},
+    {id:'leon',name:'レオン',gender:'male',job:'仕立て師'},
+    {id:'kai',name:'カイ',gender:'male',job:'旅商人'},
+    {id:'julius',name:'ユリウス',gender:'male',job:'庭師'},
+    {id:'erna',name:'エルナ',gender:'female',job:'仕立て師'},
+    {id:'fiona',name:'フィオナ',gender:'female',job:'旅商人'},
+    {id:'julia',name:'ユリア',gender:'female',job:'書店主'},
+    {id:'lilia',name:'リリア',gender:'female',job:'庭師'}
+  ];
+  const genderName=g=>GENDERS.find(x=>x.id===g)?.label||'未設定';
+  const partnerLabel=p=>`${p.name}（${p.gender==='male'?'男性':'女性'}・${p.job}）`;
+  // Numbers align with the initial 10-15 points and three early decisions.
+  const CAREER_REQUIREMENTS={
+    healer:{care:15,skill:12},
+    builder:{skill:17,vitality:9},
+    sailor:{courage:16,vitality:9},
+    guardian:{care:14,courage:14},
+    scholar:{skill:16,care:13}
+  };
+  function unmetRequirements(role){
+    const req=CAREER_REQUIREMENTS[role]||{};
+    return Object.entries(req).filter(([stat,min])=>(state.stats[stat]||0)<min)
+      .map(([stat,min])=>({stat,min,current:state.stats[stat]||0,label:STATS.find(([k])=>k===stat)?.[1]||stat}));
+  }
+  const eligibleRole=role=>unmetRequirements(role).length===0;
+  // 25歳の物語で男女それぞれの候補が登場し，その場で選ぶ．
+  // 名前・性別・仕事は同じ PEOPLE オブジェクトから取得するので食い違わない．
+  const partnerCandidates=()=>{
+    const men=PEOPLE.filter(p=>p.gender==='male');
+    const women=PEOPLE.filter(p=>p.gender==='female');
+    return [men[hash(state.seed,'partner-male')%men.length],women[hash(state.seed,'partner-female')%women.length]];
+  };
+
+  const CHOICE_AGES = Array.from({length:19},(_,i)=>5+i*5);
+  const STORY_AGES = CHOICE_AGES.map(a=>a+3);
+  const ALL_AGES = [...CHOICE_AGES,...STORY_AGES,100].sort((a,b)=>a-b);
+  const ORIGINS = [
+    {id:'snow',name:'北の雪国・エルヴァ',short:'雪国',intro:'冬は川が凍る，小さな町．家々には薪の暖炉がある．'},
+    {id:'harbor',name:'海辺の港町・ミレーヌ',short:'港町',intro:'漁船と商船が出入りする港町．遠い島から人が訪れる．'},
+    {id:'desert',name:'砂漠の交易都市・サファル',short:'砂漠の町',intro:'隊商が行き交い，井戸の水を大切にする町．'},
+    {id:'forest',name:'緑の森の村・ヴィレト',short:'森の村',intro:'森番と木こりが住む村．春には野草がたくさん育つ．'},
+    {id:'valley',name:'山あいの町・ラウネ',short:'山あいの町',intro:'山道と石橋に囲まれた町．羊飼いと職人が多い．'}
+  ];
+  const FAMILIES = [
+    'パン屋の家','小さな薬屋の家','橋の番人の家','旅の商人の家','木工職人の家','小さな宿屋の家'
+  ];
+  const NAMES = ['ミナ','リオ','ノア','エマ','セラ'];
+  const STATS = [['care','人とのつながり'],['skill','身につけた技術'],['courage','行動力'],['resources','暮らしの余裕'],['vitality','体力']];
+  const DOMAINS = {
+    healer:{name:'薬師',place:'診療所',person:'薬屋のエマ',desc:'薬草の調合を学び，病人を支える仕事',symbol:'❈',titles:['星露の薬草守','月白の療院を築いた者','銀灯を掲げる旅薬師']},
+    builder:{name:'工匠',place:'工房',person:'職人のノア',desc:'橋や時計，道具を作ったり直したりする仕事',symbol:'✳',titles:['銀歯車の星工匠','暁の石橋を築いた者','月鉄の灯台を鍛える者']},
+    sailor:{name:'航海士',place:'港',person:'船長のカイ',desc:'船で物資を運び，島々を結ぶ仕事',symbol:'☾',titles:['七海を渡る星航者','蒼帆の交易路を拓いた者','潮風の灯台を守る者']},
+    guardian:{name:'町の守り手',place:'見張り塔',person:'衛兵のミナ',desc:'人々の安全を守り，災害への備えを整える仕事',symbol:'✦',titles:['蒼嵐の盾を掲げる者','白銀の城門を守る者','夜明けの見張り塔の主']},
+    scholar:{name:'教師',place:'学び舎',person:'教師のリオ',desc:'子どもに文字や計算を教え，学ぶ場所をつくる仕事',symbol:'✧',titles:['千灯の学び舎を拓く者','星図を教える月の賢者','夜空の文字を紡ぐ導き手']}
+  };
+  const TRAITS = {heart:'人を支える',bold:'自分で挑む',plan:'仕組みを整える'};
+  const C = (text,hint,result,later,trait,risk=0)=>({text,hint,result,later,trait,risk});
+  const S = (title,body,question,...opts)=>({title,body,question,opts});
+  // 幼少期も出生地ごとに事件が異なる
+  const BIRTH_SCENES = {
+    snow:S('凍った川の手袋','冬の朝，友だちのミナが川岸で泣いている．落とした手袋は薄い氷の上にある．氷が割れるかもしれないので，大人たちは川に近づかないように言っている．','ミナの手袋をどうしますか？',
+      C('川の番人を呼ぶ','助けが来るまで待つ．','番人が長い棒で手袋を引き寄せた．ミナはほっとして笑った．','番人から冬の川の危険を教わった．','heart'),
+      C('岸から長い枝を伸ばす','自分は岸にいるが，身を乗り出す必要がある．','手袋には届かなかったが，ミナと一緒に枝を片づけた．番人が来て拾ってくれた．','ミナはあなたが手伝ったことを覚えていた．','plan'),
+      C('薄い氷に乗って拾いに行く','氷が割れて命を落とす危険がある．','あなたは急いで手袋を拾い，岸へ戻った．ミナは震える手で受け取った．','ミナは喜んだが，番人には厳しく叱られた．','bold',.30)),
+    harbor:S('桟橋の子猫','潮が満ち始め，桟橋の下で子猫が鳴いている．子猫は木箱の上にいて，海水が少しずつ近づいている．近くでは漁師が網を直している．','子猫をどう助けますか？',
+      C('漁師に救助を頼む','大人の助けを待つことになる．','漁師が小舟を出して子猫を引き上げた．','子猫は港の店で飼われることになった．','heart'),
+      C('桟橋から縄を垂らし，箱を寄せる','うまく動かすには工夫がいる．','木箱が岸へ近づき，漁師が子猫を抱き上げた．','漁師から安全な縄の結び方を教わった．','plan'),
+      C('一人で桟橋の下へ降りる','波にさらわれ，命を落とす危険がある．','あなたは子猫を抱き上げ，濡れながら戻った．','家族は喜んだが，一人で海へ入らないようにと約束させた．','bold',.30)),
+    desert:S('ひびの入った水瓶','砂嵐が近づいている．旅人たちの飲み水を入れた瓶にひびが入り，水が漏れ始めた．宿の主人はまだ気づいていない．','大切な水をどう守りますか？',
+      C('宿の主人に知らせる','主人の仕事の手が止まる．','主人が残りの水を別の瓶に移した．','旅人たちはあなたに礼を言った．','heart'),
+      C('漏れた水を受ける桶を置く','水は一部こぼれるが，残りを集められる．','桶に水を受け，主人が瓶を交換した．','主人は水を無駄にしない方法を教えてくれた．','plan'),
+      C('一人で重い瓶を運ぶ','落とすと水が全部こぼれ，けがをするおそれがある．','瓶は重かったが，台所まで運べた．腕を痛め，しばらく休んだ．','宿の主人から「次は必ず大人を呼んで」と言われた．','bold')),
+    forest:S('霧の中の兄妹','森の入り口で，小さな兄妹が帰り道を見失っている．あなたもまだ5歳．霧が濃くなり，森の奥へ進むのは危険だ．','二人をどう助けますか？',
+      C('森番を呼びに行く','少し待つが，詳しい人に任せられる．','森番が三人を村まで送り届けた．','兄妹の家族はあなたに何度も礼を言った．','heart'),
+      C('目印の布を枝に結び，その場で待つ','時間がかかるが，森で迷いにくい．','通りかかった木こりが布を見つけ，村まで案内してくれた．','森番が目印の作り方を教えてくれた．','plan'),
+      C('森の奥まで道を探しに行く','道に迷い，命を落とす危険がある．','幸い木こりと出会い，全員で村へ戻れた．','森番に，霧の中では動かずに待つよう叱られた．','bold',.12)),
+    valley:S('落石の山道','村へ続く山道で，小さな落石があった．羊飼いの少年が山の向こうで帰りを待っている．地面にはまだ細かな石が落ちている．','山道でどう行動しますか？',
+      C('村に戻り，大人の羊飼いに知らせる','回り道になるが，安全に助けを呼べる．','羊飼いが安全な別の道を探し，少年を迎えに行った．','少年はあなたと友だちになった．','heart'),
+      C('落石の手前に目印の板を置く','危険な区間へ入らずに，後の人へ知らせられる．','目印を見た村人が山道を通行止めにした．','村では道の点検が始まった．','plan'),
+      C('石の落ちる道を走って迎えに行く','再び落石があれば命を落とす危険がある．','あなたは少年と合流し，別の道で帰った．','羊飼いから，山道で急がないことを教わった．','bold',.25))
+  };
+  const TEN_SCENES = [
+    S('川向こうの薬','5歳の頃，大人と協力して人を助けたあなたは，町で頼りにされるようになった．10歳のある日，近所の子が高熱を出し，薬屋の手伝いを頼まれた．薬屋までは歩いて一時間かかり，日暮れが近い．','病気の子にどう薬を届けますか？',
+      C('大人の配達人に届けてもらう','代金がかかるが，道に慣れている．','配達人が薬を届け，子どもは数日後に回復した．','あなたは薬屋から感謝の手紙を受け取った．','heart'),
+      C('薬屋に急ぎの配達を頼み，翌朝の受け取りを約束する','今夜は待つ必要がある．','薬屋は夕方に配達を手配し，翌朝までに薬が届いた．','薬屋は夜間連絡の仕組みを作り始めた．','plan'),
+      C('夕暮れ前に近道を走って薬屋へ向かう','暗い道で迷うおそれがある．','薬屋に着き，薬を受け取って帰った．途中で足をくじいたが，配達はできた．','薬屋はあなたの勇気を褒め，同時に無理をしないよう伝えた．','bold')),
+    S('壊れた学校の屋根','5歳の頃から，道具を使った工夫が好きになった．10歳の春，学校の屋根から雨漏りが始まった．先生は教科書が濡れて困っている．修理する職人が来るのは三日後だ．','授業を続けるためにどうしますか？',
+      C('近所の家に部屋を借りられないか頼む','慣れない場所だが，すぐ授業を再開できる．','パン屋が二階の部屋を貸してくれた．','子どもたちは雨の日も勉強できた．','heart'),
+      C('机と本を濡れない場所へ移す','狭くなるが，本を守れる．','先生と本を運び，小さな教室を作った．','先生はあなたに教室の道具の管理を任せた．','plan'),
+      C('職人に会い，簡単な屋根修理を習う','手間がかかるが，修理の技術が身につく．','職人が足場を組み，あなたは地上で道具を渡した．','職人から木材の測り方を教わった．','bold')),
+    S('失われた荷物の地図','5歳の頃に思い切って行動したあなたは，10歳の夏，旅人から道案内を頼まれた．その旅人は町で荷物をなくしていた．最後に立ち寄った店を三つ覚えているが，道順が分からない．市場は夕方に閉まる．','荷物をどう探しますか？',
+      C('店の人たちに順番に尋ねる','時間はかかるが，手がかりを集められる．','二軒目の店で荷物が見つかった．','旅人はあなたに遠い町の話をしてくれた．','heart'),
+      C('町の地図を書き，道順を確かめる','少し時間がかかるが，探す場所を絞れる．','店の位置が分かり，荷物を預けた宿を見つけた．','宿屋はその地図を客に見せるようになった．','plan'),
+      C('市場へ走り，荷物を運んだ人を探す','すぐ動けるが，聞き逃す可能性もある．','運び屋を見つけ，置き忘れた荷物を取り戻した．','旅人は次の町へ向かう前に礼を言いに来た．','bold'))
+  ];
+  const FIFTEEN_SCENES = [
+    S('弟子入りの誘い','15歳．町の薬師から助手の誘いが届いた．同じ週，学校の先生は進学試験を勧めてきた．家族には店の仕事を続けてほしいと言われている．','来年に向けて何をしますか？',
+      C('薬師の助手を引き受ける','給金は少ないが，実地で学べる．','薬草を分け，患者の家族に薬を届ける仕事を始めた．','薬師はあなたの丁寧な仕事ぶりを褒めた．','heart'),
+      C('進学試験に向けて勉強する','店を手伝う時間は減る．','毎晩勉強し，学院の試験に合格した．','先生は寮の手続きを手伝ってくれた．','plan'),
+      C('町を出て，巡回商人の手伝いをする','家族と離れるが，いろいろな仕事を見られる．','荷馬車に乗って隣町へ向かい，品物の値段を覚えた．','帰郷すると，初めて見る品物を家族に見せた．','bold')),
+    S('祭りの準備を任される','15歳．秋祭りの準備で，橋の飾りが足りなくなった．祭りまでは一週間．会計係は予算が少ないと困っている．','飾りをどう用意しますか？',
+      C('町の人に余った布を分けてもらう','色はそろわないが，費用を抑えられる．','さまざまな色の旗が橋に並んだ．','祭りのあとも人々は旗を大切に保管した．','heart'),
+      C('材料を計算し，必要な数だけ作る','地味だが，予算内で完成できる．','予算を超えずに飾りをそろえた．','町長から次の行事も任せたいと言われた．','plan'),
+      C('職人に頼み，大きな星形の飾りを作る','費用はかかるが，祭りの目玉になる．','一つの大きな飾りが夜の広場に輝いた．','あなたは職人の仕事に憧れるようになった．','bold')),
+    S('隣町から来た見習い','15歳．隣町から来た見習いのリオが，住む場所を探している．親方の工房にはもう空き部屋がない．リオは明日までに決めなければならない．','リオの住まいをどう探しますか？',
+      C('宿屋を回って空き部屋を探す','時間はかかるが，すぐ住める可能性がある．','小さな宿屋が部屋を貸してくれた．','リオとは長い付き合いになった．','heart'),
+      C('工房に泊まれるよう親方と交渉する','規則の見直しが必要になる．','親方は週末だけ工房を使うことを認めた．','リオはその間に住まいを探せた．','plan'),
+      C('自分と一緒に隣町へ戻り，別の親方を探す','移動が必要だが，仕事と住まいを両方探せる．','翌日，新しい工房が見つかり，リオは弟子になれた．','リオは年に一度手紙を送ってくるようになった．','bold'))
+  ];
+  const CAREER_CHOICES = [
+    C('薬師になる','人の病気やけがを支える仕事．','薬草師のエマのもとで働き始めた．','調合と患者の世話を習う毎日が始まった．','heart'),
+    C('工匠になる','橋や道具を作り，壊れたものを直す仕事．','職人ノアの工房で修業を始めた．','木材や金属の加工を覚えた．','plan'),
+    C('航海士になる','船で品物や人を運び，遠い島へ渡る仕事．','カイ船長の船に乗ることになった．','初めて海図と羅針盤を手にした．','bold'),
+    C('町の守り手になる','災害や事故から人を守る仕事．','見張り塔のミナの隊に入った．','夜の見回りと救助の訓練を始めた．','heart'),
+    C('教師になる','子どもに読み書きを教える仕事．','学び舎のリオ先生のもとで働き始めた．','教室で初めて生徒の前に立った．','plan')
+  ];
+  const CAREER_KEYS = ['healer','builder','sailor','guardian','scholar'];
+  const CAREER_EPISODES = {
+    healer:{
+      25:S('冬の薬が足りない','診療所に風邪をひいた人が増えた．薬草はあと十人分しかない．明日の朝，遠くの町から薬を買う商人が通る．','薬をどう確保しますか？',
+        C('商人から薬草を買う','お金はかかるが，明日には届く．','商人と交渉し，三十人分の薬をそろえた．','薬を買うための積立金を始めた．','plan'),
+        C('近所の薬草師に分けてもらう','少量ずつしか集まらないかもしれない．','三人の薬草師が協力し，必要な量を分けてくれた．','診療所は町の薬草師と協力するようになった．','heart'),
+        C('自分で山へ薬草を採りに行く','費用は少ないが，山道を歩かなければならない．','山で薬草を採り，冬の間の薬を作った．','山道で使う採集道具をそろえた．','bold')),
+      30:S('師匠からの引き継ぎ','長年働いた薬師エマが，手の震えで細かな調合を続けられなくなった．診療所の薬を作れる人はまだあなたしかいない．','これからの診療所をどうしますか？',
+        C('助手を二人雇い，調合を教える','給金が必要だが，仕事を分担できる．','若い助手が入り，薬を待つ時間が短くなった．','助手たちは簡単な薬なら自分たちで作れるようになった．','heart'),
+        C('調合の手順を見直して道具を改良する','最初の準備は大変だが，作業が早くなる．','計量道具を直し，薬を安全に量れるようにした．','診療所では新しい道具が使われるようになった．','plan'),
+        C('王都へ一年修業に行く','診療所を離れるが，新しい治療法を学べる．','王都で薬草の扱いを学び，翌年に帰郷した．','新しい薬の作り方をエマにも教えた．','bold')),
+      35:S('村を襲った熱病','隣の村で熱病が広がった．村長から薬と人手を求める手紙が届いたが，あなたの診療所にも患者がいる．','隣村をどう支援しますか？',
+        C('薬を半分送り，村の人に使い方を説明する','地元の在庫が減るが，すぐ支援できる．','薬を馬車で送り，村の患者が治療を受けられた．','隣村には薬を保管する小屋ができた．','heart'),
+        C('患者数を確認して，薬の配分表を作る','調査に時間はかかるが，不足を把握できる．','両村で薬を使う順番を決め，大きな混乱を防いだ．','配分表は次の流行時にも役立った．','plan'),
+        C('自分が隣村へ行き，現場で患者を診る','地元を留守にするが，直接対応できる．','あなたは隣村に一週間滞在し，薬と食事の手配をした．','村の人々はあなたを頼るようになった．','bold')),
+      40:S('診療所の火事','夜中に診療所の台所から火が出た．患者は外へ避難できたが，薬の保管室に煙が入っている．消防隊は到着している．','火事のあと，何を優先しますか？',
+        C('患者の一時的な移転先を探す','薬は後回しになるが，治療を続けられる．','宿屋が部屋を貸してくれ，患者の診療を続けられた．','町では災害時の診療場所を決めることになった．','heart'),
+        C('消防隊と薬の在庫を点検する','時間はかかるが，使える薬を確認できる．','傷んだ薬を分け，安全なものを別の建物に移した．','診療所に耐火の薬棚を作った．','plan'),
+        C('町長に新しい診療所の建設を訴える','費用が必要だが，建物を根本から改善できる．','寄付が集まり，新しい診療所の建設が始まった．','新しい建物には避難用の出口が設けられた．','bold')),
+      45:S('高くなった薬の値段','薬草の不作で薬の値段が倍になった．裕福でない患者が買えずに帰っている．薬屋との契約は来月で切れる．','患者の負担をどう減らしますか？',
+        C('無料で薬を渡す日を週一回設ける','収入は減るが，必要な人に届けられる．','寄付を募り，週一回の無料配布を始めた．','町の人々が少しずつ寄付するようになった．','heart'),
+        C('薬草畑を借り，自分たちで育てる','収穫まで時間がかかるが，購入費を減らせる．','診療所の裏に畑を作った．','三年後，薬草の半分を畑でまかなえるようになった．','plan'),
+        C('商人と交渉し，仕入れ先を探し直す','契約が不安定になるが，値下げの可能性がある．','別の町の商人と新しい契約を結んだ．','薬の価格は少し下がり，患者が戻ってきた．','bold')),
+      50:S('幼なじみからの手紙','子どもの頃に親しかったミナから，父親が倒れたと手紙が届いた．ミナの住む村には医師がおらず，診療所の開設を希望している．','ミナの村をどう助けますか？',
+        C('若い薬師を一人派遣する','自分の診療所の人手が減る．','若い薬師が村に通い，定期的な診療が始まった．','ミナは村で小さな薬棚を管理するようになった．','heart'),
+        C('薬の配送と緊急連絡の制度を作る','準備は必要だが，長く続けられる．','月二回の配送と緊急の使いを決めた．','村の人が必要な薬を受け取れるようになった．','plan'),
+        C('自分で村を訪ね，診療所を開く準備をする','長く家を離れるが，現地の事情を確認できる．','一月滞在して建物と人手を整えた．','翌年，小さな診療所が開いた．','bold')),
+      55:S('弟子が別の町へ行きたい','五年間育てた弟子が，山向こうの村で薬師として働きたいと言った．しかし，あなたの診療所も人手が足りない．','弟子の希望にどう応えますか？',
+        C('送り出して，必要な薬を分ける','人手は減るが，隣村に薬師が増える．','弟子は山向こうへ移り，診療所を開いた．','二つの診療所が助け合うようになった．','heart'),
+        C('半年の引き継ぎ期間を設ける','弟子の出発は遅れるが，仕事を整理できる．','助手を採用し，半年後に弟子を送り出した．','引き継ぎの手順書が役立った．','plan'),
+        C('一緒に新しい村を訪ね，現地で教える','自分も移動するが，独立を支援できる．','二人で薬草園と薬棚を作った．','弟子は帰省のたびに近況を報告した．','bold')),
+      60:S('新しい療院の建設','町長が診療所を大きくしたいと言ってきた．建設費は集まったが，医療人員はまだ足りない．','新しい療院をどう始めますか？',
+        C('まず看護の研修を始める','開院は遅れるが，人手を育てられる．','十人の若者が看護を学び始めた．','三年後，新しい療院の病室が開いた．','heart'),
+        C('小さく開院し，患者数に合わせて広げる','病室は少ないが，早く使える．','まず五つの病室を作った．','療院は少しずつ規模を広げた．','plan'),
+        C('各地の薬師を招いて共同で運営する','調整が必要だが，多くの知恵が集まる．','遠くの町から薬師が集まり，診療が始まった．','療院は各地の研修場所になった．','bold')),
+      65:S('薬草畑に水が届かない','雨が少なく，薬草畑が枯れ始めた．井戸は診療所から遠く，水運びをする人も高齢になっている．','薬草畑をどう守りますか？',
+        C('近所の若者に水運びの仕事を頼む','給金はかかるが，すぐ始められる．','若者たちが交代で水を運んだ．','薬草畑は夏を越せた．','heart'),
+        C('畑へ水路を引く計画を立てる','工事に時間と費用がかかる．','職人と協力して短い水路を作った．','水運びの負担は大幅に減った．','plan'),
+        C('水の多い村に畑を移す','移転は大変だが，将来の収穫が安定する．','村の協力で新しい畑を作った．','二年後には薬草を収穫できた．','bold')),
+      70:S('夜間診療を続けるか','診療所では夜間の患者が増えている．あなた自身は夜通し働くことが難しくなったが，若い薬師たちが協力を申し出ている．','夜間診療をどうしますか？',
+        C('若い薬師に夜間の責任を任せる','自分の出番は減るが，診療を続けられる．','二人の薬師が交代勤務を始めた．','診療所には夜間用の休憩室ができた．','heart'),
+        C('重症患者だけ夜間に受け入れる','対象は限られるが，負担を抑えられる．','緊急時の連絡方法を決めた．','患者も受診の目安を知るようになった．','plan'),
+        C('周辺の村と合同で夜間の当番を作る','調整が大変だが，広い地域を支えられる．','村ごとの当番表を作り，運用が始まった．','共同診療はその後も続いた．','bold')),
+      75:S('薬師の後継者を選ぶ','療院の責任者を次の世代へ引き継ぐ時期になった．候補は経験豊富な薬師と，若いが新しい治療法に詳しい薬師の二人．','後継者をどう決めますか？',
+        C('二人に役割を分けて任せる','意見が割れることもあるが，互いに補える．','経験豊富な薬師が診療を，若い薬師が教育を担当した．','療院は二人の力で続いていった．','heart'),
+        C('一年間の試行期間を設ける','決定は遅れるが，仕事ぶりを確かめられる．','一年後，職員たちの意見を聞いて責任者を決めた．','決定に納得する人が多かった．','plan'),
+        C('新しい治療法に詳しい若手を責任者にする','変化は大きいが，新しい方法を試せる．','若手が療院を継ぎ，新しい診療を始めた．','あなたは相談役として見守った．','bold')),
+      80:S('昔の薬が使えなくなった','かつて多くの人を助けた薬草が，病気への効き目が弱いと分かった．若い薬師たちは新しい薬への切り替えを提案している．','古い治療法をどう扱いますか？',
+        C('若い薬師の提案を支える','自分の経験を見直す必要がある．','新しい薬へ切り替える研修を手伝った．','患者はより確かな治療を受けられた．','heart'),
+        C('過去の患者の経過を整理して比べる','時間はかかるが，切り替えの判断材料になる．','記録を整理し，古い薬の限界を確認した．','療院は治療法の見直しを毎年行うようになった．','plan'),
+        C('王都の薬師を招き，公開で説明してもらう','準備が必要だが，町の人も理解できる．','住民向けの説明会を開いた．','不安を抱いていた患者も治療を続けた．','bold')),
+      85:S('雪の日の訪問診療','冬の朝，遠くの農家から薬が欲しいと連絡があった．あなたは遠出を控えている．若い薬師が「私が行きます」と申し出た．','雪の日の訪問をどう手配しますか？',
+        C('若い薬師に任せ，帰宅後に報告を聞く','自分は現地へ行けないが，安全に引き継げる．','若い薬師が農家を訪ね，薬を届けた．','あなたは次の訪問に役立つ助言をした．','heart'),
+        C('馬車の手配と薬の準備を担当する','診療は任せるが，準備を支えられる．','あなたは必要な薬を袋にまとめた．','訪問先で薬が足りなくなることはなかった．','plan'),
+        C('診療所に相談の窓口を作る','すぐには届かないが，次から対応しやすい．','伝言係が農家の症状と住所を聞き取った．','離れた家への訪問がしやすくなった．','bold')),
+      90:S('若い薬師への最後の授業','90歳．療院の若い職員が，あなたに「昔の失敗から学んだことを教えて」と頼んだ．実際に患者を診るのは今の職員たちだ．','何を伝えますか？',
+        C('患者の話をよく聞く大切さを話す','派手な技術ではないが，日々の診療に役立つ．','あなたは忘れられない患者との会話を話した．','若い職員たちは毎日の診療で思い出した．','heart'),
+        C('薬の安全な保管と確認方法を見せる','地味だが，事故を防げる．','薬棚で使っていた確認表を渡した．','確認表は新しい療院でも使われた．','plan'),
+        C('昔の薬草を一緒に採りに出る','体力が必要なので近くの畑だけにする．','若い職員と療院の畑を歩き，薬草を見分ける方法を教えた．','職員たちは畑の管理を引き継いだ．','bold')),
+      95:S('療院の開院記念に向けて','診療所は長年町を支えてきた．若い責任者が，五年後の記念日に何を残すか相談してきた．','どの形で療院の歩みを残しますか？',
+        C('無料診療の日を設ける','人手は必要だが，今困っている人を支えられる．','記念日の無料診療に向けた準備が始まった．','若い薬師たちが中心になり実現させた．','heart'),
+        C('次世代の薬師を育てる基金を作る','資金集めが必要だが，将来の担い手を増やせる．','寄付を集め，学ぶ若者を支援する基金を作った．','五年後，新しい薬師が町に帰ってきた．','plan'),
+        C('遠い村にも小さな薬棚を寄贈する','準備が必要だが，支援を広げられる．','若い職員と薬棚の設置先を決めた．','遠くの村でも薬が手に入るようになった．','bold'))
+    },
+    builder:{
+      25:S('壊れた市場の橋','市場へ続く木の橋が傷み，荷馬車が渡れなくなった．修理費は限られている．','橋をどう直しますか？',
+        C('町の職人を集めて修理する','人手が要るが，早く直せる．','仲間と一緒に床板を替え，橋を通れるようにした．','町は共同の修理班を作った．','heart'),
+        C('傷んだ柱を調べて設計を直す','時間はかかるが，長く使える．','柱を補強し，丈夫な橋に作り替えた．','橋は何年も安全に使われた．','plan'),
+        C('石橋に替える案を町長へ出す','費用が大きいが，将来の荷物が増えても使える．','町長は計画を認め，石橋の工事が始まった．','石橋は町の新しい目印になった．','bold')),
+      30:S('弟子ノアが壊した時計','弟子ノアが修理中に時計の歯車を折ってしまった．依頼主は三日後に受け取りに来る．部品の作り直しには一週間かかる．','依頼主にどう対応しますか？',
+        C('事情を説明し，ノアと修理する','納期を過ぎるが，弟子が学べる．','依頼主は一週間待ってくれた．ノアは部品を作り直した．','ノアは失敗を隠さない職人になった．','heart'),
+        C('代わりの時計を貸し，修理を続ける','代用品が必要だが，依頼主も困らない．','工房の時計を貸し，約束の日までに代用品を届けた．','依頼主はその後も工房を利用した．','plan'),
+        C('王都から新しい部品を取り寄せる','費用はかかるが，納期に近づける．','翌日部品が届き，時計を直せた．','ノアは部品の形を詳しく学んだ．','bold')),
+      35:S('時計塔の鐘が止まった','町の時計塔の鐘が鳴らなくなった．鐘は毎朝，市場の始まりを知らせていた．高い足場の作業は専門の職人が必要だ．','時計塔をどう修理しますか？',
+        C('熟練の職人を呼ぶ','給金はかかるが，安全に作業できる．','職人と一緒に仕組みを調べ，鐘を直した．','塔の定期点検が始まった．','heart'),
+        C('地上で動く模型を作り，故障を調べる','準備に時間はかかるが，原因を確かめられる．','歯車の組み合わせが間違っていると分かった．','模型は弟子の教材になった．','plan'),
+        C('王都で新しい鐘の仕組みを学ぶ','町を離れるが，新しい技術を学べる．','新しい鐘の装置を持ち帰った．','時計塔は再び朝を知らせるようになった．','bold')),
+      40:S('工房に注文が殺到','新しい橋が完成して評判になり，工房へ多くの注文が来た．今の弟子だけではすべて引き受けられない．','注文をどう扱いますか？',
+        C('職人を新しく雇う','給金が必要だが，仕事を分担できる．','三人の職人が工房に加わった．','町では働ける人が増えた．','heart'),
+        C('注文の優先順位を決める','待つ客も出るが，無理なく進められる．','橋や井戸など生活に必要な仕事を先に進めた．','工房は納期を守るようになった．','plan'),
+        C('隣町にも工房を開く','費用がかかるが，受けられる仕事が増える．','隣町に小さな工房を開いた．','職人同士が道具を貸し合うようになった．','bold')),
+      45:S('嵐で壊れた水車','嵐で村の水車が壊れ，粉ひきができなくなった．村には予備の水車がない．修理するには木材と二週間が必要だ．','村の粉ひきをどう再開しますか？',
+        C('近隣の水車を借りられないか頼む','移動は増えるが，すぐ粉が作れる．','隣村が水車を貸してくれた．','修理が終わるまで食料は不足しなかった．','heart'),
+        C('部品だけ先に修理する','能力は限られるが，早く動かせる．','小さな水車として一週間で動かした．','二週間後に完全な修理も終えた．','plan'),
+        C('風で動く新しい製粉機を試す','失敗の可能性はあるが，水量に頼らずに済む．','試作を重ね，風車で粉をひけるようにした．','村には二つの方法が残った．','bold')),
+      50:S('昔の橋の点検','幼い頃に通った町の橋に大きなひびが入っている．当時の友人ミナから，通学路を安全にしてほしいと相談された．','橋をどう守りますか？',
+        C('登下校の見守りを頼む','すぐできるが，修理は別に必要．','住民の協力で子どもが安全に渡れるようにした．','橋が直るまで事故は起きなかった．','heart'),
+        C('橋を閉鎖し，修理計画を作る','遠回りになるが，事故を防ぎやすい．','古い橋を閉じ，新しい柱の工事を始めた．','半年後，橋は再び開いた．','plan'),
+        C('川に新しい橋を架ける案を出す','工事費が高いが，町の通行を改善できる．','対岸の町とも協力して新しい橋を架けた．','市場へ向かう道も短くなった．','bold')),
+      55:S('弟子が工房を持ちたい','育ててきた弟子が独立を願い出た．しかし，大きな注文が残っており，手が足りない．','弟子の独立をどう支えますか？',
+        C('注文を分け，別々の工房で作る','調整は必要だが，両方が働ける．','弟子は独立してもあなたと協力した．','二つの工房が町の仕事を支えた．','heart'),
+        C('仕事を引き継ぐ表を作る','独立は少し遅れるが，注文が混乱しない．','引き継ぎを終え，弟子を送り出した．','工房では新しい弟子も育った．','plan'),
+        C('弟子と一緒に隣町へ工房を建てる','町を離れる期間があるが，開業を助けられる．','新しい工房ができ，弟子は仕事を始めた．','職人同士の行き来が増えた．','bold')),
+      60:S('壊れやすい街灯','王都の街灯が毎月壊れ，夜道が暗くなっている．原因は雨が歯車に入ることだった．町長から改良を頼まれた．','街灯をどう改善しますか？',
+        C('職人を集めて修理班を作る','人手が必要だが，故障に早く対応できる．','夜ごとに修理班が巡回した．','町の暗い道が減った．','heart'),
+        C('雨が入らない箱を設計する','試作が必要だが，故障を減らせる．','新しい箱を作って試した．','半年後，故障は大きく減った．','plan'),
+        C('新しい灯りの仕組みを探す','時間はかかるが，もっと長く使えるかもしれない．','石の熱で灯る新しい街灯を試作した．','王都の広場で使われるようになった．','bold')),
+      65:S('工房の火事を防ぐ','近くの工房で火事があった．幸い人は助かったが，あなたの工房でも同じ炉を使っている．','工房の火の管理をどうしますか？',
+        C('弟子たちと火の見回りを分担する','交代の手間は増えるが，見落としを減らせる．','毎晩の点検が始まった．','火事の危険を早く発見できるようになった．','heart'),
+        C('炉の横に消火用の水槽を置く','場所を取るが，すぐ使える．','水槽と火消し道具を設けた．','弟子たちは訓練も行った．','plan'),
+        C('炉を新しいものに作り替える','費用はかかるが，火が外へ出にくくなる．','職人と安全な炉を開発した．','ほかの工房も新しい炉を使い始めた．','bold')),
+      70:S('使われなくなった水門','古い水門は仕事を終え，建て替えが決まった．町の人々は解体を惜しんでいる．新しい水門は来年完成する．','古い水門をどう扱いますか？',
+        C('古い木材を町の人に分ける','形は残らないが，別の場所で使える．','木材は家の修理に使われた．','水門の記憶が町のあちこちに残った．','heart'),
+        C('使える部品を新しい水門に移す','検査が必要だが，無駄を減らせる．','丈夫な歯車を新しい水門へ取り付けた．','新しい水門も安全に動いた．','plan'),
+        C('水門の一部を広場の記念碑にする','費用はかかるが，町の歴史を残せる．','大きな車輪を広場に設置した．','子どもたちはその下で遊んだ．','bold')),
+      75:S('工房の跡継ぎ','工房の次の責任者を決める時期になった．古い弟子と新しい職人の二人が候補だ．','工房を誰に任せますか？',
+        C('二人で共同経営してもらう','調整は必要だが，経験を生かし合える．','二人が仕事を分担し，工房は続いた．','若い職人も育ち始めた．','heart'),
+        C('一年間仕事ぶりを見て決める','結論は遅れるが，公平に選びやすい．','一年後，職人全員で責任者を決めた．','大きな争いは起きなかった．','plan'),
+        C('新しい職人に責任者を任せる','工房のやり方が変わる可能性がある．','新しい責任者が道具を改良した．','工房は新しい仕事も引き受けた．','bold')),
+      80:S('時計塔の大修理','四十年以上動いた時計塔が，再び止まった．部品は古く，職人たちがあなたに意見を求めている．','時計塔をどう直しますか？',
+        C('若い職人へ修理を任せる','自分は作業しないが，次世代が学べる．','若い職人が協力して鐘を直した．','修理の経験が工房に残った．','heart'),
+        C('壊れた歯車の図面を描く','体への負担は小さいが，根気が要る．','図面を使って新しい歯車が作られた．','修理のたびに図面が役立った．','plan'),
+        C('新しい時計塔への建て替えを提案する','大きな工事になるが，長く使える．','町長が計画を認め，新しい塔が建った．','次の祭りで新しい鐘が鳴った．','bold')),
+      85:S('村の職人からの相談','遠い村の若い職人が，水車の修理を相談してきた．あなたは長旅を控えている．写真と図面が同封されている．','若い職人をどう助けますか？',
+        C('近くの熟練職人を紹介する','直接教えられないが，現地で見てもらえる．','紹介した職人が村へ向かった．','水車は再び動いた．','heart'),
+        C('図面に修理箇所を書き込む','現物は見られないが，手順を伝えられる．','図面を返送し，必要な部品を示した．','若い職人は自力で直せた．','plan'),
+        C('弟子を派遣して現地を調べてもらう','人手は必要だが，細かな問題も見つかる．','弟子が村で修理を手伝った．','二つの工房の交流が始まった．','bold')),
+      90:S('工房の昔話を聞かせてほしい','町の若者が工房を訪ね，今の仕事を始めた理由を聞いた．あなたは古い道具をまだ持っている．','若者に何を伝えますか？',
+        C('最初に助けてくれた職人の話をする','道具よりも人との関係が伝わる．','あなたは親方に教わった言葉を伝えた．','若者は先輩の教えを大切にした．','heart'),
+        C('壊れた時計を教材として直す','時間はかかるが，仕組みが分かる．','一緒に歯車を交換した．','若者は自分の工房でも修理を試した．','plan'),
+        C('町の橋を一緒に見に行く','外出は必要だが，完成した仕事を見せられる．','若者と橋を渡り，設計の工夫を説明した．','若者は新しい橋を作る夢を語った．','bold')),
+      95:S('最後の設計図','町長が五年後の新しい広場について相談してきた．職人たちは，あなたが昔考えた噴水の設計図を見つけたという．','広場に何を残しますか？',
+        C('子どもが遊べる小さな水場を作る','大きな噴水ではないが，毎日使える．','子ども向けの水場を設計した．','広場に笑い声が増えた．','heart'),
+        C('維持費の少ない噴水に設計し直す','華やかさは控えめだが，長く使える．','水を循環させる仕組みを考えた．','町の負担は少なく済んだ．','plan'),
+        C('若い職人に設計を任せる','思い通りにならないかもしれないが，新しい発想が生まれる．','若い職人の案を採用した．','あなたの工房の技術は次の世代へ渡った．','bold'))
+    },
+    sailor:{
+      25:S('初めての長い航海','船長カイの船は三日後に遠い島へ出港する．積み荷は小麦と布．ただし風が強まる予報が出ている．','出港の準備をどう進めますか？',
+        C('乗組員と帆や縄を点検する','時間を使うが，事故を防ぎやすい．','破れた帆を見つけ，出港までに直した．','カイ船長はあなたを信頼するようになった．','heart'),
+        C('荷物の量を減らし，船を軽くする','利益は減るが，荒れた海で動きやすい．','大切な小麦を優先し，船を軽くした．','航海は予定どおり終わった．','plan'),
+        C('天候が回復するまで一週間待つ','到着は遅れるが，嵐を避けられる．','風が落ち着いてから出港した．','商人から日程の相談を受けるようになった．','bold')),
+      30:S('島で不足した飲み水','船が小さな島に着いた．島の井戸が壊れ，住民は水を求めている．船には航海に必要な水しか残っていない．','島の人をどう助けますか？',
+        C('近くの港へ救援の知らせを送る','到着を待つが，多くの水を運べる．','近くの港から水の入った樽が届いた．','島との連絡が続くようになった．','heart'),
+        C('井戸を直せる職人を探す','修理に数日かかるが，長く使える．','船の大工が井戸の滑車を直した．','島の住民は井戸を使えるようになった．','plan'),
+        C('航路を変更し，水のある島へ住民を運ぶ','予定の荷運びは遅れるが，人を移せる．','十人の住民を隣の島へ運んだ．','次の航海では水を余分に積むようになった．','bold')),
+      35:S('行方不明の商船','港に戻ると，親しい船長の商船が十日間帰っていない．最後に目撃されたのは北の岩礁の近くだ．','商船をどう探しますか？',
+        C('灯台守と協力し，岸から探す','広くは探せないが，危険は少ない．','灯台から信号を送り，商船の小舟を見つけた．','船員たちは翌日港へ戻れた．','heart'),
+        C('周辺の船から目撃情報を集める','時間はかかるが，位置を絞れる．','航路を地図で確かめ，捜索隊に伝えた．','商船は別の島で修理中だと分かった．','plan'),
+        C('救助船に乗り，岩礁へ向かう','海が荒れているが，早く現場を調べられる．','救助船で岩礁へ向かい，壊れた帆を発見した．','船員は無事に帰港した．','bold')),
+      40:S('船を買うための資金','船長カイが引退し，あなたに船を譲りたいと言う．ただし修理費が高く，一人では購入できない．','船をどう引き継ぎますか？',
+        C('乗組員と共同で船を買う','利益を分けるが，負担も分けられる．','乗組員が資金を出し合って船を買った．','船では大事なことを話し合って決めるようになった．','heart'),
+        C('商人から借金して一人で購入する','返済が必要だが，自分で船を管理できる．','契約を結び，航海の利益で返済を始めた．','三年後に借金を返し終えた．','plan'),
+        C('新しい小さな船を作る','完成に時間がかかるが，自分に合う船になる．','船大工と小舟を作り，新しい航路へ出た．','船は小さくても速く動けた．','bold')),
+      45:S('嵐で破れた帆','大きな嵐が来る前夜，帆が破れていることが分かった．港へ戻れば修理できるが，積んだ食料は予定より遅れる．','船をどう動かしますか？',
+        C('港に戻って帆を修理する','食料は遅れるが，乗組員の安全を守れる．','港で修理し，嵐が去ってから出港した．','荷主は安全を優先した判断に納得した．','heart'),
+        C('近くの島に入り，食料だけ先に届ける','寄港先を変えるが，食料を早く渡せる．','島の小舟に食料を積み替えて運んだ．','目的地には翌日食料が届いた．','plan'),
+        C('予備の小さな帆で進む','速度は落ちるが，航海を続けられる．','近い港まで進み，翌日帆を直した．','乗組員は予備の帆を常備するようになった．','bold')),
+      50:S('幼い友人からの依頼','故郷の友人リオから手紙が来た．島の子どもたちが学校へ通う船が古くなり，運航を続けられないという．','通学船をどう支えますか？',
+        C('自分の船で週一回子どもを運ぶ','商売の時間は減るが，すぐ学校へ行ける．','週一回の通学が始まった．','子どもたちはあなたを待つようになった．','heart'),
+        C('町同士で通学船の費用を分担する','話し合いが要るが，長く続けられる．','両町で費用を出し，船を直した．','通学便が毎日出るようになった．','plan'),
+        C('新しい通学船を探して買い付ける','まとまった資金が必要だが，早く解決できる．','古い商船を改造し，通学船として届けた．','島の子どもたちは学校に通い続けた．','bold')),
+      55:S('船員の独立','若い航海士が自分の船を持ちたいと相談してきた．あなたの船には経験者が少ない．','若い航海士をどう送り出しますか？',
+        C('経験者を一人つけて独立を助ける','自分の船は人手不足になる．','二人で新しい船に乗り，無事に初航海を終えた．','港に新しい船が増えた．','heart'),
+        C('半年間，航路を教えてから送り出す','出発は遅れるが，準備が整う．','地図を使った訓練を重ねた．','若い航海士は安全な航海を続けた．','plan'),
+        C('二隻で共同の商売を始める','調整が増えるが，荷物を多く運べる．','二隻の船が一緒に航海を始めた．','遠い島との商売が広がった．','bold')),
+      60:S('消えかけた灯台','岬の灯台の火が弱くなり，夜の船が迷うようになった．灯台守は高齢で，一人では修理できない．','灯台をどう守りますか？',
+        C('新しい灯台守を探す','人探しが必要だが，毎日の管理を続けられる．','若い灯台守が見つかり，火を絶やさずに済んだ．','岬には交代の見守り役ができた．','heart'),
+        C('火を守る装置を改良する','費用はかかるが，長く明るくできる．','職人と新しい反射鏡を取り付けた．','遠くの船からも灯りが見えた．','plan'),
+        C('船で岬を回り，安全な航路を作る','調査に時間はかかるが，危険な岩礁を避けられる．','岩礁を示す浮標を設置した．','夜の事故が少なくなった．','bold')),
+      65:S('港の税金が上がる','港の税金が上がり，小さな漁船や商船が困っている．町長は税金を港の修理に使うと言っている．','港の仕事をどう支えますか？',
+        C('漁師と商人の意見を集めて町長に伝える','時間がかかるが，困りごとを届けられる．','町長が小さな船の負担を減らした．','港の人々は話し合いを続けた．','heart'),
+        C('税金の使い道を公開してもらう','手続きが必要だが，納得しやすくなる．','港の修理費が分かるようになった．','税金への不満が少し落ち着いた．','plan'),
+        C('税金の安い港を使う新しい航路を試す','航路は長くなるが，商売を続けられる．','隣国の港と新しい取引を始めた．','遠い町からも船が訪れるようになった．','bold')),
+      70:S('古い航海図の誤り','若い船員が古い海図の浅瀬を見落とし，船を傷つけた．新しい航路図を作るには何度も海を測る必要がある．','安全な海図をどう作りますか？',
+        C('経験のある船長を集めて話を聞く','測量は必要だが，危険な場所を早く知れる．','船長たちの経験を地図にまとめた．','危険な浅瀬が広く知られた．','heart'),
+        C('測量隊を作り，浅瀬の位置を確かめる','費用はかかるが，正確な図になる．','新しい海図を港に配った．','座礁事故が減った．','plan'),
+        C('若い航海士と海に出て測量を教える','出航が必要だが，次世代が技術を学べる．','近くの海を一緒に測った．','若者たちは自分で海図を描けるようになった．','bold')),
+      75:S('次の船長を選ぶ','船は若い世代に任せる時期になった．二人の航海士が船長を希望している．一人は慎重，もう一人は新しい航路に詳しい．','船長をどう決めますか？',
+        C('二人に交代で船長を任せる','意見の違いはあるが，互いに学べる．','二人が交代し，船は安全に航海した．','乗組員も安心して働けた．','heart'),
+        C('試験航海を行い，乗組員と決める','決定に時間がかかるが，実力を確かめられる．','船員の意見を聞き，新しい船長を決めた．','新しい船長は仲間を大切にした．','plan'),
+        C('新航路に詳しい若手へ任せる','変化は大きいが，新しい交易が始まるかもしれない．','若手が船長となり，遠い島へ向かった．','新しい港との行き来が始まった．','bold')),
+      80:S('港で待つ家族たち','海が荒れ，数隻の漁船が帰らない．家族が港に集まっている．あなたはもう救助船に乗れないが，助ける方法はある．','港で何をしますか？',
+        C('家族のそばにいて，連絡をまとめる','直接船を探せないが，不安を軽くできる．','家族に知らせが届くまで一緒に待った．','翌朝，漁船は全隻帰港した．','heart'),
+        C('灯台の信号を調整してもらう','見える範囲は限られるが，航路を示せる．','灯台が強い光を送り続けた．','漁船は港を見つけて戻った．','plan'),
+        C('若い救助隊へ古い航路の知識を伝える','海には出ないが，捜索に役立つ．','地図で隠れた入り江を教えた．','救助隊が漁船を見つけた．','bold')),
+      85:S('昔の船を修理するか','若い船員が，あなたが初めて乗った船を買い取りたいと言ってきた．船は傷んでおり，大修理が必要だ．','古い船をどうしますか？',
+        C('若い船員に譲り，修理費の一部を援助する','手放すことになるが，新しい持ち主が使える．','船は若い船員の手で直された．','翌年には再び海を渡った．','heart'),
+        C('船を港の練習船にする','利益は出ないが，初心者が学べる．','船の甲板を直し，練習船にした．','たくさんの若者が操船を覚えた．','plan'),
+        C('大修理をして最後の航海に送り出す','費用はかかるが，船の力を確かめられる．','熟練の船長が船を海に出した．','あなたは港からその姿を見送った．','bold')),
+      90:S('海図を学ぶ孫世代','学び舎の子どもたちが「昔の航海の話を聞きたい」と訪ねてきた．あなたの机には長年使った海図がある．','子どもたちに何を教えますか？',
+        C('船員たちが助け合った話をする','航路よりも人との関係が伝わる．','嵐の日の協力を語った．','子どもたちは仲間を大切にしようと話した．','heart'),
+        C('海図の読み方を教える','少し難しいが，航海の仕組みが分かる．','子どもたちは海図に印を付けて学んだ．','学校で海図の授業が始まった．','plan'),
+        C('港へ出て，船の出港を見せる','外出が必要だが，本物の船を見られる．','皆で港に行き，大きな帆を見上げた．','何人かの子どもが船乗りを志した．','bold')),
+      95:S('最後の港のお願い','新しい灯台の建設計画が進んでいる．町の人が，そこに何を残すか相談してきた．','灯台に何を託しますか？',
+        C('船員の家族が集まれる部屋を作る','建設費は増えるが，待つ人が休める．','家族のための休憩室が設けられた．','港を訪れる人に使われた．','heart'),
+        C('次の灯台守を育てる講習所を作る','人手が必要だが，未来の安全につながる．','若い灯台守の研修が始まった．','灯台の火は途切れずに続いた．','plan'),
+        C('遠い島にも見える大きな灯りにする','工事費は大きいが，広い海を照らせる．','灯りの高い塔が建てられた．','遠くの船もその光を頼りにした．','bold'))
+    },
+    guardian:{
+      25:S('町の門が夜に開いた','見張り塔の近くで夜中に門が開け放たれていた．盗賊の跡はないが，町の人は不安がっている．','門の安全をどう確かめますか？',
+        C('門番と一緒に夜の見回りを増やす','人手は必要だが，すぐできる．','交代で見回り，門の故障を見つけた．','町の人々は安心した．','heart'),
+        C('錠前と鍵の仕組みを点検する','調査が必要だが，原因を特定できる．','壊れた錠前を交換した．','門は夜に開かなくなった．','plan'),
+        C('町長へ新しい門の工事を提案する','費用はかかるが，防備を強くできる．','町長が工事を認めた．','新しい門に見張り台ができた．','bold')),
+      30:S('避難所に人が集まる','大雨で川が増水した．住民は町の高台に集まっているが，毛布と食料が不足している．','避難所をどう整えますか？',
+        C('商人に食料を分けてもらう','寄付が必要だが，早く届く．','商人たちがパンと水を届けた．','避難した家族は夜を越せた．','heart'),
+        C('避難者の人数を確認し，配分を決める','手間はかかるが，不足を把握できる．','食料を人数に合わせて配った．','子どもや高齢者にも行き渡った．','plan'),
+        C('救助隊と協力して別の避難所を開く','準備が必要だが，人が分散できる．','学校を開放して避難所を増やした．','住民は安全な場所で眠れた．','bold')),
+      35:S('山道の盗難事件','峠の荷馬車から食料が盗まれた．犯人は分からず，旅人が道を通るのを怖がっている．','旅人の安全をどう守りますか？',
+        C('旅人と一緒に巡回する','人手は必要だが，不安を減らせる．','巡回を増やすと盗難は止まった．','旅人たちは峠を通れるようになった．','heart'),
+        C('荷物の積み下ろしの記録を調べる','調査に時間はかかるが，手がかりが得られる．','失くなった品が別の倉庫で見つかった．','不必要な疑いが解けた．','plan'),
+        C('峠に新しい見張り小屋を建てる','費用がかかるが，危険な場所を監視できる．','小屋ができ，夜の巡回が始まった．','峠の利用者が増えた．','bold')),
+      40:S('城門の下でけが人が出た','工事中の城門で木材が落ち，一人の職人がけがをした．ほかの職人はまだ作業を続けようとしている．','城門の工事をどうしますか？',
+        C('けが人の手当てを優先する','工事は遅れるが，人を守れる．','薬師を呼び，けが人を診療所へ運んだ．','職人は無事に仕事へ戻れた．','heart'),
+        C('作業を止め，足場の安全を確認する','工事は止まるが，次の事故を防げる．','弱い足場を直し，安全を確かめた．','工事は数日後に再開した．','plan'),
+        C('町長に工事方法の見直しを求める','手続きは必要だが，今後の事故を減らせる．','安全な工事の決まりが作られた．','ほかの工事現場でも使われた．','bold')),
+      45:S('吹雪で見えない道','冬の吹雪で町と隣村を結ぶ道が見えなくなった．見張り役は安全な場所で待つよう呼びかけている．','町の人をどう守りますか？',
+        C('家々を回って，外に出ないよう知らせる','時間はかかるが，危険を伝えられる．','住民は屋内で吹雪をやり過ごした．','外で迷う人はいなかった．','heart'),
+        C('道路の入口を閉鎖し，標識を立てる','移動は不便だが，危険な道へ入らずに済む．','見張り役と標識を置いた．','道は翌朝安全が確認されてから開いた．','plan'),
+        C('町の避難所を早めに開く','人手は必要だが，家が寒い人を守れる．','学校に毛布を集め，避難所を開いた．','高齢者も暖かい場所で夜を過ごせた．','bold')),
+      50:S('幼い友人からの相談','幼い頃の友人ミナが，学校の近くの橋に危険な穴があると知らせてきた．子どもたちは毎日通るという．','危険な橋へどう対応しますか？',
+        C('通学時だけ見張り役を配置する','すぐ対応できるが，修理までは人手が必要．','見張り役が子どもを別の道へ案内した．','事故なく橋の修理を待てた．','heart'),
+        C('橋を閉鎖し，職人へ修理を依頼する','遠回りになるが，危険を避けられる．','橋の穴を直し，一週間後に再開した．','通学路が安全になった．','plan'),
+        C('新しい通学路の建設を町長へ提案する','工事費が必要だが，長く使える．','新しい歩道が作られた．','子どもたちは安全に学校へ通えた．','bold')),
+      55:S('若い衛兵の失敗','若い衛兵が夜の見回りの時間を間違え，門を無人にしてしまった．被害はなかったが，また起こるかもしれない．','若い衛兵にどう対応しますか？',
+        C('本人と話し合い，理由を聞く','時間はかかるが，困りごとを知れる．','衛兵は疲れていたと打ち明けた．','休憩時間が見直された．','heart'),
+        C('見回りの予定表を分かりやすくする','準備は必要だが，間違いを減らせる．','新しい表を門に掲示した．','見回りの間違いが減った．','plan'),
+        C('夜間の訓練をやり直す','時間が必要だが，実際の行動を確認できる．','衛兵たちが交代で訓練した．','門は夜も守られるようになった．','bold')),
+      60:S('春祭りの人混み','町の春祭りに予想以上の人が集まり，広場の出入り口が混雑した．人が倒れる前に対応する必要がある．','人混みをどう減らしますか？',
+        C('案内役を増やし，人を別の道へ誘導する','人手は要るが，早く対応できる．','衛兵と町の人が誘導した．','人の流れが落ち着いた．','heart'),
+        C('入口と出口を別にする','準備は必要だが，混雑を減らせる．','通行の向きを決めた．','祭りは安全に終わった．','plan'),
+        C('広場の隣の庭も開放する','管理場所は増えるが，人が分散できる．','庭にも屋台を移した．','来年は最初から広い会場を用意することになった．','bold')),
+      65:S('古い城壁のひび','城壁に大きなひびが見つかった．職人は，放置すると崩れる可能性があると言う．町長は修理費を心配している．','城壁をどう直しますか？',
+        C('住民へ危険な場所を知らせる','不安は広がるが，事故を防げる．','城壁のそばに柵を立てた．','工事までけが人は出なかった．','heart'),
+        C('必要な修理費を計算し，予算を組む','すぐには直らないが，着実に進められる．','町長が修理費を確保した．','翌月から工事が始まった．','plan'),
+        C('王都から大きな工事隊を呼ぶ','費用は高いが，工事を早められる．','工事隊が城壁を補強した．','町の安全が守られた．','bold')),
+      70:S('新しい衛兵隊長','長年一緒に働いた隊長が引退する．後任の若者は経験が浅く，自信を失っている．','新しい隊長をどう支えますか？',
+        C('困った時は相談に乗ると約束する','決定は若者に任せるが，安心させられる．','若者は少しずつ自分で決められるようになった．','衛兵たちは新しい隊長を信頼した．','heart'),
+        C('過去の事故と対策を一緒に整理する','時間はかかるが，判断の材料ができる．','大切な経験をまとめた．','隊長は困った時に読み返した．','plan'),
+        C('実地の訓練を計画する','体を動かす必要があるが，経験を積める．','訓練を重ね，隊長は自信をつけた．','衛兵隊は落ち着いて働けるようになった．','bold')),
+      75:S('川の見張り塔を移す','川の流れが変わり，古い見張り塔からは堤防が見えなくなった．町長は塔の移転を提案している．','新しい見張り場所をどう決めますか？',
+        C('川辺の住民に見やすい場所を尋ねる','時間はかかるが，住民の経験を生かせる．','住民の案から高台を選んだ．','新しい塔から川を見渡せた．','heart'),
+        C('過去の洪水の位置を調べる','調査が必要だが，危険な場所を避けられる．','水位の記録から高台を選んだ．','塔は安全に使われた．','plan'),
+        C('新しい高い塔を建てる','工事費はかかるが，広く見渡せる．','遠くまで見える塔が建った．','洪水への備えが強くなった．','bold')),
+      80:S('雪の夜の呼び鈴','冬の夜，隣家の老人の呼び鈴が鳴った．見回り役はすでに出発している．あなたは屋内から連絡できる．','見回り役をどう助けますか？',
+        C('温かい飲み物と毛布を用意する','直接迎えに行けないが，戻った人を支えられる．','老人は無事に運ばれ，暖かい部屋で休んだ．','見回り役も礼を言った．','heart'),
+        C('道の灯りを窓から点ける','灯りは小さいが，帰る道を示せる．','見回り役は光を目印に戻った．','町でも冬の灯りを増やした．','plan'),
+        C('近所の家へ連絡し，見守りを増やす','手間はかかるが，多くの人が協力できる．','近所の人が順番に様子を見に行った．','冬の見守りの仕組みができた．','bold')),
+      85:S('最後の大きな訓練','若い衛兵が大きな避難訓練を計画している．あなたにも意見を求めてきた．','訓練にどう協力しますか？',
+        C('高齢者の避難方法を教える','目立たないが，困る人を助けられる．','歩くのが難しい人の避難を練習した．','訓練は住民に好評だった．','heart'),
+        C('危険な場所を地図に示す','地図を作る手間はあるが，事前に備えられる．','危険な川岸と古い橋を地図に載せた．','避難経路が見直された．','plan'),
+        C('若い隊長に訓練の指揮を任せる','自分は指揮しないが，次世代が経験を積める．','若い隊長が訓練を成功させた．','町の人々は新しい隊長を信頼した．','bold')),
+      90:S('長く守ってきた門','90歳．かつて見回った城門の修理が終わった．町長が記念式典への参加を頼んできた．','式典で何をしますか？',
+        C('働いてきた衛兵たちの名前を紹介する','自分だけが目立たずに済み，仲間の働きを伝えられる．','衛兵たちが拍手を受けた．','町は守り手の仕事を知った．','heart'),
+        C('新しい門の安全な使い方を説明する','地味だが，事故を防ぐために必要．','町の人に門の使い方を伝えた．','門は安全に使われた．','plan'),
+        C('若い衛兵へ城門の鍵を渡す','自分の役目は終わるが，新しい世代に託せる．','若い衛兵が鍵を受け取った．','城門はその後も守られた．','bold')),
+      95:S('町の百年祭','町の百年祭が近づき，衛兵隊は記念の行事を考えている．町長はあなたにも一つ提案してほしいと言う．','町の人に何を残しますか？',
+        C('住民と衛兵が話せる集会を開く','準備が必要だが，信頼を育てられる．','世代を越えた集会が始まった．','衛兵は町の声を聞くようになった．','heart'),
+        C('避難用の案内板を新しくする','費用はかかるが，次の災害に役立つ．','分かりやすい案内板を立てた．','初めて来た人にも道が分かった．','plan'),
+        C('新しい見張り塔を若者に設計させる','完成まで時間がかかるが，新しい考えを生かせる．','若い衛兵と職人が塔を設計した．','新しい塔が町を見守り始めた．','bold'))
+    },
+    scholar:{
+      25:S('教室に足りない教科書','あなたが働く学び舎には教科書が十冊しかない．生徒は三十人．一人ずつ買うお金もない．','授業をどう続けますか？',
+        C('三人一組で本を使う授業にする','一人では使えないが，互いに教え合える．','生徒はグループで問題を解いた．','分からない子を助ける習慣ができた．','heart'),
+        C('教科書を写した練習帳を作る','作る手間はかかるが，全員に配れる．','毎日の練習帳を作って配った．','子どもたちは家でも勉強できた．','plan'),
+        C('王都へ古本を買いに行く','旅費がかかるが，本を増やせる．','安い古本を二十冊見つけた．','学び舎に小さな本棚ができた．','bold')),
+      30:S('学校に来ない生徒','11歳のリオが一週間学校へ来ていない．家では母親が病気で，リオが弟の世話をしているという．','リオが学べるようにするには？',
+        C('週に二度，家へ教えに行く','自分の時間は減るが，授業を続けられる．','リオは家で勉強を再開した．','母親が回復すると学校に戻った．','heart'),
+        C('学校に子どもを預けられる場所を作る','準備は必要だが，ほかの家庭も助かる．','空き教室で小さな託児所を始めた．','学校に戻れる子どもが増えた．','plan'),
+        C('町長へ家庭の支援を頼む','話し合いが必要だが，生活も支えられる．','町が食事と薬を届けるようになった．','リオの家族の負担が減った．','bold')),
+      35:S('試験に落ちた生徒','15歳の生徒ミナが学院の試験に落ちた．自分には才能がないと思い，学校を辞めたいと言っている．','ミナにどう向き合いますか？',
+        C('一緒に得意なことを探す','時間はかかるが，ほかの道が見つかる．','ミナは絵が得意だと気づいた．','町の絵師の弟子になった．','heart'),
+        C('苦手な問題を調べ，次の試験に備える','努力が必要だが，再挑戦できる．','半年間学び直し，次の試験に合格した．','ミナは勉強を続けた．','plan'),
+        C('町の職人に見学を頼む','試験とは別の進路を知れる．','ミナは工房を見学し，仕事を選んだ．','やがて立派な職人になった．','bold')),
+      40:S('学校が閉鎖されそう','学び舎の屋根と床が傷み，町長が閉鎖を検討している．新しい建物を建てるにはお金が必要だ．','学校をどう守りますか？',
+        C('町の人と修理の寄付を集める','時間はかかるが，皆で学校を支えられる．','寄付が集まり，屋根を直せた．','学校は授業を続けた．','heart'),
+        C('危険な教室を閉め，順番に修理する','使える部屋は減るが，安全を守れる．','空いている教室で授業を続けた．','修理が終わり，全員が戻った．','plan'),
+        C('王都に新しい校舎の建設を申請する','手続きは大変だが，大きく改善できる．','申請が通り，新しい校舎が建った．','遠くから通う生徒も増えた．','bold')),
+      45:S('不公平な入学試験','町の学院で，裕福な家庭の子だけが有利な試験問題が出された．貧しい家庭の生徒が受験を諦め始めている．','試験をどう変えますか？',
+        C('貧しい家庭の子向けの無料講座を始める','教師の負担は増えるが，今の生徒を助けられる．','夜の教室で勉強会を始めた．','受験できる子どもが増えた．','heart'),
+        C('試験問題を見直してもらうよう提案する','時間はかかるが，不公平を減らせる．','学院が家庭環境によらない問題へ変えた．','試験を諦める子が減った．','plan'),
+        C('町長と会い，新しい奨学金を作る','資金集めが必要だが，学費も助けられる．','奨学金ができ，生徒が学院へ進んだ．','遠くの村からも応募が来た．','bold')),
+      50:S('幼い友人の子ども','昔の友人エマが，娘を学校に入れたいと相談してきた．娘は字を読むのが苦手で，授業についていけるか心配している．','エマの娘をどう支えますか？',
+        C('一対一で文字を教える','時間はかかるが，本人に合わせられる．','娘は少しずつ読めるようになった．','自信を持って学校へ通い始めた．','heart'),
+        C('読みやすい大きな字の教科書を作る','準備は要るが，ほかの生徒にも使える．','新しい教材を作って配った．','同じように困っていた子にも役立った．','plan'),
+        C('専門の先生を探して相談する','遠くへ行く必要があるが，支援の方法を学べる．','王都の先生に相談し，学び方を工夫した．','娘は自分に合う方法で勉強を続けた．','bold')),
+      55:S('新しい教師を迎える','若い教師が学び舎に来た．授業が上手だが，経験豊富な先生たちは新しい教え方を不安に思っている．','教師たちをどうまとめますか？',
+        C('先生同士で授業を見学し合う','時間はかかるが，互いに学べる．','授業の工夫を話し合うようになった．','新しい教師も安心して働けた．','heart'),
+        C('一部の授業だけ新しい方法を試す','変化はゆっくりだが，結果を見られる．','試した学級で生徒の理解が進んだ．','他の学級でも導入された．','plan'),
+        C('若い教師に新しい学級を任せる','責任は大きいが，経験を積める．','若い教師は自分の工夫で授業を始めた．','翌年には生徒に人気の先生になった．','bold')),
+      60:S('山の村に学校がない','山の村から子どもを学校へ通わせたいと相談が来た．歩くと片道三時間かかる．','山の村の子をどう教えますか？',
+        C('村へ週に一度教えに行く','移動は大変だが，すぐ始められる．','教師と交代で村へ通うようになった．','子どもは文字を覚え始めた．','heart'),
+        C('村の大人に教え方を伝える','準備は要るが，毎日学べる．','村の大人が小さな教室を開いた．','子どもは毎日勉強できた．','plan'),
+        C('町長と協力して村に学校を建てる','時間とお金がかかるが，長く続けられる．','小さな校舎が完成した．','村に若い教師が赴任した．','bold')),
+      65:S('本が焼けた図書室','学校の図書室で小さな火事があり，本の半分が焼けた．幸い生徒は全員無事だった．','図書室をどう再開しますか？',
+        C('町の人へ不要な本を寄付してもらう','本はばらばらだが，すぐ棚を満たせる．','町の人が本を持ち寄った．','図書室は再び開いた．','heart'),
+        C('今必要な本から買い直す','予算は要るが，授業に使いやすい．','先生たちと本を選んだ．','図書室は使いやすくなった．','plan'),
+        C('王都の図書館へ本を借りに行く','運搬が必要だが，多くの本を集められる．','百冊の本を借りて戻った．','学校に新しい読書の時間ができた．','bold')),
+      70:S('教師を辞めたい若者','新任教師が「生徒とうまく話せない」と相談してきた．授業は丁寧だが，子どもの質問に答えられず困っている．','若い教師にどう助言しますか？',
+        C('授業のあと一緒に振り返る','時間はかかるが，困りごとを聞ける．','一緒に毎週話し合った．','若い教師は少しずつ自信をつけた．','heart'),
+        C('生徒から質問を集めて準備する','手間はかかるが，授業で落ち着いて答えられる．','質問箱を置き，毎日答えを準備した．','生徒が積極的に質問するようになった．','plan'),
+        C('得意な授業を任せ，経験を積ませる','科目を調整する必要があるが，長所を生かせる．','若い教師は得意な算術を教え始めた．','生徒の成績も伸びた．','bold')),
+      75:S('学校の次の責任者','学び舎の校長が引退する．古くからいる教師と，新しい教え方を考える教師の二人が候補になった．','校長をどう決めますか？',
+        C('二人に役割を分けて協力してもらう','調整は必要だが，経験を生かせる．','一人が校長を，もう一人が授業をまとめた．','先生たちは協力して働けた．','heart'),
+        C('教師と保護者の意見を聞いて決める','時間はかかるが，納得しやすい．','話し合いを経て校長を選んだ．','学校は落ち着いて新年度を迎えた．','plan'),
+        C('若い教師を校長に推薦する','大きな変化になるが，新しい教育を進められる．','若い校長が選ばれた．','学び舎に新しい授業が増えた．','bold')),
+      80:S('昔の地図が読めない','図書室で古い地図が見つかった．文字が今と違い，子どもには読めない．地図には昔の町の橋が描かれている．','古い地図をどう生かしますか？',
+        C('年配の人に昔の町の話を聞く','時間はかかるが，町の記憶を集められる．','町の人が地図の場所を教えてくれた．','子どもたちが昔の道を知った．','heart'),
+        C('今の地図と並べて展示する','準備は要るが，違いが分かりやすい．','二枚の地図を比べる展示を作った．','子どもたちは町の変化を学んだ．','plan'),
+        C('子どもたちと古い橋を見に行く','外出が必要だが，実物で学べる．','みんなで橋の跡を見学した．','授業がとても盛り上がった．','bold')),
+      85:S('冬の教室が寒い','冬，古い校舎の教室が寒く，子どもたちが手をかじかませている．あなたは今も学校の相談役だ．','教室を暖かくするには？',
+        C('町の人に薪を分けてもらう','寄付が必要だが，すぐ暖を取れる．','薪が集まり，ストーブを使えるようになった．','子どもたちは授業に集中できた．','heart'),
+        C('窓の隙間をふさぐ工事を提案する','費用はかかるが，毎年暖かくなる．','職人が窓を直した．','翌年の冬も暖かく過ごせた．','plan'),
+        C('王都から新しい暖房器具を取り寄せる','費用が高いが，教室を広く暖められる．','新しい暖房が設置された．','ほかの学校から見学に来た．','bold')),
+      90:S('記念の授業への招待','90歳．昔教えた生徒たちが集まり，もう一度授業をしてほしいと頼んできた．','記念授業で何を話しますか？',
+        C('生徒たちが助け合った思い出を話す','知識よりも大切な関係を伝えられる．','教え子たちは昔の友達と笑い合った．','会う機会が増えた．','heart'),
+        C('自分が失敗した授業の話をする','気恥ずかしいが，学び直す大切さが伝わる．','あなたは失敗から変えた教え方を話した．','若い教師も参考にした．','plan'),
+        C('子どもたちに新しい夢を尋ねる','昔話は減るが，未来の話になる．','子どもたちが次々と夢を語った．','あなたもその言葉に元気づけられた．','bold')),
+      95:S('百年の学び舎','学校が百年の記念行事を開くことになった．校長が，あなたの経験を生かした企画を一つ考えてほしいと言う．','学校に何を残しますか？',
+        C('卒業生と子どもが交流する日を作る','準備は必要だが，世代をつなげられる．','卒業生が子どもたちと話した．','学校に新しい仲間が増えた．','heart'),
+        C('学べない子のための奨学金を作る','資金集めは大変だが，進学を支えられる．','町の人が寄付を集めた．','多くの子が学院へ進めた．','plan'),
+        C('夜の星を観察する授業を始める','屋外での準備が要るが，子どもの好奇心を育てられる．','星を学ぶ授業が始まった．','生徒は夜空を見上げるようになった．','bold'))
+    }
+  };
+
+  // 25歳と45歳の選択によって30歳・50歳の質問そのものが変わる．
+  const ALTERNATES = {
+    healer:{
+      30:[null,
+        S('薬草師たちとの約束','五年前に薬草を分けてくれた三人の薬草師が，それぞれ違う値段を提示してきた．協力は続けたいが，患者の負担も増やせない．','薬草の価格をどう決めますか？',
+          C('三人と一緒に話し合う','時間はかかるが，事情を聞ける．','薬草師と診療所で共通の値段を決めた．','患者は安心して薬を買えた．','heart'),
+          C('薬草の種類別に価格表を作る','準備が必要だが，負担が分かりやすい．','価格表を診療所に掲示した．','価格を巡る混乱が減った．','plan'),
+          C('新しい薬草師を探して競争を増やす','仕入れ先は変わるが，値下げの可能性がある．','隣町の薬草師とも取引を始めた．','薬を安く届けられるようになった．','bold')),
+        S('山で見つけた薬草の畑','五年前の採集で山の斜面に薬草が多い場所を見つけた．ところが，近くの牧場主が土地を買おうとしている．','薬草が育つ場所をどう守りますか？',
+          C('牧場主に薬草の一部を残すよう相談する','牧場の計画は変わるが，双方が使える．','薬草を育てる区画を残してもらった．','採集が続けられた．','heart'),
+          C('町の畑に薬草を移して育てる','移植の手間はかかるが，採集場所を確保できる．','畑で薬草が育ち始めた．','診療所の在庫が安定した．','plan'),
+          C('別の山へ新しい採集場所を探しに行く','長旅になるが，新しい種類が見つかるかもしれない．','新しい薬草の群生地を見つけた．','薬の種類を増やせた．','bold'))
+      ],
+      50:[null,
+        S('薬草畑で虫が増えた','五年前に始めた薬草畑で，葉を食べる虫が増えた．このままでは冬の薬が足りなくなる．','畑をどう守りますか？',
+          C('農家に虫の対策を教えてもらう','時間はかかるが，地元の経験を生かせる．','農家が虫を寄せ付けにくい植え方を教えた．','畑の収穫が戻った．','heart'),
+          C('被害の大きい畝を植え替える','収穫は減るが，ほかの薬草を守れる．','傷んだ葉を取り除いて畑を整えた．','翌年には新しい葉が育った．','plan'),
+          C('薬草を別の村でも育て始める','土地が必要だが，不作に備えられる．','隣村に小さな畑を作った．','薬の不足が起こりにくくなった．','bold')),
+        S('新しい商人との約束','五年前に契約した商人が，仕入れの量を増やしたいと言ってきた．しかし，診療所の倉庫は狭く，薬草を置けない．','薬草の保管場所をどうしますか？',
+          C('町の商人から倉庫の一角を借りる','家賃はかかるが，すぐ使える．','商人が倉庫を貸してくれた．','薬草の保存がしやすくなった．','heart'),
+          C('診療所の物置を改装する','工事は必要だが，自分たちで管理できる．','換気のよい薬棚を作った．','薬草が傷みにくくなった．','plan'),
+          C('王都に共同倉庫を作る計画を出す','大きな工事になるが，多くの診療所が使える．','共同倉庫が建ち，薬が行き渡った．','周辺の村も利用するようになった．','bold'))
+      ]
+    },
+    builder:{
+      30:[null,
+        S('補強した橋の通行規制','五年前に橋の柱を補強した．しかし，大きな荷馬車が毎日通るため，また床板が傷み始めている．','橋への負担をどう減らしますか？',
+          C('荷運び人と通行時間を決める','少し不便になるが，混雑を減らせる．','朝と夕方に分けて荷馬車を通した．','床板の傷みが減った．','heart'),
+          C('通れる荷物の重さを決める','制限ができるが，安全を守れる．','橋に重さの上限を示す札を立てた．','橋の点検がしやすくなった．','plan'),
+          C('隣に荷馬車専用の橋を作る','大きな費用が必要だが，混雑をなくせる．','町長と協力して新しい橋を架けた．','人と荷馬車が別々に渡れるようになった．','bold')),
+        S('新しい石橋の欠けた欄干','五年前に作り始めた石橋が完成した．ところが，通行初日に欄干の石が一つ欠けた．橋を閉じるべきか迷っている．','石橋をどう扱いますか？',
+          C('橋を閉じ，職人全員で点検する','通行は止まるが，安全を確認できる．','ほかにも緩んだ石が見つかり，直した．','橋は安全に再開した．','heart'),
+          C('欠けた欄干だけ直して原因を調べる','再開は早いが，点検も必要になる．','石の固定方法を変えて直した．','同じ破損が起きなくなった．','plan'),
+          C('新しい固定金具を考えて試す','試作の手間はかかるが，今後の橋にも使える．','工房で丈夫な金具を作った．','職人たちはほかの橋にも使った．','bold'))
+      ],
+      50:[null,
+        S('応急修理した水車のその後','五年前に小さく動かした水車が，今年また止まった．村では粉ひきの仕事が増えている．','水車をどう改良しますか？',
+          C('村の職人と一緒に全体を修理する','人手を要するが，今の仕組みを生かせる．','新しい軸に取り替えた．','水車は再び粉をひいた．','heart'),
+          C('毎月の点検を決める','手間は増えるが，故障を早く見つけられる．','月一回の点検が始まった．','大きな故障は減った．','plan'),
+          C('もう一基，小さな水車を増やす','費用がかかるが，予備ができる．','小型の水車を新設した．','村は粉ひきを休まず続けられた．','bold')),
+        S('風車を使いたい隣村','五年前に作った風車を見て，隣村の人が同じものを作りたいと言ってきた．ただし村は風が弱い谷にある．','隣村へどう助言しますか？',
+          C('村の人と土地の様子を見に行く','時間はかかるが，現場を確かめられる．','谷では水車の方が合うと分かった．','村は水車を作ることにした．','heart'),
+          C('風の強さを測ってから決める','調査に時間はかかるが，無駄を減らせる．','測量の結果，風車は難しいと分かった．','水の利用を考えることになった．','plan'),
+          C('風の通る峠に小さな風車を試作する','工事は大変だが，新しい使い方を試せる．','峠の試作品はゆっくり回った．','村は必要な分だけ風車を使った．','bold'))
+      ]
+    },
+    sailor:{
+      30:[null,
+        S('船に積めなかった布','五年前に船を軽くするため，布の荷物を置いて出港した．商人が「次は必ず運んでほしい」と頼んできた．','布をどう運びますか？',
+          C('別の船と荷物を分ける','利益は分けるが，約束を守れる．','二隻で布を運び，無事に届けた．','ほかの船との協力が続いた．','heart'),
+          C('積む量を計算し，二回に分けて運ぶ','日数は増えるが，自分の船で運べる．','二回の航海で布をすべて運んだ．','商人は新しい日程に納得した．','plan'),
+          C('大きな船を借りて一度に運ぶ','費用は高いが，早く届けられる．','商人から資金を借りて船を用意した．','布は予定どおり届いた．','bold')),
+        S('遅れた船への苦情','五年前に嵐を避けて一週間待ったため，荷主が損失を訴えている．荷物は無事だったが，納期の約束をどうするかが問題だ．','荷主にどう応えますか？',
+          C('荷主に説明し，次の航海で料金を下げる','収入は減るが，関係を続けられる．','荷主は説明に納得した．','次の仕事も依頼された．','heart'),
+          C('悪天候のときの規則を契約に書く','手間はかかるが，今後の誤解を防げる．','新しい契約書を作った．','嵐による遅れは理解されやすくなった．','plan'),
+          C('早い別の航路を開拓する','海の調査が必要だが，納期を短くできる．','近くの島を経由する航路を見つけた．','次の荷物は早く届いた．','bold'))
+      ],
+      50:[null,
+        S('小舟で運んだ食料の続き','五年前の嵐では，島の小舟に食料を積み替えた．その島の船頭が「定期便を一緒に作らないか」と持ちかけてきた．','定期便をどう始めますか？',
+          C('船頭たちと交代で運ぶ','相談は必要だが，負担を分けられる．','週二回の便が始まった．','島の人は買い物に行きやすくなった．','heart'),
+          C('時刻表を決めて運航する','自由は減るが，利用者が予定を立てられる．','決まった時間に船が出るようになった．','商人も便を利用した．','plan'),
+          C('島同士を結ぶ新しい船を買う','費用はかかるが，運べる量が増える．','新しい小舟で三つの島を巡った．','島の商売が盛んになった．','bold')),
+        S('予備の帆を備える','五年前，予備の帆でなんとか港へ戻れた．同じ船で航海を続けるため，安全のための準備を見直したい．','船の備えをどう変えますか？',
+          C('乗組員と故障時の訓練をする','時間はかかるが，仲間が備えられる．','帆の交換を何度も練習した．','次の嵐でも落ち着いて対応できた．','heart'),
+          C('予備の帆を二枚作る','収納場所は減るが，故障に強くなる．','船室に予備の帆を納めた．','長い航海にも安心して出られた．','plan'),
+          C('帆の形を改良する','試験航海が必要だが，風を受けやすくできる．','船大工と丈夫な帆を考えた．','船は以前より速く走った．','bold'))
+      ]
+    },
+    guardian:{
+      30:[null,
+        S('門番の鍵が重すぎる','五年前に錠前を替えたが，鍵が重く，夜勤の門番が開け閉めに時間をかけている．','門の鍵をどう改良しますか？',
+          C('門番の意見を聞き，持ち手を替える','相談が必要だが，使いやすくできる．','職人が軽い持ち手を付けた．','門番は素早く操作できた．','heart'),
+          C('鍵と錠前を一式見直す','費用はかかるが，故障も減らせる．','新しい鍵に替えた．','夜の作業が楽になった．','plan'),
+          C('王都の職人に新しい鍵を注文する','遠くから届くのを待つが，別の仕組みを試せる．','新しい鍵が届き，門番が練習した．','門は安全に閉じられるようになった．','bold')),
+        S('新しい門に人が集まる','五年前に建てた新しい門が便利になり，出入りする荷馬車が増えた．朝は長い列ができている．','門の混雑をどう減らしますか？',
+          C('荷運び人と通行の順番を決める','時間はかかるが，公平に並べる．','馬車は落ち着いて通れるようになった．','朝の列が短くなった．','heart'),
+          C('入口と出口を分ける','工事は必要だが，行き違いを減らせる．','門を二つに分けた．','人と荷馬車が安全に通れた．','plan'),
+          C('市場の近くに新しい通路を作る','費用はかかるが，交通を分散できる．','別の通路が開いた．','城門の混雑は大きく減った．','bold'))
+      ],
+      50:[null,
+        S('閉鎖した山道を開くか','五年前に吹雪で閉鎖した山道が，春になっても崩れたままだ．商人たちは早く開いてほしいと言っている．','山道をいつ開きますか？',
+          C('商人と安全な迂回路を使う','遠回りだが，修理を待てる．','迂回路の案内を出した．','商売は続けられた．','heart'),
+          C('落石を取り除き，点検してから開く','時間はかかるが，安全を確かめられる．','職人と見張り役が道を直した．','一か月後に山道が開いた．','plan'),
+          C('新しい道を山の反対側に作る','工事は大きいが，吹雪に強い道にできる．','町長が工事を始めた．','数年後には新しい道が使われた．','bold')),
+        S('新しい避難所の管理','五年前に開いた学校の避難所が，今も災害時に使われている．しかし，毛布や食料の保管場所が足りなくなった．','避難所の備えをどうしますか？',
+          C('住民に必要な物を聞いて集める','時間はかかるが，必要な物をそろえられる．','毛布と食料の寄付が集まった．','住民は安心して避難できた．','heart'),
+          C('学校に収納用の小屋を作る','工事は必要だが，保管しやすくなる．','小屋に物資を整理した．','必要な時にすぐ出せるようになった．','plan'),
+          C('町内に避難所をもう一か所作る','費用はかかるが，広い地域を守れる．','高台に新しい避難所ができた．','町の備えが強くなった．','bold'))
+      ]
+    },
+    scholar:{
+      30:[null,
+        S('練習帳を増やす相談','五年前に作った練習帳が評判になった．隣村の学校も使いたいと言うが，手書きでは全員分を用意できない．','練習帳をどう増やしますか？',
+          C('生徒と一緒に手書きで写す','時間はかかるが，学びながら作れる．','上級生が下級生の分を用意した．','生徒たちは協力して勉強した．','heart'),
+          C('印刷職人に頼んで作る','費用はかかるが，たくさん配れる．','練習帳を百冊印刷した．','隣村でも使われた．','plan'),
+          C('王都の学校に共同制作を提案する','相談が必要だが，教科を増やせる．','教師が協力して教材を作った．','数年後には新しい科目も加わった．','bold')),
+        S('買ってきた古本の行き先','五年前に王都で買った古本を，別の学校からも借りたいと連絡が来た．自分の学校で使う本も足りていない．','本をどう分けますか？',
+          C('学校同士で貸し借りする','管理の手間はかかるが，互いに使える．','貸出日を決めて本を届けた．','二つの学校で学べた．','heart'),
+          C('必要な本の種類を確認して配る','時間はかかるが，無駄なく使える．','勉強する科目に合わせて分けた．','どちらの学校でも本が活用された．','plan'),
+          C('安い本を新たに探しに行く','旅費はかかるが，本を増やせる．','旅先で多くの古本を見つけた．','学校の図書室が広がった．','bold'))
+      ],
+      50:[null,
+        S('公平な試験のその後','五年前に学院の試験を見直した．ところが，試験問題が難しくなりすぎたという声が出ている．','試験の難しさをどう調整しますか？',
+          C('受験した生徒の声を聞く','時間はかかるが，困りごとが分かる．','生徒の意見を集めた．','出題の分かりにくさが見つかった．','heart'),
+          C('過去の問題と正答率を調べる','作業は必要だが，難しさを確かめられる．','難しすぎる問題を見つけた．','次の試験は改善された．','plan'),
+          C('新しい試験委員を招く','調整が必要だが，外から見直してもらえる．','別の学院の教師が協力した．','公平な試験に近づいた．','bold')),
+        S('奨学金を続けるために','五年前に始まった奨学金の寄付が減り，来年は二人分しか用意できない．支援を続けたい生徒は五人いる．','奨学金をどう続けますか？',
+          C('卒業生に少額の寄付をお願いする','寄付集めが必要だが，関わる人が増える．','多くの卒業生が少しずつ寄付した．','五人全員へ支援を続けられた．','heart'),
+          C('支給額を見直し，必要な費用に絞る','十分ではないが，多くの生徒に渡せる．','学費の一部を五人に支給した．','生徒は勉強を続けられた．','plan'),
+          C('王都の商人に大きな寄付を頼む','交渉が必要だが，支援を増やせる．','商人が新しい基金に資金を出した．','奨学金を長く続けられた．','bold'))
+      ]
+    }
+  };
+
+  // 65歳の決断で70歳の問題も変わる．前の選択と矛盾しない後続事件だけを出す．
+  const SEVENTY_VARIANTS = {
+    healer:[null,
+      S('薬草畑の水路が壊れた','五年前に作った水路の一部が崩れ，薬草畑へ水が届かなくなった．職人は修理に一週間かかるという．','修理まで薬草をどう守りますか？',
+        C('近所の農家に水を分けてもらう','お願いが必要だが，すぐ水を確保できる．','農家が樽に水を入れて届けてくれた．','薬草は枯れずに済んだ．','heart'),
+        C('壊れた部分を一時的な木の水路に替える','作業が必要だが，流れを戻せる．','職人と木の水路を設置した．','その間に本修理も終えた．','plan'),
+        C('水が少なくても育つ薬草に植え替える','収穫量は減るが，将来の干ばつに備えられる．','乾燥に強い薬草を増やした．','畑は安定して育った．','bold')),
+      S('新しい村の薬草畑','五年前に薬草畑を移した村で，予想以上の収穫があった．薬を必要とする町が増え，どこへ送るかが問題になった．','薬草をどう分けますか？',
+        C('不足している村から優先して送る','ほかの町は待つが，困っている人を支えられる．','必要な薬が遠い村へ届いた．','村人は感謝した．','heart'),
+        C('各町の必要量を調べて配る','時間はかかるが，公平に分けられる．','必要量を一覧にして送った．','薬が余りにくくなった．','plan'),
+        C('隣の村にも薬草畑を増やす','人手は必要だが，供給を増やせる．','新しい畑を作った．','薬不足が少なくなった．','bold'))],
+    builder:[null,
+      S('消火用の水槽が凍った','五年前に設置した工房の消火用水槽が，冬に凍って使えなくなった．このままでは火事の時に水が出ない．','冬でも使えるようにするには？',
+        C('職人たちと当番で氷を割る','手間はかかるが，すぐ始められる．','毎朝水槽を点検するようになった．','火事への備えが続いた．','heart'),
+        C('水槽の周りに断熱材を取り付ける','費用がかかるが，凍りにくくなる．','水槽を覆い，水が使える状態を保った．','冬の点検が楽になった．','plan'),
+        C('地下に新しい貯水槽を作る','大工事になるが，冬も安全に使える．','地下の貯水槽を完成させた．','ほかの工房も採用した．','bold')),
+      S('新しい炉を使いたい職人','五年前に改良した炉が評判になり，他の職人も使いたいと言ってきた．ただし，古い工房には置けないほど大きい．','新しい炉をどう広めますか？',
+        C('職人を招いて使い方を教える','時間はかかるが，正しく使ってもらえる．','職人が工房で研修した．','火事の危険が減った．','heart'),
+        C('小さな炉の設計図を作る','試作が必要だが，古い工房でも使える．','小型の炉を完成させた．','多くの工房で使われた．','plan'),
+        C('町に共同で使える大きな炉を作る','場所とお金が必要だが，皆で利用できる．','共同工房が開いた．','若い職人も仕事を始めた．','bold'))],
+    sailor:[null,
+      S('港の税金の使い道','五年前に求めていた港の工事の予算が公開された．ところが，商人たちから修理の優先順位について不満が出ている．','修理の順番をどう決めますか？',
+        C('漁師と商人の話し合いを開く','時間はかかるが，互いの困りごとが分かる．','話し合いで優先する岸壁を決めた．','港の工事は順調に進んだ．','heart'),
+        C('危険な場所を先に修理する','商売は一時的に不便だが，事故を減らせる．','危険な岸壁から工事した．','船員が安全に働けるようになった．','plan'),
+        C('新しい港を一つ増やす案を出す','大きな費用が要るが，船を分散できる．','隣の湾に小さな港が建った．','古い港の混雑が減った．','bold')),
+      S('新しい航路の通行料','五年前に開拓した航路が便利になり，多くの船が通るようになった．ところが，途中の港が高い通行料を求めてきた．','航路をどう維持しますか？',
+        C('港の責任者と値下げを交渉する','話し合いが必要だが，今の航路を使える．','通行料が少し下がった．','船は航路を使い続けた．','heart'),
+        C('荷主と通行料を分担する契約を作る','調整は必要だが，負担が明確になる．','新しい契約がまとまった．','商人は安心して荷を任せた．','plan'),
+        C('別の港を通る航路を開く','遠回りになるが，通行料を減らせる．','新しい寄港地を見つけた．','船の行き先が広がった．','bold'))],
+    guardian:[null,
+      S('城壁の修理費が足りない','五年前に修理費を確保したが，工事中に追加のひびが見つかった．このままでは予算が足りない．','城壁の修理をどう続けますか？',
+        C('町の人と資金集めの相談をする','寄付を頼むことになるが，協力を得られる．','住民が資金を出し合った．','修理を最後まで続けられた．','heart'),
+        C('危険な場所から順番に修理する','完成は遅れるが，費用を分けられる．','最も危険な壁から直した．','事故なく工事が終わった．','plan'),
+        C('王都に追加の資金を申請する','手続きは必要だが，十分な修理ができる．','申請が認められた．','城壁の修理が完了した．','bold')),
+      S('直した城壁の見張り','五年前に補強した城壁に新しい見張り台ができた．人員は増えておらず，夜の当番が不足している．','夜の見張りをどう増やしますか？',
+        C('住民の見回りボランティアを募る','訓練は必要だが，協力者を増やせる．','住民も安全に見回れるようになった．','町の防犯意識が高まった．','heart'),
+        C('見張りの時間を組み直す','慣れる必要はあるが，少人数でも守れる．','当番を分け，休憩を確保した．','門番の負担が減った．','plan'),
+        C('新しい衛兵を採用する','給金はかかるが，見張りを強化できる．','若い衛兵が増えた．','城壁を守る人数が十分になった．','bold'))],
+    scholar:[null,
+      S('買い直した本の保管場所','五年前に本を買い直したため，図書室の棚が足りなくなった．子どもたちは本を床に積んでいる．','本をどう保管しますか？',
+        C('町の人から本棚を譲ってもらう','同じ形はそろわないが，早く片づけられる．','使われていない棚が届いた．','図書室は片づいた．','heart'),
+        C('本の種類ごとに並べて新しい棚を作る','時間はかかるが，探しやすくなる．','職人と棚を作った．','生徒は本を見つけやすくなった．','plan'),
+        C('隣の部屋を第二図書室にする','工事は必要だが，場所を増やせる．','二つ目の図書室が開いた．','読書する生徒が増えた．','bold')),
+      S('王都の本を返す期限','五年前に王都から借りた本の返却期限が近づいている．しかし，子どもたちはまだ読み終えていない．','本をどう返しますか？',
+        C('図書館に延長をお願いする','断られる可能性はあるが，本を使い続けられる．','図書館が一か月延長してくれた．','生徒は読み終えた．','heart'),
+        C('残りの本を分担して読めるようにする','一人の時間は短いが，全員が使える．','貸出日を決め，順番に読んだ．','期限に間に合って返した．','plan'),
+        C('同じ本を買うため寄付を募る','資金は必要だが，学校に本を残せる．','寄付が集まり，本を購入した．','図書室の本が増えた．','bold'))]
+  };
+  for(const [career,variants] of Object.entries(SEVENTY_VARIANTS)){
+    ALTERNATES[career][70]=variants;
+  }
+
+  const HAZARDS = {
+    healer:S('熱病の村へ届ける薬','山の村で熱病が広がり，薬を求める使いが来た．村への道は険しく，雨で橋も傷んでいる．診療所には元気な若い薬師がいる．','薬をどう届けますか？',
+      C('若い薬師と配達人に任せる','自分は診療所に残るが，安全な方法で届けられる．','二人が薬を届け，住民は治療を受けられた．','若い薬師の経験が増えた．','heart'),
+      C('村の入口まで馬車で同行する','薬を直接渡せるが，事故で命を落とすおそれがある．','村の入口で薬を受け渡し，無事に帰った．','村との連絡が続いた．','plan',.08),
+      C('崩れかけた橋を渡り，すぐ村へ入る','橋が崩れて命を落とす危険が高い．','橋を渡って薬を届け，すぐに安全な道から戻った．','橋は翌日通行止めになった．','bold',.50)),
+    builder:S('崩れかけた時計塔','町の時計塔の足場が崩れ，一人の職人が上階に取り残された．救助隊はすでに向かっている．塔の階段は傷んでいる．','取り残された職人をどう助けますか？',
+      C('救助隊を待ち，地上から位置を知らせる','救出まで時間がかかるが，危険な塔へ入らずに済む．','救助隊が梯子を使い，職人を助けた．','職人は無事に帰宅した．','heart'),
+      C('地上から縄と道具を渡す','救助を早められるが，落下物で命を落とすおそれがある．','職人が縄を受け取り，救助隊の手で下りた．','塔の作業に安全な足場が設けられた．','plan',.06),
+      C('自分で傷んだ階段を上って助けに行く','塔が崩れれば命を落とす危険が高い．','手すりを使って上階に着き，職人を安全な場所へ誘導した．','その後，塔は解体され新しく建てられた．','bold',.49)),
+    sailor:S('嵐の岩礁に残った船','夜の嵐で，小舟が岩礁に引っ掛かり，船員が助けを求めている．救助船は準備中だが，波が高い．','船員をどう救いますか？',
+      C('灯台から救助船の道を照らす','現場には行けないが，安全な航路を示せる．','救助船が小舟を見つけ，船員を救い出した．','灯台の見張りが強化された．','heart'),
+      C('岸から縄を運び，救助隊へ渡す','早く救助を始められるが，濡れた岸で転倒し命を落とすおそれがある．','救助隊が縄を使って船員を助けた．','港に新しい救助用の縄が備えられた．','plan',.08),
+      C('一人で小舟に乗り，岩礁へ近づく','荒波に転覆させられ命を落とす危険が高い．','波を越えて岩礁へ着き，船員を助け出した．','港の人々は救助の備えを見直した．','bold',.55)),
+    guardian:S('火の回った見張り塔','落雷で見張り塔に火がついた．衛兵は全員避難したが，上階に大切な警報用の鐘が残っている．火消し隊は到着している．','鐘をどう扱いますか？',
+      C('鐘はあきらめ，衛兵の無事を確かめる','鐘は失うが，人命を守れる．','衛兵全員の無事が確かめられた．','翌年，新しい警報の鐘が設置された．','heart'),
+      C('火消し隊に鐘の位置を伝える','救助隊に任せられるが，落下物で命を落とすおそれがある．','火消し隊が安全な側から鐘を下ろした．','塔の火は消し止められた．','plan',.06),
+      C('自分で燃える塔に入り，鐘を運び出す','煙と火に巻かれ命を落とす危険が高い．','鐘を外へ運び出し，階段が落ちる直前に脱出できた．','町では危険な救出を避ける規則が作られた．','bold',.55)),
+    scholar:S('学校に迫る山火事','乾燥した日に学校の裏山で火が出た．生徒は全員避難し，火消し隊も到着した．校舎には古い教科書が残っている．','教科書をどう守りますか？',
+      C('教科書は置いて，全員の避難を確かめる','本は失うかもしれないが，人を守れる．','全員の無事を確認した．','後日，町の人が本を寄付してくれた．','heart'),
+      C('火消し隊に本の保管場所を伝える','救助の妨げにならない範囲で運び出せる．','隊員が安全な教室から教科書を運び出した．','授業はすぐ再開できた．','plan'),
+      C('煙の入った校舎に戻って本を持ち出す','煙に巻かれ命を落とす危険が高い．','数冊の本を持って無事に戻った．','その後は人の安全を最優先することを学んだ．','bold',.55))
+  };
+
+  // 12星座は遊び手が選び，同じ日・同じ星座の出生地は共通となる．
+  const ZODIAC = [
+    {id:'aries',name:'おひつじ座',mark:'♈',gift:'行動力',stat:'courage'},
+    {id:'taurus',name:'おうし座',mark:'♉',gift:'堅実さ',stat:'resources'},
+    {id:'gemini',name:'ふたご座',mark:'♊',gift:'学ぶ力',stat:'skill'},
+    {id:'cancer',name:'かに座',mark:'♋',gift:'思いやり',stat:'care'},
+    {id:'leo',name:'しし座',mark:'♌',gift:'行動力',stat:'courage'},
+    {id:'virgo',name:'おとめ座',mark:'♍',gift:'学ぶ力',stat:'skill'},
+    {id:'libra',name:'てんびん座',mark:'♎',gift:'思いやり',stat:'care'},
+    {id:'scorpio',name:'さそり座',mark:'♏',gift:'堅実さ',stat:'resources'},
+    {id:'sagittarius',name:'いて座',mark:'♐',gift:'行動力',stat:'courage'},
+    {id:'capricorn',name:'やぎ座',mark:'♑',gift:'堅実さ',stat:'resources'},
+    {id:'aquarius',name:'みずがめ座',mark:'♒',gift:'学ぶ力',stat:'skill'},
+    {id:'pisces',name:'うお座',mark:'♓',gift:'思いやり',stat:'care'}
+  ];
+  const CHILD_NAMES=['ルネ','リリ','ティオ','カナ','エド','メイ'];
+  const F=(text,hint,result,trait,effect)=>({...C(text,hint,result,'',trait),familyEffect:effect});
+
+  function meetingScene(){
+    const [man,woman]=partnerCandidates();
+    return S('春祭りでの二つの出会い',
+      `25歳．${DOMAINS[state.career].name}として働き始めて五年．春祭りで${partnerLabel(man)}と${partnerLabel(woman)}に出会った．どちらとも何度か話すうちに，あなたは自分の気持ちを考えるようになった．`,
+      'これから誰と，どんな関係を築きますか？',
+      F(`${man.name}（男性）と交際する`,'',`${man.name}と手紙を交わし，休日を一緒に過ごすようになった．`,'heart',
+        {relationship:'dating',partner:man.name,partnerGender:'male',partnerRole:man.job}),
+      F(`${woman.name}（女性）と交際する`,'',`${woman.name}と町を散歩したり，休日に出かけたりするようになった．`,'bold',
+        {relationship:'dating',partner:woman.name,partnerGender:'female',partnerRole:woman.job}),
+      F('交際はせず，友人や仕事の時間を大切にする','','二人とは友人として交流し，仕事や趣味にも時間を使った．','plan',
+        {relationship:'single',partner:null,partnerGender:null,partnerRole:null}));
+  }
+  function marriageScene(){
+    const life=state.familyLife;
+    if(life.relationship!=='dating')return S('これからも続く仲間との約束',
+      '35歳．あなたは仕事仲間と力を合わせ，小さな町の倉庫を修理することになった．仲間たちは，長く使える場所にしたいと考えている．',
+      'どの役割を引き受けますか？',
+      C('町の人から希望を聞き取る','','人々の希望が集まり，居心地のよい倉庫になった．','町の人とのつながりが深まった．','heart'),
+      C('修理の日程と材料を調べる','','必要な材料がそろい，無理のない日程で修理できた．','計画を立てる力が伸びた．','plan'),
+      C('近隣の町で使える道具を借りてくる','','不足していた道具がそろい，予定より早く完成した．','新しい仕事仲間と知り合った．','bold'));
+    const p=life.partner;
+    const gender=life.partnerGender;
+    const job=life.partnerRole;
+    const who=`${p}（${gender==='male'?'男性':'女性'}・${job}）`;
+    if(life.relationship==='dating')return S('ふたりの暮らしを決める',
+      `35歳．${who}と交際して十年が経った．${p}から「これからの暮らしを一緒に考えたい」と相談された．`,
+      'これからの関係をどうしますか？',
+      F(`${p}と結婚する`,'',`${p}と小さな結婚式を挙げ，一緒に暮らし始めた．`,'heart',
+        {relationship:'married',partner:p,partnerGender:gender,partnerRole:job}),
+      F(`${p}と結婚せず一緒に暮らす`,'',`${p}と住まいを借り，互いの仕事を支えながら生活した．`,'plan',
+        {relationship:'partnered',partner:p,partnerGender:gender,partnerRole:job}),
+      F(`${p}と話し合い，別々の道へ進む`,'',`二人は別れることに決めた．しばらく寂しかったが，仕事と友人に支えられた．`,'bold',
+        {relationship:'single',partner:null,partnerGender:null,partnerRole:null}));
+  }
+  function childrenScene(){
+    const life=state.familyLife;
+    const name=CHILD_NAMES[hash(state.seed,'child-name')%CHILD_NAMES.length];
+    if(life.relationship==='married'||life.relationship==='partnered')return S('家族のこれから',`40歳．${life.partner}と落ち着いた暮らしを送っている．二人は，この先の家族の形について話し合うことにした．町には，親を亡くし新しい家族を待つ子どももいる．`,'子どもについて，どう考えますか？',
+      F('赤ちゃんを家族に迎え，育てる','','二人は長い準備を経て，赤ちゃんの${name}を家族に迎えた．二人で世話をしながら育てた．','heart',{childMode:'birth',childName:name}),
+      F('親を亡くした子を養子に迎える','新しい環境に慣れるまで，時間をかけて支える必要がある．',`5歳の${name}を家族に迎えた．少しずつ互いの好きなものを知っていった．`,'plan',{childMode:'adopt',childName:name}),
+      F('子どもは持たず，二人の暮らしを大切にする','子育てはしないが，仕事や二人の時間を続けられる．',`二人は子どもを持たないことに決め，今の家で暮らし続けた．`,'bold',{childMode:'none',childName:null}));
+    return S('町の子どもたちのこと',`40歳．あなたは一人で暮らしている．親戚から，両親を亡くした${name}の面倒を見られないか相談された．一方，町の学校では，放課後に子どもたちが過ごす場所も不足している．`,'あなたはどう関わりますか？',
+      F(`${name}の後見人になり，一緒に暮らす`,'暮らしが変わり，育てる責任を持つ．',`${name}を自宅に迎え，二人の生活が始まった．`,'heart',{childMode:'guardian',childName:name}),
+      F('学校の放課後教室を手伝う','自分の家では育てないが，町の子どもたちを支えられる．','週に一度，子どもたちの勉強や遊びを手伝うことにした．','plan',{childMode:'mentor',childName:null}),
+      F('仕事を続け，家で子どもは育てない','自分の時間と暮らしを守れる．','親戚には事情を説明し，町の福祉係と相談して別の預け先を探した．','bold',{childMode:'none',childName:null}));
+  }
+  function laterFamilyScene(){
+    const life=state.familyLife;
+    if(life.childName){
+      const name=life.childName;
+      return S(`${name}の進路`, `55歳．家族として育ててきた${name}は，将来を考える年齢になった．遠くで学ぶ道と，町で見習い仕事を始める道で迷い，「相談に乗ってほしい」と話した．`,'どんな助言をしますか？',
+        F('本人の希望を聞き，町を出る準備を手伝う','離れて暮らすことになるが，新しい世界へ送り出せる．',`${name}は町を出て学ぶ道を選んだ．出発の日，あなたは荷物を持って見送った．`,'heart',{childFuture:'travel'}),
+        F('町で学べる仕事や学校を一緒に探す','選択肢は地域に限られるが，具体的に将来を考えられる．',`${name}は町の仕事を見学し，職人のもとで学び始めた．`,'plan',{childFuture:'local'}),
+        F('自分の経験を話し，最後は本人に決めてもらう','答えを出すまで時間がかかるが，自分で選べる．',`${name}は考えた末，一年間旅をしてから進路を決めることにした．`,'bold',{childFuture:'journey'}));
+    }
+    if(life.relationship==='married'||life.relationship==='partnered'){
+      const p=life.partner;
+      return S('ふたりの住まい',`55歳．${p}は長年住んだ家を修理したいと言う．家の屋根は雨漏りが始まっているが，引っ越しを考える友人もいる．二人には，今後どこで暮らすかを決める余裕がある．`,'住まいをどうしますか？',
+        F(`${p}と協力して屋根を直し，ここで暮らす`,'修理費はかかるが，慣れた町に残れる．','職人に屋根を直してもらい，二人は今の家で暮らし続けた．','heart',{home:'repair'}),
+        F('小さな家へ引っ越し，今の家を貸す','荷物の整理は必要だが，維持する家が小さくなる．','二人は市場の近くに移り，古い家は若い家族に貸した．','plan',{home:'move'}),
+        F('別の町で暮らしてみる','友人と離れるが，新しい場所で生活できる．',`${p}と隣町へ移り，新しい知り合いが増えた．`,'bold',{home:'travel'}));
+    }
+    return S('長年の友人の頼み',`55歳．昔からの友人ミナが，町の広場に小さな休憩所を作りたいと相談してきた．雨の日にも座れる場所を用意したいが，人手が足りない．`,'友人の計画をどう助けますか？',
+      F('友人や近所の人に声をかける','人数が集まれば作業が早く終わる．','近所の人が集まり，休憩所が完成した．','heart',{home:'community'}),
+      F('必要な材料と費用を調べる','準備が必要だが，無理な出費を抑えられる．','木材の数を計算し，予算内で休憩所を作れた．','plan',{home:'budget'}),
+      F('町長に土地の利用を相談する','許可を待つが，長く使える場所にできる．','町長の許可を得て，広場の一角が休憩所になった．','bold',{home:'public'}));
+  }
+
+  // 選択の結果は直後の画面で伝える．3年後には前の事件とは別の出来事を挟む．
+  const INTERLUDES={
+    8:[['秋の読み聞かせ','学校の先生が，広場で物語を読んでくれた．あなたは初めて，北の山に住む巨鳥の冒険を聞いた．帰り道，友だちと「本物の巨鳥はいるのかな」と話した．'],['市場で見つけた小さな笛','市場で，旅人が木の笛を売っていた．あなたは音色が気に入り，しばらく立ち止まった．店主は見本を吹き，祭りの日にまた来ると言った．']],
+    13:[['学校の劇','学校で，秋祭りに上演する短い劇の練習が始まった．友だちのリオは台詞を忘れて困っていたが，放課後に皆で練習すると，少しずつ言えるようになった．'],['川辺の遠足','先生に連れられて，川の上流へ遠足に出かけた．初めて見る大きな水車が，村の粉ひきを支えていた．帰り道，あなたはその仕組みを何度も思い出した．']],
+    18:[['卒業の日','学校を卒業する日，先生は一人ずつに小さな手紙を渡した．友人たちは別々の進路を話し合っていた．あなたにも，町の外でできる仕事があると知った．'],['春の旅立ち','町の門前で，旅立つ同級生を見送った．友人は大きな荷物を背負い，王都の学校へ向かうと言った．あなたは，自分のこれからの仕事について考え始めた．']],
+    23:[['初めての給金','働き始めて三年がたった．初めてまとまった給金を受け取り，家族に焼き菓子を買って帰った．家では皆が仕事の話を聞きたがった．'],['仕事帰りの食堂','仕事を終えて食堂に寄ると，ほかの職人や商人たちが集まっていた．仕事は違っても，誰もが翌日の準備に追われていると分かった．']],
+    28:[['初雪の夜','仕事帰りに初雪が降り始めた．あなたは近所の店の軒先で雨宿りをした．隣にいた旅人は，雪の降らない南の町で育ったと話してくれた．'],['市の新しい店','市場に小さな料理屋が開いた．遠い国の香辛料を使った料理が評判になり，昼休みには長い行列ができた．あなたも一度食べに行った．']],
+    33:[['古い友人との再会','子どもの頃に同じ学校へ通ったリオが，久しぶりに町へ戻ってきた．二人は昔の教室を眺めながら，この十年の仕事や暮らしを話した．'],['冬の大掃除','町の人たちが広場の倉庫を片づけることになった．古い祭りの旗や道具が見つかり，昔の祭りを知る人が思い出を語ってくれた．']],
+    38:[['春の新しい橋','川に新しい歩道橋がかかり，学校へ通う子どもたちの回り道が減った．完成の日には町の人々が集まり，橋の上で小さな式が開かれた．'],['夜の星見会','王都から来た天文学者が，広場で星を見せてくれた．空には知らない星の並びがいくつもあり，あなたは望遠鏡をのぞいて静かに驚いた．']],
+    43:[['町の音楽祭','この年，町で新しい音楽祭が開かれた．商人の娘が歌い，職人たちが楽器を演奏した．あなたは知り合いと客席に並び，最後まで楽しんだ．'],['花の咲く道','市場へ続く道沿いに，住民たちが花を植えた．毎朝通るたびに花の数が増え，春の終わりには道が明るくなった．']],
+    48:[['遠い町からの便り','遠い町へ移った友人から手紙が届いた．手紙には新しい家と仕事のことが書かれていた．あなたは返事に近況を書き，季節の挨拶を添えた．'],['夏の水不足','雨の少ない夏が続き，町では井戸の水を大切に使うよう呼びかけがあった．皆が協力し，秋の雨まで水を分け合って暮らした．']],
+    53:[['久しぶりの休日','忙しい日々の合間に，久しぶりの休日を取った．小さな茶屋で昼食をとり，窓から通りを眺めた．町には若い働き手が増えていた．'],['市場の新しい時計','市場の中央に大きな時計が設置された．開店時間を確かめやすくなり，商人たちは便利だと喜んだ．古い店主は「昔は鐘を聞いていた」と笑った．']],
+    58:[['広場の新しい木','広場に若い木が植えられた．木陰ができるのは何年も先だが，子どもたちが毎日水をやっている．あなたは仕事帰りにその様子を見かけた．'],['昔の写真','友人が若い頃の絵を見せてくれた．そこには今はない店や，まだ小さかった町の門が描かれている．あなたは街の変化を感じた．']],
+    63:[['雨の図書室','大雨の日，町の図書室で一冊の本を手に取った．若い旅人の日記を読んでいると，自分にも初めて町を出た日があったと思い出した．'],['久しぶりの祭り','夏祭りの夜，屋台の灯りが広場いっぱいに並んだ．あなたは昔と変わらない焼き菓子を買い，隣にいた友人と近況を話した．']],
+    68:[['冬支度','町には今年も冬が近づいてきた．家々で薪や毛布をそろえ，近所同士で足りない物を貸し借りした．あなたも早めに家の修理を済ませた．'],['薬草園の公開日','町の薬草園が一般公開された．案内係は，花の香りや育て方を丁寧に説明してくれた．あなたは小さな苗をひとつ買って帰った．']],
+    73:[['川沿いの散歩','陽の暖かい午後，川沿いをゆっくり歩いた．若い人が新しい橋を渡り，遠くで子どもたちの声が聞こえる．町は少しずつ変わり続けていた．'],['昔の菓子屋','かつて通った菓子屋が，新しい店主に代わっていた．昔と同じ焼き菓子の香りがして，あなたは一つ買って帰った．']],
+    78:[['学校の展示会','町の学校で，子どもたちが作った地図や絵の展示会が開かれた．新しい地図には，あなたが若い頃にはなかった道も描かれていた．'],['秋の収穫市','秋の収穫市に，近くの村から果物と麦が届いた．あなたは昔からなじみのある店主と話し，今年の天候のことを聞いた．']],
+    83:[['古い家の修繕','近所の若い家族が家の修理を始めた．作業の音を聞きながら，あなたは町で長く暮らしてきたことを思った．'],['午後の茶会','友人に招かれ，小さな茶会へ出かけた．皆で昔の仕事や祭りの話をすると，時間があっという間に過ぎた．']],
+    88:[['春の日差し','窓からやわらかな日差しが入る朝，あなたはしばらく庭を眺めた．隣家の子どもが新しい花を植え，元気に挨拶してくれた．'],['若者たちの歌','広場から聞こえる歌声に誘われて外へ出た．若者たちが新しい歌を練習している．あなたが知っている古い歌も，その中に一曲あった．']],
+    93:[['古い通りの名前','町では新しい地図が作られていた．昔から使われていた通りの名前も残され，地図を見た人々は懐かしそうに話した．'],['夕暮れの鐘','遠くの鐘が夕方を知らせた．昔は仕事を終える合図だったその音を，今は家で静かに聞いている．窓の外はゆっくり暗くなっていった．']],
+    98:[['最後の春祭り','春祭りの広場で，幼い子どもたちが踊っていた．あなたは少し離れた席から眺め，長く続く祭りの光景に微笑んだ．'],['町の新しい門','町の入り口に，新しい木の門が建てられた．あなたが幼い頃にくぐった門と形は違うが，人々を迎える役目は同じだった．']]
+  };
+  function independentStory(age){
+    const options=INTERLUDES[age];if(!options)throw Error('物語がありません：'+age);
+    const [title,body]=options[hash(state.seed,`life-interlude-${age}`)%options.length];
+    return {age,title,body:`${age}歳．${body}`};
+  }
+
+  'use strict';
+  const screen = document.getElementById('screen');
+  const notice = document.getElementById('notice');
+  const ESC = value=>String(value??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+  const fmt = value=>ESC(value).replace(/\n/g,'<br>');
+  const hash=(seed,label)=>{let h=(seed>>>0)^2166136261;for(const c of String(label)){h^=c.charCodeAt(0);h=Math.imul(h,16777619);}return h>>>0;};
+  const chance=(seed,label)=>hash(seed,label)/4294967296;
+  const newSeed=()=>{try{const v=new Uint32Array(1);crypto.getRandomValues(v);return v[0]||123456789;}catch{return ((Date.now()^Math.random()*0xffffffff)>>>0)||987654321;}};
+
+  // 東京の日付で「同じ星座ならその日の出生地は同じ」を実現．翌日必ず隣の地域へ変わる．
+  function tokyoDay(){
+    const p=Object.fromEntries(new Intl.DateTimeFormat('en-US',{
+      timeZone:'Asia/Tokyo',year:'numeric',month:'2-digit',day:'2-digit'
+    }).formatToParts(new Date()).filter(x=>x.type!=='literal').map(x=>[x.type,x.value]));
+    return `${p.year}-${p.month}-${p.day}`;
+  }
+  function originForDay(signId,day){
+    const i=ZODIAC.findIndex(z=>z.id===signId);
+    if(i<0 || !/^\d{4}-\d{2}-\d{2}$/.test(day))throw Error('出生条件が正しくありません');
+    const [y,m,d]=day.split('-').map(Number);
+    const dayNumber=Math.floor(Date.UTC(y,m-1,d)/86400000);
+    return (hash(i+2026,'star-place')%ORIGINS.length + dayNumber)%ORIGINS.length;
+  }
+  const zodiacById=id=>ZODIAC.find(z=>z.id===id);
+  const hasChild=()=>!!state?.familyLife?.childName;
+  function relationshipLabel(){
+    if(!state?.familyLife)return 'まだ決めていません';
+    const {relationship,partner}=state.familyLife;
+    if(relationship==='married')return `${partner}と結婚`;
+    if(relationship==='partnered')return `${partner}と共同生活`;
+    if(relationship==='dating')return `${partner}と交際中`;
+    return '一人暮らし';
+  }
+  const choiceOrder=(seed)=>CAREER_KEYS.map((key,i)=>({key,choice:CAREER_CHOICES[i]})).sort((a,b)=>hash(seed,`career-order-${a.key}`)-hash(seed,`career-order-${b.key}`));
+  const requestedSeed=(()=>{try{let n=new URLSearchParams(location.search).get('seed');if(n!==null&&/^\d{1,10}$/.test(n)&&Number(n)<=4294967295)return Number(n)>>>0;}catch(e){}return null;})();
+  const requestedSign=(()=>{try{const s=new URLSearchParams(location.search).get('sign');return zodiacById(s)?.id||null;}catch{return null;}})();
+  function fresh(seed,sign= 'leo',birthDay=tokyoDay(),gender='female'){
+    if(!GENDERS.some(g=>g.id===gender))throw Error('主人公の設定が正しくありません');
+    const z=zodiacById(sign);if(!z)throw Error('星座を選択してください');
+    const stats={care:10,skill:10,courage:10,resources:10,vitality:15};
+    stats[z.stat]+=3;
+    return {v:VERSION,seed,zodiac:sign,birthDay,gender,romance:null,origin:originForDay(sign,birthDay),
+      family:hash(seed,'family')%FAMILIES.length,phase:'prologue',age:0,career:null,stats,
+      traits:{heart:0,bold:0,plan:0},history:[],stories:[],latest:null,death:null,
+      familyLife:{relationship:'single',partner:null,partnerGender:null,partnerRole:null,childMode:'none',childName:null,childFuture:null,home:null}};
+  }
+  function validSave(x){
+    return x&&x.v===VERSION&&Number.isInteger(x.seed)&&x.seed>=0&&x.seed<=4294967295&&
+      zodiacById(x.zodiac)&&GENDERS.some(g=>g.id===x.gender)&&[null,'men','women','none'].includes(x.romance)&&/^\d{4}-\d{2}-\d{2}$/.test(x.birthDay||'')&&
+      Number.isInteger(x.origin)&&x.origin===originForDay(x.zodiac,x.birthDay)&&
+      ['prologue','choice','result','story','ending'].includes(x.phase)&&
+      Number.isInteger(x.age)&&[0,...ALL_AGES].includes(x.age)&&
+      (x.career===null||Object.hasOwn(DOMAINS,x.career))&&
+      x.stats&&STATS.every(([k])=>Number.isFinite(x.stats[k]))&&
+      x.traits&&Object.values(x.traits).every(Number.isFinite)&&
+      x.familyLife&&['single','dating','married','partnered'].includes(x.familyLife.relationship)&&
+      (!x.familyLife.partner||(x.familyLife.partnerGender==='male'||x.familyLife.partnerGender==='female'))&&
+      Array.isArray(x.history)&&Array.isArray(x.stories);
+  }
+  function load(){
+    try{
+      const saved=JSON.parse(localStorage.getItem(SAVE_KEY)||'null');
+      if(validSave(saved))return saved;
+      const previous=null;
+      if(previous&&previous.v===11){
+        const migrated={...previous,v:VERSION};
+        if(validSave(migrated))return migrated;
+      }
+    }catch(e){}
+    return null;
+  }
+  function save(){try{localStorage.setItem(SAVE_KEY,JSON.stringify(state));}catch{}}
+  let oldSave=load(); let state=null; let selectedSign=requestedSign||oldSave?.zodiac||null;
+  let selectedGender=oldSave?.gender||null;
+  function scrollTop(){try{window.scrollTo({top:0,left:0,behavior:'instant'});}catch{window.scrollTo(0,0);}}
+  function header(t){return `<div class="chapter-top"><span class="eyebrow dark">${ESC(t)}</span><span class="side-date">${state.age===0?'誕生':state.age+'歳'}</span></div>`;}
+  function timeline(){
+    const entries=state.history.slice(-5).map(x=>`<li><b>${x.age}歳｜${ESC(x.title)}</b><br>${ESC(x.choice)}</li>`);
+    return entries.length?`<details><summary>これまでの選択を見る</summary><ol class="timeline">${entries.join('')}</ol></details>`:'<p>物語はここから始まります．</p>';
+  }
+  function sidebar(){const place=ORIGINS[state.origin];const work=state.career?DOMAINS[state.career].name:'まだ決めていません';
+    const star=zodiacById(state.zodiac); const life=state.familyLife;
+    const child=life.childName?`${life.childName}と家族`:life.childMode==='mentor'?'放課後教室を支援':'子どもはいません';
+    return `<aside class="sidebar"><section class="status-box"><h2>いまのあなた</h2>
+      <div class="about-you" style="margin-top:0;border:0;padding:0"><strong>主人公：</strong>${ESC(genderName(state.gender))}<br>${state.age>=25?`<strong>恋愛：</strong>${ESC(state.familyLife.partner?`${state.familyLife.partner}（${state.familyLife.partnerGender==='male'?'男性':'女性'}）`:'交際しない道を選んだ')}<br>`:''}<strong>星座：</strong>${ESC(star.mark)} ${ESC(star.name)}<br><strong>生まれた町：</strong>${ESC(place.name)}<br><strong>生まれた家：</strong>${ESC(FAMILIES[state.family])}<br><strong>仕事：</strong>${ESC(work)}<br>${state.age>=25?`<strong>暮らし：</strong>${ESC(relationshipLabel())}<br>`:''}${state.age>=40?`<strong>子ども：</strong>${ESC(child)}<br>`:''}</div>
+      <p class="status-sub" style="margin-top:18px">行動によって積み重なる，ゲーム内の数値です．</p>
+      ${STATS.map(([k,label])=>`<div class="row"><span>${ESC(label)}</span><strong>${state.stats[k]}</strong></div><div class="meter"><span style="width:${Math.max(0,Math.min(100,state.stats[k]/(Math.max(0,state.stats[k])+35)*100))}%"></span></div>`).join('')}
+      </section><section class="tale-box"><h2>歩んだ道</h2>${timeline()}</section></aside>`;
+  }
+  function frame(contents){return `<div class="folio-wrap"><article class="folio-paper"><div class="folio-inside">${contents}</div></article>${sidebar()}</div><div class="stage-foot"><span>${state.age}歳 ／ 100歳まで</span><div class="progress"><span style="width:${state.age}%"></span></div><span>進行は自動保存</span></div>`;}
+  function introArtwork(){return selectedGender==='female'?GAME_ART.intro:selectedGender==='male'?GAME_ART.male_intro:GAME_ART.neutral_intro;}
+  function viewIntro(){
+    const today=tokyoDay();
+    const selected=zodiacById(selectedSign);
+    screen.innerHTML=`<div class="intro-card screen-enter"><div class="intro-copy"><p class="eyebrow light">ANOTHER LIFE · FANTASY STORY</p>
+      <h1 class="display">星の彼方で，<br><em>もう一度．</em></h1>
+      <p class="lead">星座を選び，もうひとつの人生へ．<br>出会い，仕事，家族．あなたの選択で物語が変わります．</p>
+      <figure class="intro-visual-peek"><img id="intro-peek-image" src="${introArtwork()}" alt="" width="1280" height="960" decoding="async"><figcaption>✦ 星の下で，もうひとつの人生を</figcaption></figure>
+      <div class="person-setup"><p class="zodiac-label">主人公を選ぶ</p>
+      <div class="setup-grid setup-grid-three" role="group" aria-label="主人公の性別">
+      ${GENDERS.map(g=>`<button class="setup-button gender-card ${selectedGender===g.id?'selected':''}" type="button" data-action="gender" data-value="${g.id}" aria-pressed="${selectedGender===g.id}"><img src="${GAME_ART['gender_'+g.id]}" alt="" width="120" height="156" decoding="async"><span>${ESC(g.label)}</span></button>`).join('')}</div>
+      <p class="zodiac-note">恋愛や家族の形は，大人になってから選べます．</p></div>
+      <div class="zodiac-section"><p class="zodiac-label">あなたの星座を選ぶ</p>
+      <div class="zodiac-grid" role="group" aria-label="12星座から選ぶ">
+      ${ZODIAC.map(z=>`<button class="zodiac-option ${selectedSign===z.id?'selected':''}" type="button" data-action="zodiac" data-sign="${z.id}" aria-pressed="${selectedSign===z.id}"><span class="zodiac-symbol" aria-hidden="true">${z.mark}</span><span>${z.name}</span></button>`).join('')}
+      </div><p class="zodiac-note" id="daily-place">${selected?`${ESC(selected.mark)} ${ESC(selected.name)} · 今日の出生地は「${ESC(ORIGINS[originForDay(selected.id,today)].name)}」`:'星座を選ぶと，今日の出生地が決まります．'}</p></div>
+      <div class="actions"><button class="button gold" data-action="new" type="button" ${selected&&selectedGender?'':'disabled'}>この人生を始める ↗</button>
+      ${oldSave?`<button class="button outline" data-action="resume" type="button">${oldSave.phase==='ending'?'前回の結末を読む':'前回の続きから'} →</button>`:''}</div>
+      <p class="tiny-help">無料 · 途中保存可能 · 出生地は日本時間で日替わり．<br>危険な行動を選ぶと，途中で人生が終わることがあります．</p>
+      </div><div class="intro-visual"><img id="intro-main-image" src="${introArtwork()}" alt="月明かりのファンタジーの世界" width="1280" height="960" decoding="async" fetchpriority="high"><p class="intro-visual-caption">✦ 星の下で，もうひとつの人生を．</p></div></div>
+      <div class="intro-bottom"><span><strong>✦</strong> 星座から始まる</span><span><strong>✧</strong> 選択で変わる人生</span><span><strong>☾</strong> 結末は人それぞれ</span></div>`;
+    scrollTop();
+  }
+  function syncIntroSelection(){
+    const today=tokyoDay();
+    screen.querySelectorAll('button[data-action="zodiac"]').forEach(b=>{
+      const active=b.dataset.sign===selectedSign;b.classList.toggle('selected',active);b.setAttribute('aria-pressed',String(active));
+    });
+    for(const kind of ['gender']){
+      const value=selectedGender;
+      screen.querySelectorAll(`button[data-action="${kind}"]`).forEach(b=>{
+        const active=b.dataset.value===value;b.classList.toggle('selected',active);b.setAttribute('aria-pressed',String(active));
+      });
+    }
+    const z=zodiacById(selectedSign),note=screen.querySelector('#daily-place');
+    if(note)note.textContent=z?`${z.mark} ${z.name} · 今日の出生地は「${ORIGINS[originForDay(z.id,today)].name}」`:'星座を選ぶと，今日の出生地が決まります．';
+    const start=screen.querySelector('button[data-action="new"]');if(start)start.disabled=!(z&&selectedGender);
+    for(const id of ['intro-peek-image','intro-main-image']){
+      const im=screen.querySelector('#'+id);if(im)im.src=introArtwork();
+    }
+  }
+  function prologue(){const p=ORIGINS[state.origin],z=zodiacById(state.zodiac);
+    const content=`${header('PROLOGUE · はじまり')}<h1 class="story-title">${ESC(p.name)}で生まれた．</h1>
+      <div class="birth-board"><div class="birth-chip"><b>主人公</b><span>${ESC(genderName(state.gender))}</span></div><div class="birth-chip"><b>あなたの星座</b><span>${ESC(z.mark)} ${ESC(z.name)}</span></div><div class="birth-chip"><b>生まれた町</b><span>${ESC(p.short)}</span></div><div class="birth-chip"><b>この日の星の贈り物</b><span>${ESC(z.gift)}</span></div></div>
+      <figure class="chapter-art"><img src="${GAME_ART.opening}" alt="星の降る町で新しい人生が始まる風景" width="1280" height="960" decoding="async"><figcaption>✦ ${ESC(p.short)}で始まる物語</figcaption></figure>
+      <div class="story-text"><p>${ESC(p.intro)}</p><p>あなたは${ESC(FAMILIES[state.family])}に生まれた．家族は忙しかったが，近所の子どもたちと遊んで育った．友だちのミナやリオとは，よく一緒に市場へ出かけた．</p><p>5歳のある日，小さな事件が起きる．</p></div>
+      <div class="scene-divider"><span>✧</span></div><button type="button" class="button ink" data-action="next">5歳へ進む ↗</button>`;
+    screen.innerHTML=frame(content);scrollTop();
+  }
+  // 第二の事件集：生き方・選択履歴から，既存の事件と異なる展開を選ぶ．
+  const ROUTE_NEW_SCENES={
+  healer:{
+    30:S('なくなった診療所の鍵','朝，薬棚の鍵が見つからない．昼に使う薬を取り出せず，新人のセラも困っている．','まず何を確かめますか？',
+      C('セラと昨夜の作業を振り返る','','洗い場の棚から鍵が見つかった．セラも安心した．','夜間当番の確認が習慣になった．','heart'),
+      C('受け渡し表を調べ，予備の鍵を作る','','昨日の当番が分かり，職人が薬棚を開けてくれた．','鍵の管理方法が新しくなった．','plan'),
+      C('患者を別室で診て，職人を急いで呼ぶ','','患者を待たせず診察でき，午後には薬棚も使えるようになった．','緊急時の対応が改善した．','bold')),
+    60:S('患者の名前が残る古い記録','町の学者が，昔の病気を調べるため診療所の記録を見たいと言う．そこには患者の名前や家族の秘密もある．','学者にどの情報を渡しますか？',
+      C('本人の同意を得た記録だけを見せる','','一人ずつ説明し，同意のあった情報だけを渡した．','患者との信頼が深まった．','heart'),
+      C('名前を消して症状と経過をまとめる','','個人を特定できない表を作り，学者に渡した．','調査が進み，秘密も守られた．','plan'),
+      C('住民への説明会を開いてから決める','','話し合いで使える範囲を決め，安心して調査を始められた．','町の人も調査に参加した．','bold')),
+    90:S('庭に残された薬瓶','若い薬師が，昔あなたが使った薬瓶を見つけた．瓶には色あせた文字があり，使い方を知る人は少ない．','この瓶をどう残しますか？',
+      C('薬を使った人々の思い出を語る','','若い職員は患者の話を聞く大切さを学んだ．','聞き書きの本が作られた．','heart'),
+      C('用途を調べ，古い道具と展示する','','瓶の歴史が分かり，療院で大切に保管された．','資料を見に来る人が増えた．','plan'),
+      C('若い職員と安全な薬瓶を設計する','','古い工夫を生かした新しい瓶が完成した．','患者が薬を使いやすくなった．','bold'))
+  },
+  builder:{
+    30:S('祭りの舞台がきしむ','祭りの前日，広場の舞台から大きな音がした．踊り手は練習を続けたいが，床板の一部が反っている．','明日の祭りをどう開きますか？',
+      C('踊り手と相談し，地面に仮の舞台を作る','','皆で飾りを移し，安全な場所で祭りを開いた．','翌年から予備の会場も用意することになった．','heart'),
+      C('舞台を閉鎖し，柱を詳しく調べる','','腐った柱が見つかり，演目を変更して事故を防いだ．','舞台の点検記録を残した．','plan'),
+      C('職人たちと徹夜で仮設の舞台を組む','','仮設舞台は完成したが，夜通し働いて疲れた．','祭りは無事に開かれた．','bold')),
+    60:S('橋に新しい名前がつく','長く修理を続けた橋に名前をつけることになった．町長の名前と昔の職人の名前が候補になり，住民の意見も分かれている．','橋の名前をどう決めますか？',
+      C('橋を使う人々から候補を集める','','子どもから年配の人まで案が届き，投票で一つを選んだ．','橋を大切にする人が増えた．','heart'),
+      C('古い地図で昔の呼び名を探す','','昔から使われていた名前を見つけ，その名を残した．','橋の歴史が保存された．','plan'),
+      C('若い職人たちに決定を任せる','','次の世代が考えた名前が採用された．','職人たちは橋を誇りに思った．','bold')),
+    90:S('師匠が残した工具箱','工房を片づけると，若い日に師匠から譲られた工具箱が出てきた．もう使わない道具にも，たくさんの思い出がある．','工具箱をどうしますか？',
+      C('弟子に一つずつ道具を譲る','','道具とともに師匠の思い出が受け継がれた．','工房の仲間の絆が深まった．','heart'),
+      C('道具の用途を書いて展示する','','工具箱は工房の資料室に置かれた．','見習いが昔の技術を学ぶようになった．','plan'),
+      C('若い職人と実際に道具を使う','','古い道具を使った小さな作品が完成した．','技術が次の工房へ伝わった．','bold'))
+  },
+  sailor:{
+    30:S('灯台からの赤い合図','深夜，島の灯台から救援を求める光が三度見えた．港の船は翌朝の荷物を積み終えたところだ．','今夜，どんな準備をしますか？',
+      C('港の船長たちに協力を頼む','','二隻の船が救助に向かい，灯台守の家族を港へ運んだ．','島との連絡が強くなった．','heart'),
+      C('灯りの位置と潮の流れを確認する','','岩礁の危険を調べ，安全な航路を救助隊に伝えた．','夜の航路図が新しくなった．','plan'),
+      C('救助船の指揮を引き受ける','','強い波を越え，灯台の近くまで救助隊を運んだ．','船員たちは夜の航海を学んだ．','bold')),
+    60:S('船員たちの給金','長旅から戻ると，若い船員たちが給金について相談してきた．積み荷は増えたが，船の修理費も必要だ．','船員の給金をどう決めますか？',
+      C('船員の希望を聞き，利益を分け合う','','事情を話し合い，少しずつ給金を増やす案に決まった．','船の仲間が相談できる場ができた．','heart'),
+      C('運賃と修理費を計算して基準を作る','','給金表ができ，航海ごとに公平に計算できるようになった．','不満が減った．','plan'),
+      C('古い小舟を売り，給金の資金にする','','船は一隻減ったが，船員の給金を上げられた．','少ない船で効率のよい航路を考えた．','bold')),
+    90:S('海図にない小さな島','若い船乗りから，古い海図に載っていない島の話を聞いた．あなたは若い頃，その近くを航海したことがある．','若い船乗りに何を託しますか？',
+      C('島の近くに住む漁師を紹介する','','漁師たちが安全な航路を教えてくれた．','海で助け合う仲間が増えた．','heart'),
+      C('昔の航海日誌を見せる','','風向きと岩礁の記録が調査に役立った．','日誌が港の資料になった．','plan'),
+      C('港で探検隊を募集する','','若い船員が集まり，新しい海図を作る旅に出た．','その旅の始まりにあなたの名が記された．','bold'))
+  },
+  guardian:{
+    30:S('城門に届いた苦情','市場の荷馬車が城門で長く待たされ，食べ物が傷んだ．見張りは規則を守っているが，商人は困っている．','門の通行をどう見直しますか？',
+      C('商人と見張りの話を交互に聞く','','お互いの事情が分かり，荷馬車用の時間帯を設けた．','争いが落ち着いた．','heart'),
+      C('通行台数を記録して混む時間を調べる','','見張りの配置を変え，待ち時間を短くできた．','荷物が傷むことが減った．','plan'),
+      C('荷馬車専用の小さな門を提案する','','町長の許可を得て通路が増設された．','市場に荷物が早く届いた．','bold')),
+    60:S('旅人への間違った通報','「森から危険な集団が来た」と通報された人々は，実は隣村から祭りに来た旅人だった．旅人は怖い思いをしたと怒っている．','旅人と町の人にどう説明しますか？',
+      C('旅人に謝り，困ったことを聞く','','旅人たちを宿へ案内し，不安を和らげることができた．','町への信頼が少しずつ戻った．','heart'),
+      C('通報の確認方法を作り直す','','見張りが事実を二人で確認するようになった．','誤報は減った．','plan'),
+      C('旅人と住民を招いて話し合う','','双方が顔を合わせ，誤解を解くことができた．','翌年の祭りでは旅人が歓迎された．','bold')),
+    90:S('返された古い紋章','昔あなたが助けた村から，古い紋章を返したいと手紙が届いた．村はもう自分たちで安全を守れるようになったという．','この紋章をどこに置きますか？',
+      C('村の子どもたちに贈り直す','','子どもは紋章の話を聞き，祭りで大切に飾った．','村とのつながりが続いた．','heart'),
+      C('城門の記念板に飾る','','多くの人が紋章を見られるようになった．','町の歴史として残った．','plan'),
+      C('若い守り手に渡す','','若者は受け取った紋章を胸に，仕事を引き継いだ．','責任は次の世代に渡った．','bold'))
+  },
+  scholar:{
+    30:S('転校生が書いた一行の詩','隣町から来た生徒が短い詩を書いた．文字はまだ上手ではないが，読む人の心に残る．本人は人前で読むのが恥ずかしいと言う．','その詩をどう紹介しますか？',
+      C('本人と相談し，名前を伏せて読み聞かせる','','生徒は自分の言葉が届いたことを喜んだ．','教室で詩を書く子が増えた．','heart'),
+      C('皆の作文を集めて小さな本を作る','','作文が一冊になり，図書室に置かれた．','生徒が互いの作品を読むようになった．','plan'),
+      C('町の詩人を呼んで一緒に詩を書く','','詩人と子どもたちが新しい作品を作った．','学校に新しい授業が生まれた．','bold')),
+    60:S('石碑に刻まれた間違い','生徒が，広場の石碑に刻まれた年が古文書と違うことに気づいた．町長は石碑を直すことに慎重だ．','生徒の発見をどう生かしますか？',
+      C('町の年配者から昔の話を聞く','','証言が集まり，生徒は歴史を調べる面白さを知った．','聞き書きの会ができた．','heart'),
+      C('古文書と石碑を照らし合わせる','','誤りを確かめ，説明板に正しい情報を添えた．','歴史を正しく学べるようになった．','plan'),
+      C('公開授業で住民と話し合う','','住民が資料を見比べ，石碑の扱いを決めた．','町で歴史に関心が高まった．','bold')),
+    90:S('卒業生からの白い封筒','若い頃に教えた生徒から手紙が届いた．いまは遠い村の先生になり，あなたの授業を思い出しているという．','その手紙にどう返しますか？',
+      C('一緒に過ごした教室の話を書く','','懐かしい返事が届き，文通が続いた．','二つの町の学校が交流するようになった．','heart'),
+      C('役立った教材を一式送る','','古い教材が遠い村の学校でも使われ始めた．','子どもたちが新しい本を読むようになった．','plan'),
+      C('その学校に本を寄付する','','村の教室に新しい本棚ができた．','子どもたちからお礼の絵が届いた．','bold'))
+  }
+  };
+
+  // 過去の決断を含めて分岐を決定し，画面を開き直しても同じ事件になる．
+  function sceneBranchKey(age){
+    const recent=state.history.slice(-4).map(h=>`${h.age}:${h.index}`).join(',');
+    return hash(state.seed,`arc17:${age}:${state.origin}:${state.career}:${recent}:${state.familyLife.childMode}`)%3;
+  }
+  function familyBranchScene(age){
+    const life=state.familyLife;
+    const branch=sceneBranchKey(age);
+    if(age===30 && life.relationship==='dating' && branch===0){
+      const p=life.partner;
+      return S(`${p}から届いた仕事の知らせ`,
+        `${p}が隣町で半年間の仕事を頼まれた．あなたにも今の町の仕事があり，一緒に行けば職場を離れなければならない．`,
+        'この半年をどう過ごしますか？',
+        C('送り出して，手紙で近況を伝え合う','','二人は離れて暮らし，忙しい日にも手紙を続けた．','次に会う楽しみが増えた．','heart'),
+        C('仕事を調整し，交代で町を訪ね合う','','互いの仕事を続けながら月に一度会う時間を作った．','二人の信頼が深まった．','plan'),
+        C('自分も半年間，隣町の仕事を探す','','慣れない町での暮らしが始まり，新しい仕事仲間もできた．','帰郷後は仕事の幅が広がった．','bold'));
+    }
+    if(age===45 && life.childName && branch!==2){
+      const n=life.childName;
+      return S(`${n}の初めての発表会`,
+        `${n}の学校で小さな発表会がある．しかし，同じ日にあなたの仕事でも大切な用事が入った．${n}は「見に来てほしい」と言っている．`,
+        'この日の予定をどう調整しますか？',
+        C('同僚に仕事をお願いして学校へ行く','',`${n}は壇上からあなたを見つけ，笑顔で手を振った．`,'家族の新しい思い出ができた．','heart'),
+        C('仕事を早く終わらせ，後半だけ見に行く','','最後の発表に間に合い，帰り道に二人で話をした．','仕事と家庭の予定を工夫するようになった．','plan'),
+        C('発表を録画してもらい，夜に一緒に見る','','直接は行けなかったが，夜に二人で発表を見て笑った．',`${n}は頑張ったことを詳しく話してくれた．`,'bold'));
+    }
+    if(age===45 && !life.childName && ['married','partnered'].includes(life.relationship) && branch===0){
+      const p=life.partner;
+      return S(`${p}と考える週末`,
+        `${p}と一緒に暮らして十年近くになる．休日が重なったが，家の修理と久しぶりの遠出のどちらを優先するか迷っている．`,
+        '二人の休日をどう使いますか？',
+        C('古い家の窓を二人で直す','','作業は大変だったが，夕方には明るい窓辺ができた．','ふたりで暮らしを整えた．','heart'),
+        C('修理を職人に頼み，日帰りの旅をする','','費用はかかったが，海辺でゆっくり過ごせた．','新しい旅の思い出が増えた．','plan'),
+        C('修理を延期して近所の友人を招く','','友人たちと食卓を囲み，久しぶりに笑い合った．','二人の家に人が集まるようになった．','bold'));
+    }
+    if(age===60 && life.childName && branch!==2){
+      const n=life.childName;
+      const future=life.childFuture;
+      const setting=future==='travel'?`${n}から遠い町の暮らしを知らせる手紙が届いた．`:future==='local'?`${n}は町で仕事を始め，忙しく過ごしている．`:`${n}は長い旅から戻り，次の暮らしを考えている．`;
+      return S(`${n}と変わる親子の距離`,`${setting} あなたには自分の仕事があり，子どもも一人の大人として暮らしている．`,
+        'これからどのように交流しますか？',
+        C('月に一度，互いの近況を話す日を決める','','忙しい月も手紙や会話を続けられた．','親子の関係が穏やかに続いた．','heart'),
+        C('互いの仕事や生活を尊重し，休暇に会う','','予定を調整して会うようになり，一緒に過ごす時間を大切にした．','それぞれの生活が落ち着いた．','plan'),
+        C('子どもの町を訪ね，新しい暮らしを見てみる','','知らなかった仕事や友人を知り，帰り道に少し誇らしくなった．','旅の思い出ができた．','bold'));
+    }
+    if(age===75 && life.childName && branch===0){
+      const n=life.childName;
+      return S(`${n}が持ってきた古い写真`,
+        `成長した${n}が訪ねてきて，子どもの頃の写真を見せてくれた．あなたは忘れていた小さな出来事を思い出した．`,
+        'この写真をどう残しますか？',
+        C('家族でアルバムを作る','','二人で思い出を話し，アルバムに新しい写真も加えた．','家族の時間が増えた．','heart'),
+        C('写真に日付と出来事を書き添える','','忘れかけていた年月が記録として残った．','いつでも家族の歩みを振り返れるようになった．','plan'),
+        C('写真の場所へ一緒に出かける','','思い出の道を歩き，新しい写真を撮って帰った．','昔と今がつながる一日になった．','bold'));
+    }
+    if(age===75 && !life.childName && ['married','partnered'].includes(life.relationship) && branch===1){
+      const p=life.partner;
+      return S(`${p}と歩いた坂道`,
+        `夕方，${p}と昔よく歩いた坂を上った．坂の上には新しい店ができ，若い頃の景色とは少し違う．`,
+        '二人の記憶をどう残しますか？',
+        C('昔のことを語りながらゆっくり歩く','','二人は古い知人や店の話をして，長い時間を過ごした．','会話を楽しむ時間が増えた．','heart'),
+        C('街の変化を日記に書き留める','','店や通りの変化を一冊の記録にまとめた．','読み返す楽しみができた．','plan'),
+        C('まだ行ったことのない道を探す','','新しい小道を見つけ，二人で小さな喫茶店に入った．','遅い年齢にも新しい発見があった．','bold'));
+    }
+    if(age===90 && life.childName && branch===0){
+      const n=life.childName;
+      return S(`${n}からの星祭りの誘い`,
+        `${n}が，久しぶりに星祭りへ行こうと誘ってくれた．あなたは昔，子どもと初めて祭りへ出かけた夜を覚えている．`,
+        '祭りの夜をどう過ごしますか？',
+        C('家族と屋台を回り，思い出を語る','','笑い声の中で，昔と同じ菓子を分け合った．','大切な夜になった．','heart'),
+        C('静かな席から星を眺める','','祭りの明かりと星をゆっくり眺め，昔の話をした．','一緒に落ち着いた時間を過ごせた．','plan'),
+        C('子どもと新しい催しを見に行く','','初めて見る光の舞台に，二人で目を輝かせた．','年齢を重ねても新しい思い出が増えた．','bold'));
+    }
+    return null;
+  }
+  function optionalRouteScene(age){
+    if(![30,45,60,75,90].includes(age))return null;
+    const familyScene=familyBranchScene(age);
+    if(familyScene)return familyScene;
+    const branch=sceneBranchKey(age);
+    return branch!==0?ROUTE_NEW_SCENES[state.career]?.[age]||null:null;
+  }
+
+  function sceneAt(age){
+    if(age===5)return BIRTH_SCENES[ORIGINS[state.origin].id];
+    if(age===10)return TEN_SCENES[state.history.find(h=>h.age===5)?.index??0];
+    if(age===15)return FIFTEEN_SCENES[state.history.find(h=>h.age===10)?.index??0];
+    if(age===20){const o=choiceOrder(state.seed);return S('これからの仕事を選ぶ','20歳．町では五つの職業への募集が出ている．幼い頃から身につけてきた力によって，応募できる仕事が違う．','これから，どの仕事をしますか？',...o.map(({key,choice})=>({...choice,career:key})));}
+    if(!state.career)throw Error('職業が設定されていません');
+    if(age===25)return meetingScene();
+    if(age===35)return marriageScene();
+    if(age===40)return childrenScene();
+    if(age===55)return laterFamilyScene();
+    const dangerAges=[30,45,60,85];
+    const dangerAge=dangerAges[hash(state.seed,`danger-age-${state.career}`)%dangerAges.length];
+    if(age===dangerAge&&chance(state.seed,`danger-offered-${state.career}`)<.65)return HAZARDS[state.career];
+    const special=alternateScene(age);
+    const varied=optionalRouteScene(age);
+    let selected=special||varied||CAREER_EPISODES[state.career]?.[age];
+    if(selected && state.history.some(h=>h.title===selected.title || (h.question && h.question===selected.question))){
+      const fallback=CAREER_EPISODES[state.career]?.[age];
+      if(fallback&&!state.history.some(h=>h.title===fallback.title))selected=fallback;
+    }
+    return selected;
+  }
+  // 仕事を選んだ後も，25歳の決断で30歳の質問が変わる．
+  function alternateScene(age){
+    if(![50,70].includes(age))return null;
+    const last=state.history.find(h=>h.age===age-5);
+    const variants=ALTERNATES?.[state.career]?.[age];
+    const original=CAREER_EPISODES[state.career]?.[age-5];
+    return last && variants && original && last.title===original.title?(variants[last.index]||null):null;
+  }
+  const eventArtByAge={8:'story_library',13:'story_workshop',18:'story_city',23:'story_clock',25:'story_harbor',28:'story_garden',33:'story_library',35:'story_tower',38:'story_harbor',40:'story_garden',43:'story_clock',48:'story_city',55:'story_library',58:'story_apothecary',68:'story_garden',78:'story_harbor',88:'story_tower'};
+  function artForEvent(age){
+    // 共通イベントの挿絵に主人公と違う性別の人物が写っていたため，
+    // 人物を特定できない風景へ切り替える．
+    if(age===35 && state.romance==='none')return GAME_ART.builder_senior||'assets/builder_senior.webp';
+    if(age===40 && state.familyLife.relationship==='single')return GAME_ART.story_library;
+    if(age===55 && state.familyLife.childName)return GAME_ART.story_garden;
+    const key=eventArtByAge[age];
+    if(key==='story_city')return GAME_ART.story_harbor;
+    if(key==='story_workshop' && state.gender!=='male')return 'assets/builder_middle.webp';
+    if(key==='story_clock' && state.gender!=='male')return 'assets/builder_senior.webp';
+    if(key==='story_tower' && state.gender!=='female')return 'assets/guardian_senior.webp';
+    if(key==='story_apothecary' && state.gender!=='female')return GAME_ART.story_garden;
+    return GAME_ART[key]||GAME_ART.story_harbor;
+  }
+  function eventArtwork(age){
+    const src=artForEvent(age);
+    return `<figure class="chapter-art milestone-art"><img src="${src}" alt="星空の町で過ごす${age}歳のひとこま" width="1152" height="648" decoding="async" loading="lazy"><figcaption>✦ ${age}歳の物語</figcaption></figure>`;
+  }
+  // 絵を人物ではなく『仕事場の風景』として使う際の安全な画像．
+  const ROLE_SCENERY={
+    healer:['assets/story_garden.webp','assets/story_library.webp','assets/guardian_senior.webp'],
+    builder:['assets/builder.webp','assets/builder_middle.webp','assets/builder_senior.webp'],
+    sailor:['assets/story_harbor.webp','assets/sailor_senior.webp','assets/guardian_senior.webp'],
+    guardian:['assets/guardian.webp','assets/guardian_middle.webp','assets/guardian_senior.webp'],
+    scholar:['assets/story_library.webp','assets/scholar_middle.webp','assets/story_garden.webp']
+  };
+  function scenicForRole(role,age=20){
+    const eraIndex=age<35?0:age<60?1:2;
+    return ROLE_SCENERY[role]?.[eraIndex]||GAME_ART.story_harbor;
+  }
+  function artForCareer(role,age=20){
+    // 85歳以上は，若い人物が『85歳のあなた』として映ることを防ぐ．
+    if(age>=85)return scenicForRole(role,age);
+    if(state.gender==='female')return GAME_ART_PHASES[role]?.[ageEra(age)]||scenicForRole(role,age);
+    if(state.gender==='male'){
+      // 大きな絵の中で別の性別に見える素材は使わない．
+      return GAME_ART_PHASES_MALE[role]?.[ageEra(age)]||scenicForRole(role,age);
+    }
+    return scenicForRole(role,age);
+  }
+
+  function choicePage(){
+    const event=sceneAt(state.age);
+    if(!event||!Array.isArray(event.opts)||event.opts.length<2)throw Error(`事件がありません：${state.age}歳`);
+    const content=`${header(state.age===25?'LIFE · 出会いと恋愛':'LIFE · 選択の年')}<h1 class="story-title">${ESC(event.title)}</h1>
+      ${state.career&&[30,50,60,70,80,90,95].includes(state.age)?lifeArtwork(state.age):[25,35,40,55].includes(state.age)?eventArtwork(state.age):''}
+      <div class="story-text"><p>${ESC(event.body)}</p></div>
+      <div class="decision-question"><span>いま，決めること</span><strong>${ESC(event.question)}</strong></div>
+      <div class="options">${event.opts.map((x,i)=>{const locked=x.career&&!eligibleRole(x.career);const missing=locked?unmetRequirements(x.career):[];return `<button type="button" class="option ${state.age===20?'option-career':''} ${locked?'locked-career':''}" data-action="choose" data-index="${i}" ${locked?'disabled aria-disabled="true"':''}><span class="index">${i+1}</span>${state.age===20&&x.career?`<img class="career-thumb" src="${artForCareer(x.career,20)}" alt="" loading="lazy" decoding="async" width="98" height="68">`:''}<span class="copy"><strong>${ESC(x.text)}</strong>${locked?`<small class="career-requirement">まだ応募できません｜${missing.map(m=>`${ESC(m.label)} ${m.current}／必要 ${m.min}`).join('・')}</small>`:x.career?'<small class="career-open">応募できます</small>':''}${x.risk>0?`<small class="life-risk">※命に関わる危険がある行動です</small>`:''}</span><span class="arrow" aria-hidden="true">${locked?'—':'→'}</span></button>`;}).join('')}</div>
+      <p class="caption">${state.age===20?'選べない職業は，これまでの能力を満たしていません．':'選択後に結果と数値の変化が分かります．'}</p>`;
+    screen.innerHTML=frame(content);scrollTop();
+  }
+  // 結果画面にのみ表示される実際の変化．
+  // 支出は暮らしに，無理な行動は体力に，すれ違いは人との縁に反映する．
+  // 単なる「手伝う」「長く取り組む」といった表現で一律に財布を減らさない．
+  const BASE_EFFECTS={
+    heart:{care:4,skill:1,courage:0,resources:0,vitality:0},
+    plan:{care:1,skill:4,courage:0,resources:0,vitality:0},
+    bold:{care:0,skill:1,courage:4,resources:0,vitality:0}
+  };
+  function statEffectFor(option){
+    const out={...(BASE_EFFECTS[option.trait]||BASE_EFFECTS.heart)};
+    const action=String(option.text||'');
+    const hint=String(option.hint||'');
+    const result=String(option.result||'');
+    const text=[action,hint,result].join(' ');
+    const cost=/(自費|私財|貯金を使|お金を使|お金を払|費用がかか|費用はかか|修理費|旅費|材料費|資金が必要|設備を購入|費用を負担|給金を払|借金|買い取る|自分の財産)/.test(text);
+    const gain=/(利益が増|収入が増|収入を得|利益を得|稼ぐ|売って|売却|節約|費用を節約|余ったお金|費用を抑|収益|市場で売|支出を減ら)/.test(text);
+    const exertion=/(夜通し|徹夜|休まず|長時間|夜遅くまで|仕事が増える|忙しくなる|休む時間が減|疲れ|重労働|睡眠を削|体力を使|一晩中|何日も|体への負担|無理をして|毎晩|数日かか|付き添う|看病する|自分一人で運|自力で運|時間がかかる|時間はかかる|手間がかかる|手間はかかる|多くの時間|時間を使う|休みが減る|負担が増える|しばらく続ける)/.test(text);
+    const activeWork=/(駆けつける|走って|一人で降りる|潜って|泳いで|飛び込|登って|担いで|引き上げ|救助に入|危険を承知|嵐に出る)/.test(action);
+    const rest=/(体を休め|休養|早めに休|休憩を取|休む日を|休めるよう|休息|治療を受け|休みを増|交代制を作|無理をしない)/.test(text)&&!/(休む時間が減|休養を削)/.test(text);
+    const distance=/(家族と離れ|友人と離れ|仲間と離れ|別れを告げ|約束を破|信頼を失|関係が悪化|人が離れ|すれ違い|協力を断られ|疎遠|仕事を優先して会えない|会う時間が減る|話す時間が減る|離れて暮らす)/.test(text);
+    const refusal=/(助けを断る|頼みを断る|見捨てる|放置する|約束を破る|話を聞かない|一方的に決める)/.test(action);
+    const hesitation=/(あきらめる|諦める|迷って何もしない|途中で投げ出す|挑戦を避け|逃げ出す|引き受けずにやめる|機会を逃す)/.test(action);
+    const blunder=/(作業に失敗|図面をなく|道具を壊|間違えたため|うまく作れな|準備不足で)/.test(result);
+    if(cost&&!gain)out.resources-=3;
+    if(gain)out.resources+=2;
+    if(exertion)out.vitality-=2;
+    if(activeWork)out.vitality-=1;
+    if(option.risk>0)out.vitality-=3;
+    if(rest)out.vitality+=3;
+    if(distance)out.care=out.care>0?-1:out.care-2;
+    if(refusal)out.care=out.care>0?-2:out.care-2;
+    if(hesitation)out.courage-=2;
+    if(blunder)out.skill=out.skill>0?-1:out.skill-2;
+    // 選択が何らかの才能を伸ばす一方で，やり過ぎた場合に負担が生じる．
+    // 負担のない選択もあってよい．無理にマイナスを作らない．
+    return out;
+  }
+  const HAZARD_TEXT={snow:'薄い氷が割れ，冷たい川に落ちてしまった．大人たちが捜したが，助けることはできなかった．',harbor:'波にさらわれてしまった．漁師たちが救助に向かったが，間に合わなかった．',forest:'霧の中で道に迷い，崖から転落してしまった．森番の捜索も間に合わなかった．',valley:'落石が再び起き，山道から転落してしまった．村人たちが救助に向かったが，助けられなかった．'};
+  function choose(index){
+    const event=sceneAt(state.age),selected=event?.opts?.[index];if(!selected)return;
+    const now=state.age;
+    if(now===20&&selected.career&&!eligibleRole(selected.career)){notice.textContent='必要な能力が足りず，この仕事には応募できません．';return;}
+    const fatal=(selected.risk>0 && chance(state.seed,`fate-${now}-${index}`)<selected.risk);
+    if(now===20){state.career=selected.career;}
+    if(selected.familyEffect)Object.assign(state.familyLife,selected.familyEffect);
+    if(now===25)state.romance=selected.familyEffect?.partnerGender==='male'?'men':selected.familyEffect?.partnerGender==='female'?'women':'none';
+    state.traits[selected.trait]=(state.traits[selected.trait]||0)+(now>=25?1:0);
+    const incr=statEffectFor(selected);
+    const changes={};
+    // 結果欄には実際に増減した数値だけを表示する（0以下に切り捨てた場合も反映）．
+    Object.entries(incr).forEach(([k,v])=>{
+      const before=state.stats[k];
+      state.stats[k]=k==='resources'?Math.max(-80,before+v):Math.max(0,before+v);
+      changes[k]=state.stats[k]-before;
+    });
+    const entry={age:now,title:event.title,question:event.question,choice:selected.text,index,trait:selected.trait,result:selected.result,later:selected.later,career:state.career,changes,hint:selected.hint};
+    state.history.push(entry);state.latest=entry;
+    if(fatal){
+      const cause=event===HAZARDS[state.career] ? ({healer:'雨で傷んだ橋が崩れ，川に転落した．',builder:'時計塔の階段が崩れ，落下した．',sailor:'高波で小舟が転覆した．',guardian:'見張り塔の煙と火に巻かれた．',scholar:'校舎の煙を吸って倒れた．'}[state.career]+'救助隊が駆けつけたが，命を落とした．') : (HAZARD_TEXT[ORIGINS[state.origin].id]||'事故に遭い，命を落とした．');
+      state.death={age:now,text:`${now}歳．${selected.text}ことを選んだ．しかし，${cause} 家族と友人はあなたを悼み，ともに過ごした時間を大切にした．`};
+      state.phase='ending';
+    }else state.phase='result';
+    save();show();
+  }
+  function resultPage(){const h=state.latest;
+    const changes=h.changes||{};
+    const numeric=STATS.filter(([k])=>changes[k]!==0&&Number.isFinite(changes[k]))
+      .map(([k,label])=>`<span class="delta ${changes[k]<0?'minus':''}">${ESC(label)} <b>${changes[k]>0?'+':''}${changes[k]}</b></span>`).join('');
+    const content=`${header('CHOICE · 選んだ結果')}<h1 class="story-title">${ESC(h.title)} — 選んだ結果</h1>
+      ${state.age===20&&state.career?lifeArtwork(state.age):[25,35,40,55].includes(state.age)?eventArtwork(state.age):state.career&&[45,65,75,95].includes(state.age)?lifeArtwork(state.age):''}
+      <div class="story-text"><p>あなたは「${ESC(h.choice)}」と決めた．</p><p>${ESC(h.result)}</p></div>
+      <section class="numeric-feedback" aria-label="今回の選択で変化した数値"><p class="numeric-feedback-label">✧ 今回の変化</p>
+        <div class="delta-row">${numeric||'<span class="delta neutral">数値の変化はありません</span>'}</div>
+      </section>
+      <button type="button" class="button ink" data-action="next">${state.age+3}歳へ進む ↗</button>`;
+    screen.innerHTML=frame(content);scrollTop();
+  }
+  function storyPage(){const h=state.stories.find(x=>x.age===state.age);
+    if(!h)throw Error('読み物がありません');
+    const content=`${header('LIFE · 人生のひとこま')}<h1 class="story-title">${ESC(h.title)}</h1>
+      ${state.career&&[48,63,83,98].includes(state.age)?lifeArtwork(state.age):eventArtByAge[state.age]?eventArtwork(state.age):''}
+      <div class="story-text"><p>${ESC(h.body)}</p></div><div class="scene-divider"><span>✧</span></div>
+      <button type="button" class="button ink" data-action="next">${state.age+2}歳へ進む ↗</button>`;
+    screen.innerHTML=frame(content);scrollTop();
+  }
+
+  // 最終数値と実際の選択から結末を決める．
+  const LEGACY_TITLES={
+    healer:{care:'月白の手を差し伸べた薬師',skill:'星露を極めた調薬師',courage:'暁路を渡る旅薬師',resources:'銀瓶の療院を育てた者',vitality:'百年の薬草庭を守る者'},
+    builder:{care:'千の暮らしを結んだ星工匠',skill:'銀歯車に名を刻んだ工匠',courage:'暁の架け橋を渡した者',resources:'月鉄の工房を守る者',vitality:'長き時を支えた石の匠'},
+    sailor:{care:'七つの港に友を持つ星航者',skill:'忘れられた海図を編んだ者',courage:'星風を追う蒼帆の航海士',resources:'琥珀の交易路を拓いた者',vitality:'潮の百年を見守る航海士'},
+    guardian:{care:'夜明けを分けた城門の守り手',skill:'星盾の守りを築いた者',courage:'蒼嵐の先へ進んだ守護者',resources:'金灯の城塞を守る者',vitality:'百の夜を越えた星見の盾'},
+    scholar:{care:'千灯の教室を照らした賢者',skill:'星図の書を紡いだ導き手',courage:'暁の学び舎を拓いた者',resources:'月桂の図書館を守る者',vitality:'百年の言葉を伝える教師'}
+  };
+  function endingFamilyPortrait(){
+    if(state.age<20)return {tag:'短い旅に残った温かな記憶',text:'家族や友人に見守られた日々でした．',art:GAME_ART.child};
+    const life=state.familyLife;
+    if(life.childName && ['married','partnered'].includes(life.relationship))
+      return {tag:'家族と育てた星の灯',text:`${life.partner}と${life.childName}のいる家族を育てました．`,art:GAME_ART.story_harbor};
+    if(life.childName)return {tag:'自分の手で守った小さな星',text:`${life.childName}を家族に迎えて育てました．`,art:GAME_ART.story_library};
+    if(['married','partnered'].includes(life.relationship))
+      return {tag:'ふたりで灯した窓明かり',text:`${life.partner}と二人で暮らしを築きました．`,art:GAME_ART.story_harbor};
+    if(life.childMode==='mentor')return {tag:'町の子どもたちへ渡した光',text:'町の子どもたちと関わる道を選びました．',art:'assets/guardian_senior.webp'};
+    return {tag:'自分で選び取った星の航路',text:'結婚や子育てに限定されない，自分らしい暮らしを選びました．',art:GAME_ART.story_garden};
+  }
+  function legacyStats(){
+    const s=state.stats;
+    // 体力・所持金は値域が異なるため，単純な最大値で称号を固定しない．
+    const baseline={care:10,skill:10,courage:10,resources:10,vitality:15};
+    const pace={care:40,skill:40,courage:35,resources:12,vitality:17};
+    const keyed=STATS.map(([key,label])=>({
+      key,label,value:s[key],
+      progress:(s[key]-baseline[key])/pace[key]
+    }));
+    keyed.sort((a,b)=>b.progress-a.progress||b.value-a.value);
+    const strongest=keyed[0];
+    const weakest=[...keyed].sort((a,b)=>a.progress-b.progress||a.value-b.value)[0];
+    return {strongest,weakest,ordered:keyed};
+  }
+  function decideEnding(){
+    const family=endingFamilyPortrait(),weights=legacyStats();
+    if(!state.career||state.age<20){
+      return {title:['夜明け前の小さな星','春風の小さな約束','短い旅を照らした星灯'][hash(state.seed,'short-fate')%3],
+        symbol:'✧',kind:'短い人生',summary:'家族や友人は，ともに過ごした日々を大切にしました．',
+        family,core:weights.strongest,low:weights.weakest};
+    }
+    const role=DOMAINS[state.career];
+    const key=weights.strongest.key;
+    const title=LEGACY_TITLES[state.career]?.[key]||role.titles[0];
+    const themes={
+      care:'誰かと支え合って歩いたことが，あなたの人生の中心にありました．',
+      skill:'学び，試し，身につけた技術を使って，さまざまな問題に取り組みました．',
+      courage:'慣れない出来事にも向き合い，自分で進む道を見つけました．',
+      resources:'暮らしを整える力が，あなたと周囲の人を支えました．',
+      vitality:'日々を生き抜く力を大切にし，長い時間を重ねました．'
+    };
+    return {title,symbol:role.symbol,kind:role.name,summary:themes[key],family,
+      core:weights.strongest,low:weights.weakest};
+  }
+  function endingParagraphs(){
+    const place=ORIGINS[state.origin],end=decideEnding(),life=state.familyLife,lines=[];
+    lines.push(`あなたは${place.name}の${FAMILIES[state.family]}に生まれました．生まれた日の星は${zodiacById(state.zodiac).name}でした．`);
+    if(state.career)lines.push(`20歳で${DOMAINS[state.career].name}の道を選び，仕事とともにさまざまな人に出会いました．`);
+    lines.push(end.summary);
+    const mid=state.history.find(h=>h.age===45)||state.history.find(h=>h.age===30);
+    const late=state.history.find(h=>h.age===75)||state.history.find(h=>h.age===60);
+    if(mid)lines.push(`${mid.age}歳の「${mid.title}」では，あなたは「${mid.choice}」と決めました．${mid.result}`);
+    if(life.relationship==='married')lines.push(`${life.partner}と結婚し，暮らしの中で喜びや難しさを分かち合いました．`);
+    else if(life.relationship==='partnered')lines.push(`${life.partner}と結婚せず一緒に暮らす道を選びました．二人の暮らしも，この人生の大切な一部でした．`);
+    else if(life.relationship==='dating')lines.push(`${life.partner}と出会い，一緒に過ごす時間を大切にしました．`);
+    else if(state.age>=35)lines.push('結婚を人生の条件にはせず，友人や仕事との関わりを大切にして過ごしました．');
+    if(life.childName){
+      const mode=life.childMode==='adopt'?'養子として':life.childMode==='guardian'?'後見人として':'';
+      lines.push(`${life.childName}を${mode}家族に迎え，成長を見守りました．`);
+      if(life.childFuture==='travel')lines.push(`${life.childName}が町を出て学ぶときは，旅立ちを見送りました．`);
+      if(life.childFuture==='local')lines.push(`${life.childName}が町に残り，自分の仕事を見つけていく姿を見守りました．`);
+      if(life.childFuture==='journey')lines.push(`${life.childName}は旅に出て，自分の進む道を探しました．`);
+    }else if(life.childMode==='mentor')lines.push('自分の家では子どもを育てず，町の子どもたちが学び遊ぶ時間を支えました．');
+    else if(state.age>=40)lines.push('子どもを育てない道も，自分で選んだ人生の大切なかたちでした．');
+    if(late)lines.push(`${late.age}歳の「${late.title}」では，${late.result}`);
+    const low=end.low;
+    if(low.value<0&&low.key==='resources')lines.push('生涯の終わりには蓄えに余裕がありませんでしたが，その時々の選択の記録が残っています．');
+    else if(low.key==='vitality'&&low.value<8)lines.push('晩年には体力が少なくなり，できることを選びながら過ごしました．');
+    if(state.death)lines.push(state.death.text);
+    else lines.push('100歳．窓の外の星を眺めながら，初めて町を歩いた日のことを思い出しました．');
+    return lines;
+  }
+
+  // 同じ決まり文句を繰り返さず，実際に歩んだ人生から『星からのひと言』を選ぶ．
+  function starMessage(){
+    const role=state.career?DOMAINS[state.career].name:'この旅';
+    const life=state.familyLife;
+    const power=legacyStats();
+    const selectedChoices=state.history.filter(h=>h.age>=20).map(h=>h.index).join('-');
+    const pick=(arr,key)=>arr[hash(state.seed,`star-v18:${key}:${selectedChoices}:${state.gender}:${state.zodiac}`)%arr.length];
+    if(state.death){
+      const last=state.latest;
+      const texts=state.age<=15?[
+        '小さな星の光も，出会った人の記憶には長く残る．',
+        '短い旅にだって，笑顔を届けた朝が確かにあった．',
+        '届かなかった明日より，ともに過ごした今日を忘れないで．'
+      ]:[
+        `あなたが${role}として残した灯りは，ここで消えるわけではない．`,
+        '旅が途中で終わっても，その人が選んだ道まで消えることはない．',
+        `最後の日まで重ねた選択が，誰かの心に小さな星を残した．`
+      ];
+      return pick(texts,`early:${state.age}:${last?.choice||''}`);
+    }
+    const main={
+      care:['あなたが手を差し伸べた場所に，今も誰かの灯りがともっている．','与えた優しさは数えられなくても，受け取った人の心に残っている．'],
+      skill:['一つずつ覚えた技が，いつか誰かの明日を支える道具になった．','積み重ねた知恵は，あなたの手を離れても町に残り続ける．'],
+      courage:['踏み出した足跡は，戻れない日々を照らす星の道になった．','怖くても選んだ一歩が，あなたの世界を少しずつ広げていった．'],
+      resources:['守り抜いた暮らしの灯りは，次にここを訪れる人を迎える．','築いた居場所には，あなたがいなくても人々の営みが続いていく．'],
+      vitality:['幾度も季節を越えたあなたの眼差しに，町は長い時間を映していた．','遠い日の約束も，今日まで歩いた足元に静かに息づいている．']
+    };
+    const familyNotes=[];
+    if(life.childName)familyNotes.push(`${life.childName}へ渡したぬくもりは，あなたの知らない未来へ続いていく．`);
+    if(life.partner&&['married','partnered'].includes(life.relationship))familyNotes.push(`${life.partner}とともに灯した窓は，ふたりだけの星座だった．`);
+    if(life.childMode==='mentor')familyNotes.push('教えた子どもたちの歩く道に，あなたが見せた星の光が残る．');
+    if(!life.childName&&!life.partner)familyNotes.push('自分で選んだ静かな暮らしにも，ひとつの星空があった．');
+    const mainLine=pick(main[power.strongest.key],`ability:${power.strongest.key}`);
+    // 家族のあり方も結末に反映しつつ，最終能力を反映した言葉も出す．
+    const familyLine=familyNotes.length?pick(familyNotes,'family'):'';
+    return familyLine&&hash(state.seed,`star-family-v18:${selectedChoices}`)%3!==0?familyLine:mainLine;
+  }
+
+  function shareMessage(){
+    const e=decideEnding(),url=(location.protocol==='https:'||location.protocol==='http:')?`${location.origin}${location.pathname}?seed=${state.seed}&sign=${state.zodiac}`:'';
+    const z=zodiacById(state.zodiac);
+    return `星の彼方で，もう一度｜私の人生は「${e.title}」．\n${state.age}歳まで歩みました．\n星からのひと言：${starMessage()}\n星座：${z.name}\n生まれた町：${ORIGINS[state.origin].name}\n${state.career?`仕事：${DOMAINS[state.career].name}\n`:''}${url?`この星座で始める：${url}\n`:''}#星と余白`;
+  }
+  // 20代・中年期・晩年ごとに，挿絵そのものを切り替える．
+  const ageEra=age=>age<35?'young':age<60?'middle':'senior';
+  const ageDescriptions={
+    young:'仕事を始めた頃',middle:'経験を積んだ頃',senior:'次の世代へとつなぐ頃'
+  };
+  function lifeArtwork(age,kind='chapter'){
+    const career=state.career||'child',era=ageEra(age),z=zodiacById(state.zodiac);
+    const art=career==='child'?GAME_ART.child:artForCareer(career,age);
+    // 人物が実際に写っていて，設定した年齢と整合する画像だけを『あなた』と表記する．
+    const isPortrait=state.gender==='female'&&age<85&&(
+      (career==='healer'&&(era==='young'||era==='senior'))||
+      (career==='scholar'&&(era==='young'||era==='middle'))
+    );
+    const alt=isPortrait?`${age}歳頃の女性主人公を描いた挿絵`:`${age}歳頃の暮らしを象徴する星明かりの風景`;
+    const caption=career==='child'?'星に見守られた子どもの日々':`${DOMAINS[career].name} · ${age>=85?'人生を振り返る風景':ageDescriptions[era]}`;
+    const ending=kind==='ending';
+    return `<figure class="age-art age-art-${era} ${ending?'ending-art-v13':''}">
+      <div class="age-art-picture"><img src="${art}" alt="${ESC(alt)}" width="1280" height="960" decoding="async" loading="${ending?'eager':'lazy'}">
+      <span class="age-corner">${age}歳${isPortrait?'のあなた':'頃の風景'}</span></div>
+      <figcaption><span>✦ ${ESC(caption)}</span><span>${ESC(z.mark)} ${ESC(z.name)}</span></figcaption>
+    </figure>`;
+  }
+  function endingIllustration(){
+    if(!state.career || state.age<20)return lifeArtwork(state.age,'ending');
+    return `<section class="ending-memory"><p class="ending-memory-label">✦ 若い日の一枚</p>${lifeArtwork(20,'ending')}
+      <details class="late-years"><summary>歳を重ねた頃の風景も見る</summary>${lifeArtwork(Math.min(state.age,75),'chapter')}</details></section>`;
+  }
+
+  function endingScoreboard(){
+    const profile=legacyStats();
+    return `<section class="ending-scoreboard" aria-label="人生の最後の数値">
+      <h2 class="legacy-section-title">人生の最後に残った力</h2>
+      <p class="legacy-lead">いちばん伸びた力：<strong>${ESC(profile.strongest.label)}</strong>．この人生での選択が積み重なった結果です．</p>
+      <div class="ending-score-grid">
+      ${STATS.map(([k,label])=>{
+        const value=state.stats[k];
+        const width=Math.max(0,Math.min(100,Math.round(value/120*100)));
+        return `<div class="legacy-stat ${k===profile.strongest.key?'legacy-strong':''}">
+          <span>${ESC(label)}</span><strong>${value}</strong><i class="legacy-meter"><b style="width:${width}%"></b></i>
+        </div>`;
+      }).join('')}
+      </div></section>`;
+  }
+  function endingFamilyPanel(){
+    if(state.age<20)return `<section class="legacy-family-panel"><h2 class="legacy-section-title">ともに過ごした人たち</h2><p class="legacy-lead">家族や友だちとの時間が，この短い人生の大切な記憶でした．</p></section>`;
+    const p=decideEnding(),life=state.familyLife;
+    const withPartner=['married','partnered','dating'].includes(life.relationship)&&life.partner;
+    const rel=life.relationship==='married'?'結婚して暮らした':life.relationship==='partnered'?'結婚せずに暮らした':life.relationship==='dating'?'交際した':'恋愛関係に限定しない道';
+    const child=life.childName?`${life.childName}（${life.childMode==='adopt'?'養子':life.childMode==='guardian'?'後見人として迎えた':'家族に迎えた子'}）`:
+      life.childMode==='mentor'?'町の子どもたちと関わった':'子育てを選ばなかった';
+    const body=`<h2 class="legacy-section-title">家族と大切な人の記録</h2>
+      <div class="legacy-families">
+        <div><span>ともに歩んだ人</span><strong>${ESC(withPartner?life.partner:'自分で選んだ暮らし')}</strong><small>${ESC(rel)}</small></div>
+        <div><span>子どもとの関わり</span><strong>${ESC(child)}</strong><small>${ESC(life.childFuture==='travel'?'遠い町への旅立ちを見送った':life.childFuture==='local'?'町での仕事を見守った':life.childFuture==='journey'?'自分の進路を探す旅を見守った':'それぞれの人生のかたち')}</small></div>
+      </div>`;
+    return `<section class="legacy-family-panel"><p class="legacy-lead-title">${ESC(p.family.tag)}</p>
+      ${body}<figure class="legacy-memory-picture"><img src="${p.family.art}" alt="この人生の人間関係を振り返る星明かりの風景" loading="lazy" decoding="async"><figcaption>✦ この人生で大切にした関係</figcaption></figure></section>`;
+  }
+  function endingMemoryHighlights(){
+    const ages=[5,15,30,45,55,60,70,75,90];
+    const found=ages.map(age=>state.history.find(h=>h.age===age)).filter(Boolean);
+    const picks=[found[0],found.find(h=>h.age>=30&&h.age<=55),found.find(h=>h.age>=60)].filter(Boolean);
+    const chosen=[...new Map(picks.map(x=>[x.age,x])).values()].slice(0,3);
+    if(!chosen.length)return '';
+    return `<section class="legacy-memories"><h2 class="legacy-section-title">あなたが選んだ三つの場面</h2>
+      <div class="legacy-memory-grid">${chosen.map(h=>`<article><small>${h.age}歳 · ${ESC(h.title)}</small>
+        <strong>${ESC(h.choice)}</strong><p>${ESC(h.result)}</p></article>`).join('')}</div></section>`;
+  }
+  function endingPage(){
+    const e=decideEnding(),hist=[...state.history,...state.stories].sort((a,b)=>a.age-b.age);
+    const content=`<div class="epilogue-heading">
+      <div class="ending-sigil">${ESC(e.symbol)}</div><span class="eyebrow dark" style="justify-content:center">EPILOGUE · 生涯の記録</span>
+      <p class="epilogue-age">${state.age}歳 · ${state.death?(state.age<40?'若くして迎えた最期':'人生の終わり'):'100歳の物語の完結'}</p>
+      <h1 class="ending-title">${ESC(e.title)}</h1>
+      <p class="legacy-destiny">${ESC(e.family.tag)}</p>
+      <p class="caption">${state.career?`${ESC(e.kind)}として歩んだ人生`:'あなたが歩んだ短い物語'}</p></div>
+      ${endingIllustration()}${endingScoreboard()}${endingFamilyPanel()}${endingMemoryHighlights()}
+      <div class="scene-divider"><span>✧</span></div>
+      <h2 class="legacy-section-title">あなたの一生を振り返って</h2>
+      <div class="story-text">${endingParagraphs().map(t=>`<p>${ESC(t)}</p>`).join('')}</div>
+      <section class="star-message"><p class="star-message-label">✧ 星からのひと言</p><p class="star-message-text">${ESC(starMessage())}</p></section>
+      <details class="all-life"><summary>人生の全記録を読む（${hist.length}件）</summary>
+      <ol class="timeline">${hist.map(h=>`<li><b>${h.age}歳 · ${ESC(h.title)}</b><br>${h.choice?`${ESC(h.choice)}<br>${ESC(h.result)}`:ESC(h.body||'')}</li>`).join('')}</ol></details>
+      <div class="actions"><button type="button" class="button ink" data-action="share">結果を共有する ↗</button>
+      <button type="button" class="button plain" data-action="replay">別の人生を遊ぶ ✧</button></div>
+      <div class="share-box" id="share-fallback"><p class="share-note">長押しで文章をコピーできます．</p>
+      <textarea class="share-input" readonly>${ESC(shareMessage())}</textarea></div>
+      <p class="caption">この作品はフィクションです．人生の結果は現実の予測ではありません．</p>`;
+    screen.innerHTML=frame(content);scrollTop();
+  }
+
+  function advance(){
+    if(state.phase==='prologue'){state.age=5;state.phase='choice';}
+    else if(state.phase==='result'){state.age+=3;state.stories.push(independentStory(state.age));state.phase='story';}
+    else if(state.phase==='story'){
+      state.age+=2;
+      if(state.age===100)state.phase='ending';else state.phase='choice';
+    }else return;
+    save();show();
+  }
+  function show(){try{
+      notice.textContent='';
+      if(state===null)viewIntro();
+      else if(state.phase==='prologue')prologue();
+      else if(state.phase==='choice')choicePage();
+      else if(state.phase==='result')resultPage();
+      else if(state.phase==='story')storyPage();
+      else if(state.phase==='ending')endingPage();
+      else throw Error('表示できない画面です');
+    }catch(e){console.error('Game error',e);notice.textContent='読み込みに失敗しました．新しい人生から始めてください．';state=null;viewIntro();}
+  }
+  async function share(){const text=shareMessage();
+    if(navigator.share){try{await navigator.share({title:'星の彼方で，もう一度',text});return;}catch(e){if(e?.name==='AbortError')return;}}
+    if(navigator.clipboard&&window.isSecureContext){try{await navigator.clipboard.writeText(text);notice.textContent='結果をコピーしました．';return;}catch{}}
+    const box=document.getElementById('share-fallback');if(box){box.classList.add('visible');const area=box.querySelector('textarea');area?.focus();area?.select();}
+    notice.textContent='下の文章を長押ししてコピーしてください．';
+  }
+  screen.addEventListener('click',e=>{
+    const button=e.target.closest('button[data-action]');if(!button||!screen.contains(button))return;
+    const act=button.dataset.action;
+    if(act==='zodiac'){
+      if(zodiacById(button.dataset.sign)){selectedSign=button.dataset.sign;syncIntroSelection();}
+    }else if(act==='gender'){
+      if(GENDERS.some(g=>g.id===button.dataset.value)){selectedGender=button.dataset.value;syncIntroSelection();}
+    }else if(act==='new'){
+      if(!zodiacById(selectedSign)||!selectedGender){notice.textContent='主人公の性別と星座を選んでください．';return;}
+      state=fresh(requestedSeed!==null?requestedSeed:newSeed(),selectedSign,tokyoDay(),selectedGender);oldSave=null;save();show();
+    }else if(act==='replay'){
+      selectedSign=state?.zodiac||selectedSign;selectedGender=state?.gender||selectedGender;oldSave=load();state=null;viewIntro();
+    }else if(act==='resume'){
+      state=load();if(!state){notice.textContent='保存データが見つかりません';return;}show();
+    }else if(act==='next'){if(state)advance();}
+    else if(act==='choose'){if(state?.phase==='choice')choose(Number(button.dataset.index));}
+    else if(act==='share'){if(state?.phase==='ending')void share();}
+  });
+  // 開発用の動作テストに使用．公開画面への変更権限は付与しない．
+  Object.defineProperty(window,'__hoshiV18Test',{value:Object.freeze({
+    getState:()=>state?JSON.parse(JSON.stringify(state)):null,
+    getScene:()=>state?.phase==='choice'?sceneAt(state.age):null,
+    getOptionEffect:(n)=>state?.phase==='choice'?statEffectFor(sceneAt(state.age).opts[n]):null,
+    choose:n=>{if(state?.phase==='choice')choose(n);},advance,
+    begin:(seed,sign='leo',day=tokyoDay(),gender='female')=>{state=fresh(seed,sign,day,gender);selectedSign=sign;selectedGender=gender;save();show();},
+    originForDay,independentStory,getEnding:()=>state?decideEnding():null,tokyoDay,eligibleRole,unmetRequirements,partnerCandidates
+  }),configurable:false});
+  show();
+
+})();
+</script>
+</body>
+</html>
