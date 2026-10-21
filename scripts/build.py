@@ -211,7 +211,6 @@ def make_sitemap(today: date, data: dict, base: str) -> str:
         ("terms.html", "2026-10-09"),
         ("contact.html", "2026-10-09"),
     ]
-
     urls.append(("game/", "2026-10-19"))
 
     for sign in data["signs"]:
