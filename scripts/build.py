@@ -199,17 +199,28 @@ def make_feed(day: date, data: dict, base: str) -> str:
         ET.SubElement(item, "pubDate").text = datetime(d.year, d.month, d.day, 6, 0, tzinfo=timezone(timedelta(hours=9))).strftime("%a, %d %b %Y %H:%M:%S %z")
     return ET.tostring(rss, encoding="unicode", xml_declaration=True)
 
-
 def make_sitemap(today: date, data: dict, base: str) -> str:
     namespace = "http://www.sitemaps.org/schemas/sitemap/0.9"
     ET.register_namespace("", namespace)
     root = ET.Element(f"{{{namespace}}}urlset")
-    urls = [("", today.isoformat()), ("about.html", "2026-10-09"), ("privacy.html", "2026-10-09"), ("terms.html", "2026-10-09"), ("contact.html", "2026-10-09")]
+
+    urls = [
+        ("", today.isoformat()),
+        ("about.html", "2026-10-09"),
+        ("privacy.html", "2026-10-09"),
+        ("terms.html", "2026-10-09"),
+        ("contact.html", "2026-10-09"),
+    ]
+
+    urls.append(("game/", "2026-10-19"))
+
     for sign in data["signs"]:
         urls.append((f'signs/{sign["id"]}/', today.isoformat()))
+
     for back in range(ARCHIVE_DAYS):
         d = (today - timedelta(days=back)).isoformat()
         urls.append((f'archive/{d}/', d))
+
     for path, changed in urls:
         el = ET.SubElement(root, f"{{{namespace}}}url")
         ET.SubElement(el, f"{{{namespace}}}loc").text = base + path
