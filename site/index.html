@@ -18,6 +18,53 @@
   <meta property="og:image" content="{{OG_IMAGE_URL}}">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="stylesheet" href="./styles.css">
+  
+<style>
+.hero-actions-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+  width: 100%;
+  max-width: 560px;
+}
+.hero-actions-grid .hero-action {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 0;
+  min-height: 60px;
+  padding: 12px 16px;
+  border: 1px solid #b79b7a;
+  border-radius: 3px;
+  color: #f6ecdd;
+  background: rgba(255,255,255,.03);
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 1.5;
+  transition: background .2s, transform .2s;
+}
+.hero-actions-grid .hero-action.primary {
+  background: #f2cfb6;
+  border-color: #f2cfb6;
+  color: #263149;
+}
+.hero-actions-grid .hero-action:hover {
+  background: rgba(217,183,131,.19);
+  transform: translateY(-2px);
+}
+.hero-actions-grid .hero-action.primary:hover {
+  background: #f5d9c4;
+}
+@media (max-width: 600px) {
+  .hero-actions-grid .hero-action {
+    padding: 11px;
+    font-size: 11px;
+    min-height: 66px;
+  }
+}
+</style>
+
   <script type="application/ld+json">{{JSON_LD}}</script>
 </head>
 <body>
@@ -45,20 +92,18 @@
           <h1 id="hero-title">今日という一日に，<br><em>小さな光を．</em></h1>
           <p class="hero-lead">思いどおりの日も，そうではない日も．<br>星と物語を道しるべに，今のあなたを少しだけ好きになる時間を．</p>
          
-<div class="hero-actions" style="flex-wrap:wrap;gap:16px 24px">
-  <a class="btn btn-peach" href="#horoscope">
+<div class="hero-actions hero-actions-grid">
+  <a class="hero-action primary" href="#horoscope">
     運勢を読む <span aria-hidden="true">↗</span>
   </a>
-  <a class="text-link light-link" href="#diagnosis">
-    心の診断をする <span aria-hidden="true">→</span>
+  <a class="hero-action" href="#diagnosis">
+    心の診断をする <span aria-hidden="true">↗</span>
   </a>
-  <a class="text-link light-link" href="./game/">
-    物語ゲームを遊ぶ
-    <span aria-hidden="true">→</span>
+  <a class="hero-action" href="./game/">
+    物語ゲームを遊ぶ <span aria-hidden="true">↗</span>
   </a>
-  <a class="text-link light-link" href="./novels/">
-    星が選ぶ，今夜の一冊
-    <span aria-hidden="true">→</span>
+  <a class="hero-action" href="./novels/">
+    星が選ぶ，今夜の一冊 <span aria-hidden="true">↗</span>
   </a>
 </div>
 
